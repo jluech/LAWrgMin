@@ -2,6 +2,10 @@
 ### ignore models due to size
 miners/targer_instance/models
 
+### ignore input/output folders due to volatility
+miners/targer_instance/data/in
+miners/targer_instance/data/out
+
 
 # IDEA project folder
 .idea
