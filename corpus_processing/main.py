@@ -1,10 +1,12 @@
 import json
+import os
 
 echr_corpus_path = "/datasets/echr_corpus/ECHR_Corpus.json"  # local linux path, not repo specific
 
 
 def parse_corpus_data():
     with open(echr_corpus_path) as corpus_file:
+        # ========== load and parse data from json file to dictionary ==========
         data = json.load(corpus_file)  # corpus yields list of 42 decision entries as json-dicts
         # print(data)
         # print(type(data))
@@ -22,31 +24,49 @@ def parse_corpus_data():
         print(keys)
         print()
 
+        # ========== extract trimmed text from each case and write to txt file ==========
+        out_dir = "./out"
+        if not os.path.exists(out_dir):
+            os.mkdir(out_dir)
+        for index, case in enumerate(data):
+            # filename = "/".join([out_dir, "case-"+str(index)+".txt"])
+            filename = "/".join([out_dir, case["name"]])
+            if os.path.exists(filename):
+                os.remove(filename)
+
+            text = case["text"]
+            trimmed = text.replace("  ", "").replace("\r", "").replace("\n\n", "\n").strip()
+
+            casefile = open(filename, "x")
+            casefile.write(trimmed)
+            casefile.close()
+
+        # ========== further inspect specific first entry of corpus ==========
         # for key in keys:
         #     print(key, first_entry.get(key))
         # print("\n")
 
-        text = corpus_entry["text"]
+        # text = corpus_entry["text"]
         # print(type(text))
         # print(text)
-        trimmed = text.replace("  ", "").replace("\r", "").replace("\n\n", "\n").strip()
-        print(trimmed)
-        print()
-        print(repr(trimmed))
+        # trimmed = text.replace("  ", "").replace("\r", "").replace("\n\n", "\n").strip()
+        # print(trimmed)
+        # print()
+        # print(repr(trimmed))
 
-        clauses = corpus_entry["clauses"]
-        print()
-        print(clauses.__len__(), "clauses")
-        for clause in clauses:
-            print("clause", clause)
+        # clauses = corpus_entry["clauses"]
+        # print()
+        # print(clauses.__len__(), "clauses")
+        # for clause in clauses:
+        #     print("clause", clause)
 
-        arguments = corpus_entry["arguments"]
-        print()
-        print(arguments.__len__(), "arguments")
-        for argument in arguments:
-            print("argument", argument)
+        # arguments = corpus_entry["arguments"]
+        # print()
+        # print(arguments.__len__(), "arguments")
+        # for argument in arguments:
+        #     print("argument", argument)
 
-        # to extract individual sections:
+        # TODO: to extract individual sections (rough sketch, needs verification):
         # - instantiate sections_array=[] and last_index=0
         # - split string on blanks into array of words
         # - traverse words and check for all uppercase
