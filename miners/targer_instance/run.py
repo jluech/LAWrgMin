@@ -5,6 +5,7 @@ warnings.filterwarnings("ignore")
 import glob
 import time
 import json
+import os
 
 def process(file):
 	filename = 'data/in/' + file +'.txt'
@@ -20,10 +21,12 @@ def process(file):
 	model.label('Therefore fixed punishment will')
 	result = model.label_with_probs(inputtext)
 
-	#from ModelNewES import ModelNewES
-	#model = ModelNewES()
-	from ModelNewSciArg import ModelNewSciArg
-	model = ModelNewSciArg()
+	from ModelNewES import ModelNewES
+	model = ModelNewES()
+	# model = ModelNewSciArg()
+	# from ModelNewSciArg import ModelNewSciArg
+	# from Model import Model
+	# model = Model()
 	result = model.label(inputtext)
 	res = result
 
@@ -65,9 +68,20 @@ def process(file):
 	#print(out)
 	#[print(o) for o in res]
 	#print(res)
-	
-	f = open('data/out/' + file +'.out', 'w+')
-	json.dump(res, f)
+	out_dir = 'data/out'
+	out_path = '/'.join([out_dir, file+'.out'])
+	if not os.path.exists(out_dir):
+		os.mkdir(out_dir)
+	if os.path.exists(out_path):
+		os.remove(out_path)
+	# if not os.path.exists(out_path):
+		# new = open(out_path, "x")
+		# new.close()
+
+	# f = open(out_path, 'w+')
+	# with open(out_path, 'w+') as f:
+	with open(out_path, 'x') as f:
+		json.dump(res, f)
 	"""
 	for r in res[:-1]:
 		f.write(r + '\n')
@@ -78,13 +92,17 @@ def process(file):
 
 if __name__ == "__main__":
 	files = glob.glob('data/in/*.txt')
+	# print("initial glob", files)
 	files = [f.split('/')[-1].split('.')[0] for f in files]
+	# print("split", files)
 	files.sort()
+	# print("sorted", files)
+	print("Found files:", files)
 	#files = ['A01']
 	
 	times = []
 	for file in files:
-		print('Processing ' + file)
+		print('\nProcessing ' + file)
 		start_time = time.time()
 		process(file)
 		end_time = time.time()
@@ -93,9 +111,15 @@ if __name__ == "__main__":
 	no_files = len(files)
 	timed = sum(times)
 	avg_time = timed / no_files
-	
-	f = open('data/out/stats.txt', 'w+')
+
+	print("\nWriting stats to file...")
+	stats_path = 'data/out/stats.txt'
+	if os.path.exists(stats_path):
+		os.remove(stats_path)
+	# f = open(stats_path, 'w+')
+	f = open(stats_path, 'x')
 	f.write('No. files:\t' + str(no_files) + '\n')
 	f.write('Total time:\t' + str(round(timed, 2)) + '\n')
 	for i, file in enumerate(files):
-		f.write(file + ':\t' + str(round(times[i], 2)) + '\n')	
+		f.write(file + ':\t' + str(round(times[i], 2)) + '\n')
+	print("=== Done ===")
