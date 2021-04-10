@@ -9,6 +9,7 @@ import json
 path = "models/model_new_wd.hdf5"
 
 
+# TODO: This is basically the same as ModelNewES but without replacing the labels
 class ModelNewWD:
 
     tagger =TaggerFactory.load(path, -1)

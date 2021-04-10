@@ -14,3 +14,4 @@ miners/targer_instance/data/out
 # python internals
 **/__pycache__
 **/venv
+**/venv36

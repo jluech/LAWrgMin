@@ -11,6 +11,8 @@ path = "models/2021_01_15_11-52_42_tagger.hdf5"
 def replace_labels(input):
     return input.replace('B-Premise','P-B').replace('I-Premise','P-I').replace('I-Claim','C-I').replace('B-Claim','C-B').replace("B-MajorClaim", "C-B").replace("I-MajorClaim", "C-I")
 
+
+# TODO: this is the exact same as ModelNewES just with a different path
 class ModelNewMY:
 
     tagger =TaggerFactory.load(path, -1)
