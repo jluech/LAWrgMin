@@ -1,125 +1,128 @@
 # -*- coding: utf-8 -*-
 
-import warnings
-warnings.filterwarnings("ignore")
 import glob
 import time
 import json
 import os
+import warnings
+
+warnings.filterwarnings("ignore")
+
 
 def process(file):
-	filename = 'data/in/' + file +'.txt'
+	# ===== load file =====
+	filename = "data/in/{0}.txt".format(file)
+	with open(filename, "r", encoding="utf-8") as f:
+		input_text = f.read()
 
-	# load file
-	with open(filename, 'r', encoding='utf-8') as f:
-		inputtext = f.read()
-
+	# ===== address keras bug =====
 	from Model import Model
-	model = Model('IBM.h5')
-	#We must call this cause of a keras bug
-	#https://github.com/keras-team/keras/issues/2397
-	model.label('Therefore fixed punishment will')
-	result = model.label_with_probs(inputtext)
+	model = Model("IBM.h5")
+	# We must call this because of a keras bug
+	# https://github.com/keras-team/keras/issues/2397
+	model.label("Therefore fixed punishment will")
+	model.label_with_probs(input_text)
 
-	from ModelNewES import ModelNewES
-	model = ModelNewES()
-	# model = ModelNewSciArg()
+	# ===== select model =====
+	from Model import Model
+	model = Model("IBM.h5")
+	# from ModelNewES import ModelNewES
+	# model = ModelNewES()
 	# from ModelNewSciArg import ModelNewSciArg
+	# model = ModelNewSciArg()
 	# from Model import Model
 	# model = Model()
-	result = model.label(inputtext)
-	res = result
 
-	"""
-	#print(result)
-	#print('======================')
-	res = []
-	for sentence in result:
-		for word in sentence:
-			token = word['token']
-			label = word['label'][::-1]
-			res.append(token + '\t' + label)
-				
-	# merge parts for single label
-	out = []
-	for sentence in result:
-		out.append([])
-		curr = ''
-		for word in sentence:
-			#print(word)
-			#if float(word['prob']) < 0.9:
-			#	curr = ''
-			#	continue
-			if not curr == word['label'][0]:
-				curr = word['label'][0]
-				out[-1].append({curr : []})
-			out[-1][-1][curr].append(word['token'])
+	# ===== process and label input text =====
+	# raw_results = model.label(input_text)
+	raw_results = model.label_with_probs(input_text)
 
-	#out = [o for sub in out for o in sub]
-	res = []
-	for o in out:
-		for i in o:
-			key = list(i.keys())[0]
-			if not key == 'O':
-				res.append(key + '\t' + ' '.join(list(i.values())[0]))
-	"""
-	
-	#[print(o) for o in out]
-	#print(out)
-	#[print(o) for o in res]
-	#print(res)
-	out_dir = 'data/out'
-	out_path = '/'.join([out_dir, file+'.out'])
+	# ===== merge fragments with same label - losing probability =====
+	merged_results = []
+	for sentence in raw_results:
+		current_label = ""
+		words = []
+		for word in sentence:
+			if float(word["prob"]) < 0.9:
+				print("prob < 0.9 in", word)
+				current_label = ""  # cut out unsure classification
+				continue
+			meta_label = word["label"][0]  # P or O
+			if not current_label == meta_label:
+				current_label = meta_label  # match following words with same meta label
+				# instantiate new group for meta label not matching previous meta label
+				words.append({"label": current_label, "text": []})
+			words[-1]["text"].append(word["token"])  # add word to latest group's text
+		merged_results.append(words)
+
+	# ===== collect understandable text from merged results =====
+	text_only = []
+	for sentence in merged_results:
+		for label_group in sentence:
+			label = list(label_group.keys())[0]
+			if not label == "O":
+				text_only.append(label + "\t" + " ".join(label_group[label]))
+
+	# ===== print any collected results =====
+	# [print(raw_sentence) for raw_sentence in raw_results]
+	# print(raw_results)
+	# [print(merged_sentence) for merged_sentence in merged_results]
+	# print(merged_results)
+	# [print(nice_sentence) for nice_sentence in text_only]
+	# print(text_only)
+
+	# ===== prepare output directory =====
+	out_dir = "data/out"
+	out_path = "/".join([out_dir, file + ".out"])
 	if not os.path.exists(out_dir):
 		os.mkdir(out_dir)
 	if os.path.exists(out_path):
 		os.remove(out_path)
-	# if not os.path.exists(out_path):
-		# new = open(out_path, "x")
-		# new.close()
 
-	# f = open(out_path, 'w+')
-	# with open(out_path, 'w+') as f:
-	with open(out_path, 'x') as f:
-		json.dump(res, f)
-	"""
-	for r in res[:-1]:
-		f.write(r + '\n')
-	r = res[-1]
-	f.write(r)
-	"""
-	
+	# ===== write output to file =====
+	# output = {"results": raw_results}
+	output = {"results": merged_results}
+	# output = {"results": text_only}
+
+	print("\n> Writing output to file...")
+	with open(out_path, "x") as f:
+		json.dump(output, f)
+
 
 if __name__ == "__main__":
-	files = glob.glob('data/in/*.txt')
+	# ===== collect input files =====
+	files = glob.glob("data/in/*.txt")
 	# print("initial glob", files)
-	files = [f.split('/')[-1].split('.')[0] for f in files]
+	files = [f.split("/")[-1].split('.')[0] for f in files]
 	# print("split", files)
 	files.sort()
 	# print("sorted", files)
-	print("Found files:", files)
-	#files = ['A01']
-	
+	print("=== Found files:", files, "===")
+
+	# ===== process files and measure execution time =====
 	times = []
 	for file in files:
-		print('\nProcessing ' + file)
+		print("\n=== Processing", file, "===")
 		start_time = time.time()
 		process(file)
 		end_time = time.time()
+		print("= Done processing file")
 		times.append(end_time - start_time)
 	
-	no_files = len(files)
+	nr_files = len(files)
 	timed = sum(times)
-	avg_time = timed / no_files
+	avg_time = timed / nr_files
 
-	print("\nWriting stats to file...")
-	stats_path = 'data/out/stats.txt'
+	# ===== write stats to file =====
+	print("\n> Writing overall stats to file...")
+	stats_path = "data/out/stats.txt"
 	if os.path.exists(stats_path):
 		os.remove(stats_path)
-	# f = open(stats_path, 'w+')
-	f = open(stats_path, 'x')
-	f.write('No. files:\t' + str(no_files) + '\n')
-	f.write('Total time:\t' + str(round(timed, 2)) + '\n')
-	for i, file in enumerate(files):
-		f.write(file + ':\t' + str(round(times[i], 2)) + '\n')
+
+	with open(stats_path, "x") as f:
+		f.write("Nr. files:\t" + str(nr_files) + "\n")
+		f.write("Total time:\t" + str(round(timed, 2)) + "\n")
+		for idx, file in enumerate(files):
+			f.write(file + ":\t" + str(round(times[idx], 2)) + "\n")
+
 	print("=== Done ===")
