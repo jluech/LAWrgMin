@@ -24,3 +24,7 @@ Make sure you are using python v3.5.3 for this
 
 Models are huge and were left away for this repository.
 To get them, follow the instructions in the [models](./models/add_models.md) folder
+
+### Prepare Word Vectors
+
+Execute the scripts in the [embeddings](lstm/embeddings) folder to download the fasttext and glove word vectors.
