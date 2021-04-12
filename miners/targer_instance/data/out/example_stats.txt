@@ -1,0 +1,3 @@
+Nr. files:	1
+Total time:	16.18
+example_input:	16.18

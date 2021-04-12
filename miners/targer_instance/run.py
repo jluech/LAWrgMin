@@ -109,11 +109,11 @@ if __name__ == "__main__":
 		print("= Done processing file")
 		times.append(end_time - start_time)
 	
+	# ===== write stats to file =====
 	nr_files = len(files)
 	timed = sum(times)
 	avg_time = timed / nr_files
 
-	# ===== write stats to file =====
 	print("\n> Writing overall stats to file...")
 	stats_path = "data/out/stats.txt"
 	if os.path.exists(stats_path):
