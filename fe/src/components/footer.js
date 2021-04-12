@@ -1,6 +1,7 @@
-import footer from '../images/footerimage.jpg';
-import './App.css';
 import React from 'react';
+
+import './App.css';
+import footer from '../images/footerimage.jpg';
 
 class Footer extends React.Component {
 

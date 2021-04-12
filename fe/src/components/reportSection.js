@@ -1,15 +1,10 @@
-import footer from '../images/footerimage.jpg';
+import React from 'react';
+
 import uzh from '../images/uzh.svg';
 import './App.css';
-import { report } from './data.js';
-import Header from "./header";
-import Lawrgminer from './lawrgminer';
-import Button from 'react-bootstrap/Button';
-import React from 'react';
-import Footer from "./footer";
+import {report} from './data.js';
 
 class ReportSection extends React.Component {
-
     render() {
         return <div>
             <div className="light">
