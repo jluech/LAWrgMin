@@ -1,0 +1,115 @@
+.App {
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    display: inline-block;
+
+  }
+}
+
+.App-header {
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #282c34;
+  /* min-height: 100vh; */
+  align-items: flex-end;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+div.header-footer-content-box {
+  padding-bottom: 2em;
+  padding-top: 6em;
+}
+
+Link {
+  color: plum;
+}
+
+.App-footer {
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #282c34;
+  /* min-height: 100vh; */
+  align-items: flex-end;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dashed border */
+hr.dashed {
+  border-top: 3px dashed #bbb;
+}
+
+/* Dotted border */
+hr.dotted {
+  border-top: 3px dotted #bbb;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid white;
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
+div.light {
+  background-color: slategray;
+}
+
+div.dark {
+  background-color: #282c34;
+}
+
+.textbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.section {
+  color: white;
+  position: relative;
+  left: 10%;
+  padding-top: 1em;
+}
+
+p.text {
+  color: white;
+  position: relative;
+  left: 10%;
+  white-space: pre-line;
+  display: inline-block;
+  padding-bottom: 1em;
+
+}
+
+img.text-image {
+  height: 100px;
+  vertical-align: middle;
+}
