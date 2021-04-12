@@ -1,6 +1,8 @@
 # TARGER
-### ignore models due to size
+### ignore files due to size
 miners/targer_instance/models
+miners/targer_instance/lstm/embeddings
+
 
 ### ignore input/output folders due to volatility
 miners/targer_instance/data/in
