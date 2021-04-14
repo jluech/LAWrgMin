@@ -1,0 +1,2 @@
+poppler-utils==0.1.0
+textract==1.6.3
