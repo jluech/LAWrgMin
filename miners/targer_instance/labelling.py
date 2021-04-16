@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import glob
-import time
 import json
 import os
+import time
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -91,9 +91,9 @@ def process(file):
 
 if __name__ == "__main__":
 	# ===== collect input files =====
-	files = glob.glob("data/in/*.txt")
+	files = glob.glob(os.path.abspath("./data/in/*.txt"))
 	# print("initial glob", files)
-	files = [f.split("/")[-1].split('.')[0] for f in files]
+	files = [f.split(("/" if "/" in f else "\\"))[-1].split('.')[0] for f in files]
 	# print("split", files)
 	files.sort()
 	# print("sorted", files)
