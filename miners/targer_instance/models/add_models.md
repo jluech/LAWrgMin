@@ -19,3 +19,6 @@ wget http://ltdata1.informatik.uni-hamburg.de/targer/WD.h5 &&
 wget http://ltdata1.informatik.uni-hamburg.de/targer/WD_dep.h5 &&
 wget http://ltdata1.informatik.uni-hamburg.de/targer/model_new_es.hdf5 &&
 wget http://ltdata1.informatik.uni-hamburg.de/targer/model_new_wd.hdf5`
+
+**On Windows** it gets a little more cumbersome as `wget` is not coming with Windows by default.
+Instead you can download the models with `bitsadmin` (built-in cli download tool), see the [documentation examples](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/bitsadmin-examples).
