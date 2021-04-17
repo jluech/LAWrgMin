@@ -1,8 +1,20 @@
 import json
+import numpy as np
+from operator import itemgetter
 import os
 
-echr_corpus_path = "/datasets/echr_corpus/ECHR_Corpus.json"  # local linux path, not repo specific
+echr_corpus_path = "/home/adrian/Desktop/FS2021/AI/Project/LAWrgMin/corpus_processing/datasets/echr_corpus/ECHR_Corpus.json"  # local linux path, not repo specific
 
+def find_clause_from_id(clauses, id):
+    for clause in clauses:
+        if clause['id'] == id:
+            return clause
+
+def tag_sent_to_str(tagged_sentences):
+
+
+
+    return None
 
 def parse_corpus_data():
     with open(echr_corpus_path) as corpus_file:
@@ -24,22 +36,63 @@ def parse_corpus_data():
         print(keys)
         print()
 
-        # ========== extract trimmed text from each case and write to txt file ==========
-        out_dir = "./out"
-        if not os.path.exists(out_dir):
-            os.mkdir(out_dir)
         for index, case in enumerate(data):
-            # filename = "/".join([out_dir, "case-"+str(index)+".txt"])
-            filename = "/".join([out_dir, case["name"]])
+            text = case['text']
+
+            clauses = case['clauses']
+
+            tagged_sentences = np.arr([])
+
+            for argument in case['arguments']:
+
+                premises = argument['premises']
+                for premise_id in premises:
+                    clause = find_clause_from_id(clauses, premise_id)
+                    start = clause["start"]
+                    end = clause["end"]
+                    sentence = text[start:end]
+                    sentence_tagged = {'text': sentence, 'label': 'P', 'start': start, 'end': end}
+                    np.append(tagged_sentences, sentence_tagged)
+
+                conclusions = argument['conclusion']
+                for conclusion_id in conclusions:
+                    clause = find_clause_from_id(clauses, conclusion_id)
+                    start = clause["start"]
+                    end = clause["end"]
+                    sentence = text[start:end]
+                    sentence_tagged = {'text': sentence, 'label': 'P', 'start': start, 'end': end}
+                    np.append(tagged_sentences, sentence_tagged)
+
+            tagged_sentences = sorted(tagged_sentences, key=itemgetter('start'))
+
+            text_with_IOB = tag_sent_to_str(tagged_sentences)
+
+            filename = "/".join([out_dir, case["name"]]) + "_IOB"
             if os.path.exists(filename):
                 os.remove(filename)
 
-            text = case["text"]
-            trimmed = text.replace("  ", "").replace("\r", "").replace("\n\n", "\n").strip()
-
             casefile = open(filename, "x")
-            casefile.write(trimmed)
+            casefile.write(text_with_IOB)
             casefile.close()
+            print(case["name"] + "_IOB")
+
+
+        # ========== extract trimmed text from each case and write to txt file ==========
+        # out_dir = "./out"
+        # if not os.path.exists(out_dir):
+        #     os.mkdir(out_dir)
+        # for index, case in enumerate(data):
+        #     # filename = "/".join([out_dir, "case-"+str(index)+".txt"])
+        #     filename = "/".join([out_dir, case["name"]])
+        #     if os.path.exists(filename):
+        #         os.remove(filename)
+        #
+        #     text = case["text"]
+        #     trimmed = text.replace("  ", "").replace("\r", "").replace("\n\n", "\n").strip()
+        #
+        #     casefile = open(filename, "x")
+        #     casefile.write(trimmed)
+        #     casefile.close()
 
         # ========== further inspect specific first entry of corpus ==========
         # for key in keys:

@@ -8,6 +8,10 @@ miners/targer_instance/lstm/embeddings
 miners/targer_instance/data/in
 miners/targer_instance/data/out
 
+### ignore echr dataset due to size
+corpus_processing/datasets
+corpus_processing/out
+
 
 # IDEA project folder
 .idea

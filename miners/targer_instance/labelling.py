@@ -80,8 +80,8 @@ def process(file):
 		os.remove(out_path)
 
 	# ===== write output to file =====
-	# output = {"results": raw_results}
-	output = {"results": merged_results}
+	output = {"results": raw_results}
+#	output = {"results": merged_results}
 	# output = {"results": text_only}
 
 	print("\n> Writing output to file...")
