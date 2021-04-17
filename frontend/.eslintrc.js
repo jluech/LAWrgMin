@@ -8,7 +8,7 @@ module.exports = {
   extends: [
       "eslint:recommended",
       "plugin:react/recommended",
-      // "prettier" // put last to override other configs
+      "prettier" // put last to override other configs
   ],
   ignorePatterns: [".idea/*", "assets/*", "build/*", "node_modules/*", "public/*"],
   parser: "babel-eslint",
