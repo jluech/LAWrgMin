@@ -94,14 +94,19 @@ div.dark {
 .section {
     color: white;
     position: relative;
-    left: 10%;
+    padding-top: 1em;
+}
+
+.section-title {
+    margin-left: 10%;
+    color: white;
+    position: relative;
     padding-top: 1em;
 }
 
 p.text {
     color: white;
     position: relative;
-    left: 10%;
     white-space: pre-line;
     display: inline-block;
     padding-bottom: 1em;

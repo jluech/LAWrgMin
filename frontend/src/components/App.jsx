@@ -1,26 +1,22 @@
-import './App.css';
-import { report } from './data.js';
+import "./App.css";
 import {Header} from "./header";
-import {Lawrgminer} from './lawrgminer';
-import Button from 'react-bootstrap/Button';
-import React from 'react';
+import {Lawrgminer} from "./lawrgminer";
+import React from "react";
 import {Footer} from "./footer";
 import {ReportSection} from "./reportSection";
 
-
 export class App extends React.Component {
-
     render() {
-        return <div className="App">
+        return (
+            <div className="App">
+                <Header />
+                <body>
+                    <ReportSection />
+                    <Lawrgminer />
+                </body>
 
-            <Header />
-            <body>
-                <ReportSection />
-                <Lawrgminer />
-            </body>
-
-            <Footer />
-        </div>
+                <Footer />
+            </div>
+        );
     }
 }
-
