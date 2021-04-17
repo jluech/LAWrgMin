@@ -1,36 +1,28 @@
-import axios from 'axios';
-import React from 'react';
+import React from "react";
+import axios from "axios";
 
 export class FileUpload extends React.Component {
-
     constructor() {
         super();
         this.state = {
             // Initially, no file is selected
-            selectedFile: null
-        }
+            selectedFile: null,
+        };
     }
 
     // On file select (from the pop up)
-    onFileChange = event => {
-
+    onFileChange = (event) => {
         // Update the state
-        this.setState({ selectedFile: event.target.files[0] });
-
+        this.setState({selectedFile: event.target.files[0]});
     };
 
     // On file upload (click the upload button)
     onFileUpload = () => {
-
         // Create an object of formData
         const formData = new FormData();
 
         // Update the formData object
-        formData.append(
-            "myFile",
-            this.state.selectedFile,
-            this.state.selectedFile.name
-        );
+        formData.append("myFile", this.state.selectedFile, this.state.selectedFile.name);
 
         // Details of the uploaded file
         console.log(this.state.selectedFile);
@@ -43,24 +35,16 @@ export class FileUpload extends React.Component {
     // File content to be displayed after
     // file upload is complete
     fileData = () => {
-
         if (this.state.selectedFile) {
-
             return (
                 <div>
                     <h2>File Details:</h2>
 
                     <p>File Name: {this.state.selectedFile.name}</p>
 
-
                     <p>File Type: {this.state.selectedFile.type}</p>
 
-
-                    <p>
-                        Last Modified:{" "}
-                        {this.state.selectedFile.lastModifiedDate.toDateString()}
-                    </p>
-
+                    <p>Last Modified: {this.state.selectedFile.lastModifiedDate.toDateString()}</p>
                 </div>
             );
         } else {
@@ -74,24 +58,15 @@ export class FileUpload extends React.Component {
     };
 
     render() {
-
         return (
-            <div>
-                <h1>
-                    GeeksforGeeks
-                </h1>
-                <h3>
-                    File Upload
-                </h3>
+            <div style={{marginLeft:"10%"}}>
+                <h3>Or browse a file of your computer</h3>
                 <div>
                     <input type="file" onChange={this.onFileChange} />
-                    <button onClick={this.onFileUpload}>
-                        Upload!
-                    </button>
+                    <button onClick={this.onFileUpload}>Upload!</button>
                 </div>
                 {this.fileData()}
             </div>
         );
     }
 }
-
