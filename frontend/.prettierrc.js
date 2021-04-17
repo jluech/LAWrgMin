@@ -6,7 +6,7 @@ module.exports = {
     // add semicolon after each statement
     semi: true,
     // do not enforce single quote strings, default double, choose the one for least escaping
-    singleQuote: true,
+    singleQuote: false,
     quoteProps: "as-needed",
     // do not enforce single quotes in jsx(jsx is based on HTML double quotes)
     jsxSingleQuote: false,
