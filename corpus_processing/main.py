@@ -5,16 +5,28 @@ import os
 
 echr_corpus_path = "/home/adrian/Desktop/FS2021/AI/Project/LAWrgMin/corpus_processing/datasets/echr_corpus/ECHR_Corpus.json"  # local linux path, not repo specific
 
+
 def find_clause_from_id(clauses, id):
     for clause in clauses:
-        if clause['id'] == id:
+        if clause['_id'] == id:
             return clause
 
+
 def tag_sent_to_str(tagged_sentences):
+
+    # tagged sentences format: {'text': sentence, 'label': 'P', 'start': start, 'end': end}
+
+    text = ''
+
 
 
 
     return None
+
+def is_major_argument(claim):
+
+
+    return False
 
 def parse_corpus_data():
     with open(echr_corpus_path) as corpus_file:
@@ -41,38 +53,54 @@ def parse_corpus_data():
 
             clauses = case['clauses']
 
-            tagged_sentences = np.arr([])
+            case_annotated = ''
+
+            #tag counter
+            tag_counter = 1
+
+            #relation-counter
+            relation_counter = 1
 
             for argument in case['arguments']:
-
                 premises = argument['premises']
+                claim = argument['conclusion']
+
+                claim_id = 0
+
+                if is_major_argument(claim):
+                    clause = find_clause_from_id(clauses, argument['conclusion'])
+                    start = clause['start']
+                    end = clause['end']
+                    case_annotated = case_annotated + '\nT' + str(tag_counter) + '\tMajorClaim' + ' ' + str(start) + ' ' + str(end) + '\t' + text[start:end]
+                    claim_id = tag_counter
+                    tag_counter = tag_counter + 1
+                else:
+                    print()
+                    clause = find_clause_from_id(clauses, argument['conclusion'])
+                    start = clause['start']
+                    end = clause['end']
+                    print(clause)
+                    case_annotated = case_annotated + '\nT' + str(tag_counter) + '\tClaim' + ' ' + str(start) + ' ' + str(end) + '\t' + \
+                                     text[start:end]
+                    claim_id = tag_counter
+                    tag_counter = tag_counter + 1
+
                 for premise_id in premises:
                     clause = find_clause_from_id(clauses, premise_id)
-                    start = clause["start"]
-                    end = clause["end"]
-                    sentence = text[start:end]
-                    sentence_tagged = {'text': sentence, 'label': 'P', 'start': start, 'end': end}
-                    np.append(tagged_sentences, sentence_tagged)
+                    start = clause['start']
+                    end = clause['end']
+                    case_annotated = case_annotated + '\nT' + str(tag_counter) + '\tPremise ' + str(start) + ' ' + str(end) + '\t' + text[start:end]
+                    tag_counter = tag_counter + 1
 
-                conclusions = argument['conclusion']
-                for conclusion_id in conclusions:
-                    clause = find_clause_from_id(clauses, conclusion_id)
-                    start = clause["start"]
-                    end = clause["end"]
-                    sentence = text[start:end]
-                    sentence_tagged = {'text': sentence, 'label': 'P', 'start': start, 'end': end}
-                    np.append(tagged_sentences, sentence_tagged)
+                    case_annotated = case_annotated + '\nR' + str(relation_counter) + '\tsupports Arg1:T' + str(claim_id) + ' Arg2:T' + str(tag_counter)
 
-            tagged_sentences = sorted(tagged_sentences, key=itemgetter('start'))
-
-            text_with_IOB = tag_sent_to_str(tagged_sentences)
-
-            filename = "/".join([out_dir, case["name"]]) + "_IOB"
+            out_dir = "./out"
+            filename = "/".join([out_dir, case["name"]]) + ".ann"
             if os.path.exists(filename):
                 os.remove(filename)
 
             casefile = open(filename, "x")
-            casefile.write(text_with_IOB)
+            casefile.write(case_annotated)
             casefile.close()
             print(case["name"] + "_IOB")
 
