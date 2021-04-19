@@ -11,21 +11,12 @@ def find_clause_from_id(clauses, id):
         if clause['_id'] == id:
             return clause
 
-
-def tag_sent_to_str(tagged_sentences):
-
-    # tagged sentences format: {'text': sentence, 'label': 'P', 'start': start, 'end': end}
-
-    text = ''
-
-
-
-
-    return None
-
-def is_major_argument(claim):
-
-
+def is_major_argument(argument, case):
+    for premise_id in argument['premises']:
+        for other_arguments in case['arguments']:
+            if other_arguments['conclusion'] == premise_id:
+                print('MAJOR_CLAIM_FOUND')
+                return True
     return False
 
 def parse_corpus_data():
@@ -63,23 +54,20 @@ def parse_corpus_data():
 
             for argument in case['arguments']:
                 premises = argument['premises']
-                claim = argument['conclusion']
 
                 claim_id = 0
 
-                if is_major_argument(claim):
+                if is_major_argument(argument, case):
                     clause = find_clause_from_id(clauses, argument['conclusion'])
                     start = clause['start']
                     end = clause['end']
-                    case_annotated = case_annotated + '\nT' + str(tag_counter) + '\tMajorClaim' + ' ' + str(start) + ' ' + str(end) + '\t' + text[start:end]
+                    case_annotated = case_annotated + '\nT' + str(tag_counter) + '\tMajorClaim' + ' ' + str(start) + ' ' + str(end) + '\t' + text[start:end].replace('\n', '')
                     claim_id = tag_counter
                     tag_counter = tag_counter + 1
                 else:
-                    print()
                     clause = find_clause_from_id(clauses, argument['conclusion'])
                     start = clause['start']
                     end = clause['end']
-                    print(clause)
                     case_annotated = case_annotated + '\nT' + str(tag_counter) + '\tClaim' + ' ' + str(start) + ' ' + str(end) + '\t' + \
                                      text[start:end]
                     claim_id = tag_counter
@@ -103,6 +91,14 @@ def parse_corpus_data():
             casefile.write(case_annotated)
             casefile.close()
             print(case["name"] + "_IOB")
+
+            filename = "/".join([out_dir, case["name"]])
+            if os.path.exists(filename):
+                os.remove(filename)
+
+            casefile = open(filename, "x")
+            casefile.write(text)
+            casefile.close()
 
 
         # ========== extract trimmed text from each case and write to txt file ==========
