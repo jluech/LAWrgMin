@@ -39,10 +39,10 @@ def parse_corpus_data():
         # clauses: dict
         # arguments: dict
 
-        owd = os.getcwd()
+        orig_wd = os.getcwd()
 
         for index, case in enumerate(data):
-            os.chdir(owd)
+            os.chdir(orig_wd)
 
             text = case['text']
             trimmed = text.replace("  ", "").replace("\r", "").replace("\n", " ").strip()
@@ -103,12 +103,11 @@ def parse_corpus_data():
 
             path = './standoff2conll'
             if not os.path.exists(path):
-                clone = 'git clone https://github.com/spyysalo/standoff2conll'
-                os.system(clone)
+                os.system('git clone https://github.com/spyysalo/standoff2conll')
             os.chdir(path)
-            cwd = os.getcwd()
-            new_path = cwd.replace(path.replace('.', '', 1), '')
-            os.system('python standoff2conll.py ' + new_path + out_dir.replace('.', '', 1) + ' ' + new_path + out_dir.replace('.', '', 1))
+            new_path = os.getcwd().replace(path.replace('.', '', 1), '')
+            file_out_dir = new_path + out_dir.replace('.', '', 1)
+            os.system('python standoff2conll.py {__file_out_dir} {__file_out_dir}'.format(__file_out_dir=file_out_dir))
 
 
 if __name__ == "__main__":
