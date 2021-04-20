@@ -1,0 +1,158 @@
+.App {
+    text-align: left;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        display: inline-block;
+    }
+}
+
+.App-header {
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #282c34;
+    /* min-height: 100vh; */
+    align-items: flex-end;
+    display: flex;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+div.header-footer-content-box {
+    padding-bottom: 2em;
+    padding-top: 6em;
+}
+
+a.active {
+    color: white;
+    font-weight: 700;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 1em 1em
+}
+
+a:hover {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 1em 1em;
+}
+
+.App-footer {
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #282c34;
+    /* min-height: 100vh; */
+    align-items: flex-end;
+    display: flex;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Dashed border */
+hr.dashed {
+    border-top: 3px dashed #bbb;
+}
+
+/* Dotted border */
+hr.dotted {
+    border-top: 3px dotted #bbb;
+}
+
+/* Solid border */
+hr.solid {
+    border-top: 3px solid white;
+}
+
+/* Rounded border */
+hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+}
+
+div.light {
+    background-color: slategray;
+}
+
+div.dark {
+    background-color: #282c34;
+}
+
+.textbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.section {
+    color: white;
+}
+
+.section-title {
+    margin-left: 10%;
+    color: white;
+    position: relative;
+    padding-top: 1em;
+}
+
+p.text {
+    color: white;
+    position: relative;
+    white-space: pre-line;
+    display: inline-block;
+    padding-bottom: 1em;
+}
+
+img.text-image {
+    height: 100px;
+    vertical-align: middle;
+}
+
+.dx-list-item-content > div {
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+}
+
+.options {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(191, 191, 191, 0.15);
+}
+
+.options .caption {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.option {
+    margin-top: 10px;
+}
+
+.option > span {
+    margin-right: 10px;
+}
+
+.option > .dx-selectbox {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 350px;
+    width: 100%;
+}
