@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FileDocumentMultipleOutlineIcon from "mdi-react/FileDocumentMultipleOutlineIcon";
 
-import "./scss/lawrgminer.scss";
+import "../../scss/lawrgminer.scss";
 import {FileUpload} from "./fileupload";
 import {DragAndDrop} from "./draganddrop";
 import {Arguments} from "./arguments";

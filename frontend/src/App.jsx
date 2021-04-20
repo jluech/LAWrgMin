@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./App.scss";
+import "./scss/app.scss";
 import {Header} from "./layout/header";
 import {Lawrgminer} from "./components/miner/lawrgminer";
 import {Footer} from "./layout/footer";
@@ -9,7 +9,7 @@ import {ReportSection} from "./components/report/reportSection";
 export class App extends React.Component {
     render() {
         return (
-            <div className="App">
+            <div className="text-left">
                 <Header />
 
                 <body>

@@ -1,0 +1,30 @@
+@import "variables";
+
+.textbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+p.text {
+  color: white;
+  position: relative;
+  white-space: pre-line;
+  display: inline-block;
+  padding-bottom: 1em;
+}
+
+div.light {
+  background-color: slategray;
+}
+
+div.dark {
+  background-color: $backgroundColor;
+}
+
+img.text-image {
+  height: 100px;
+  vertical-align: middle;
+}

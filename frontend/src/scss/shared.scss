@@ -1,0 +1,52 @@
+/* Links and Anchors */
+a.active {
+  color: white;
+  font-weight: 700;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 1em 1em;
+}
+
+a:hover {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 1em 1em;
+}
+
+
+/* Headers and Text */
+.section {
+  color: white;
+}
+
+.section-title {
+  margin-left: 10%;
+  color: white;
+  position: relative;
+  padding-top: 1em;
+}
+
+.text-left {
+  text-align: left;
+}
+
+
+/* Vertical Division Lines */
+hr {
+  &.dashed {
+    border-top: 3px dashed #bbb;
+  }
+
+  &.dotted {
+    border-top: 3px dotted #bbb;
+  }
+
+  &.solid {
+    border-top: 3px solid white;
+  }
+
+  &.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+  }
+}
