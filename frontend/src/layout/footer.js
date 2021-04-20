@@ -1,5 +1,5 @@
 import footer from "../images/footerimage.jpg";
-import "./App.css";
+import "../App.css";
 import React from "react";
 
 export class Footer extends React.Component {

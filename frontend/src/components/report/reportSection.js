@@ -1,7 +1,7 @@
 import React from "react";
 
-import uzh from "../images/uzh.svg";
-import "./App.css";
+import uzh from "../../images/uzh.svg";
+import "../../App.css";
 import {report} from "./data.js";
 
 export class ReportSection extends React.Component {

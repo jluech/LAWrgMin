@@ -1,15 +1,16 @@
 import "./App.css";
-import {Header} from "./header";
-import {Lawrgminer} from "./lawrgminer";
+import {Header} from "./layout/header";
+import {Lawrgminer} from "./components/miner/lawrgminer";
 import React from "react";
-import {Footer} from "./footer";
-import {ReportSection} from "./reportSection";
+import {Footer} from "./layout/footer";
+import {ReportSection} from "./components/report/reportSection";
 
 export class App extends React.Component {
     render() {
         return (
             <div className="App">
                 <Header />
+
                 <body>
                     <ReportSection />
                     <Lawrgminer />

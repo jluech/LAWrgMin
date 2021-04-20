@@ -7,8 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {Link} from "react-scroll";
 
 export class Header extends React.Component {
-
-
     render() {
         return (
             <div className="App">
