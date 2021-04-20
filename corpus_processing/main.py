@@ -4,7 +4,7 @@ import os
 from shutil import copyfile
 
 
-echr_corpus_path = "/home/adrian/Desktop/FS2021/AI/Project/LAWrgMin/corpus_processing/datasets/echr_corpus/ECHR_Corpus.json"  # local linux path, not repo specific
+echr_corpus_path = "/".join([os.getcwd(), "datasets/echr_corpus/ECHR_Corpus.json"])
 
 
 def find_clause_from_id(clauses, id):
@@ -109,8 +109,6 @@ def parse_corpus_data():
             cwd = os.getcwd()
             new_path = cwd.replace(path.replace('.', '', 1), '')
             os.system('python standoff2conll.py ' + new_path + out_dir.replace('.', '', 1) + ' ' + new_path + out_dir.replace('.', '', 1))
-            print(path)
-            print(new_path)
 
 
 if __name__ == "__main__":
