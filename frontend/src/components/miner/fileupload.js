@@ -32,8 +32,7 @@ export class FileUpload extends React.Component {
         axios.post("api/uploadfile", formData);
     };
 
-    // File content to be displayed after
-    // file upload is complete
+    // File content to be displayed after file upload is complete
     fileData = () => {
         if (this.state.selectedFile) {
             return (
@@ -44,7 +43,9 @@ export class FileUpload extends React.Component {
 
                     <p className={"section"}>File Type: {this.state.selectedFile.type}</p>
 
-                    <p className={"section"}>Last Modified: {this.state.selectedFile.lastModifiedDate.toDateString()}</p>
+                    <p className={"section"}>
+                        Last Modified: {this.state.selectedFile.lastModifiedDate.toDateString()}
+                    </p>
                 </div>
             );
         } else {
@@ -59,12 +60,11 @@ export class FileUpload extends React.Component {
 
     render() {
         return (
-            <div style={{marginLeft:"10%"}}>
+            <div style={{marginLeft: "10%"}}>
                 <h3 className={"section"}>Or browse a file of your computer</h3>
                 <div>
                     <input type="file" onChange={this.onFileChange} />
-                    <button
-                    onClick={this.onFileUpload}>Upload!</button>
+                    <button onClick={this.onFileUpload}>Upload!</button>
                 </div>
                 {this.fileData()}
             </div>

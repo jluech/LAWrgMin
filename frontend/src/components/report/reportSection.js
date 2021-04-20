@@ -1,7 +1,7 @@
 import React from "react";
 
-import uzh from "../images/uzh.svg";
-import "./App.css";
+import uzh from "../../images/uzh.svg";
+import "../../App.css";
 import {report} from "./data.js";
 
 export class ReportSection extends React.Component {
@@ -9,9 +9,7 @@ export class ReportSection extends React.Component {
         return (
             <div id="introduction">
                 <div className="light">
-                    <h2 className="section-title">
-                        {report[0].section}
-                    </h2>
+                    <h2 className="section-title">{report[0].section}</h2>
                     <div className="textbox">
                         <img className="text-image" src={uzh} alt={"uzh_logo"} />
                         <p className="text">{report[0].text}</p>

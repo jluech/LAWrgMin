@@ -1,26 +1,29 @@
-import React from 'react';
-import List from 'devextreme-react/list';
-import { products } from './mockdata.js';
-import 'devextreme/dist/css/dx.common.css';
-import 'devextreme/dist/css/dx.light.css';
+import React from "react";
+import List from "devextreme-react/list";
+import "devextreme/dist/css/dx.common.css";
+import "devextreme/dist/css/dx.light.css";
+
+import {products} from "./mockdata.js";
 
 function ItemTemplate(data) {
-    return <div>{data.Category}</div>;
+    return <div>{data.Name}</div>;
 }
 
-export class Claims extends React.Component {
+export class Arguments extends React.Component {
     constructor() {
         super();
         this.state = {
-            searchMode: 'contains'
+            searchMode: "contains",
         };
         this.onSearchModeChange = this.onSearchModeChange.bind(this);
     }
+
     onSearchModeChange(args) {
         this.setState({
-            searchMode: args.value
+            searchMode: args.value,
         });
     }
+
     render() {
         return (
             <div>
@@ -30,14 +33,13 @@ export class Claims extends React.Component {
                             dataSource={products}
                             height={600}
                             itemRender={ItemTemplate}
-                            searchExpr="Category"
+                            searchExpr="Name"
                             searchEnabled={true}
-                            searchMode={this.state.searchMode} />
+                            searchMode={this.state.searchMode}
+                        />
                     </div>
                 </React.Fragment>
             </div>
-
         );
     }
 }
-
