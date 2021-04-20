@@ -4,6 +4,7 @@ from operator import itemgetter
 import os
 import sys
 from shutil import copyfile
+import bconv
 
 
 echr_corpus_path = "/home/adrian/Desktop/FS2021/AI/Project/LAWrgMin/corpus_processing/datasets/echr_corpus/ECHR_Corpus.json"  # local linux path, not repo specific
@@ -25,9 +26,9 @@ def is_major_argument(argument, case):
 
 
 def get_start_end_trimmed(trimmed, sentence):
-    trimmed_sentence = sentence.replace("  ", "").replace("\r", "").replace("\n\n", "\n").strip()
+    trimmed_sentence = sentence.replace("  ", "").replace("\r", "").replace("\n", " ").strip()
     start = trimmed.find(trimmed_sentence)
-    end = start + len(trimmed)
+    end = start + len(trimmed_sentence)
     return start, end, trimmed_sentence
 
 
@@ -56,7 +57,7 @@ def parse_corpus_data():
             os.chdir(owd)
 
             text = case['text']
-            trimmed = text.replace("  ", "").replace("\r", "").replace("\n\n", "\n").strip()
+            trimmed = text.replace("  ", "").replace("\r", "").replace("\n", " ").strip()
 
             clauses = case['clauses']
 
@@ -104,7 +105,6 @@ def parse_corpus_data():
             casefile = open(ann_filename, "x")
             casefile.write(case_annotated)
             casefile.close()
-            print(ann_filename)
 
             filename = ann_filename.replace('.ann', '.txt')
             if os.path.exists(filename):
@@ -113,18 +113,19 @@ def parse_corpus_data():
             casefile = open(filename, "x")
             casefile.write(trimmed)
             casefile.close()
-            print(out_dir + '/annotation.conf')
+
             copyfile('annotation.conf', out_dir+'/annotation.conf')
 
-            path = './brat/tools'
+            path = './standoff2conll'
             if not os.path.exists(path):
-                clone = 'git clone https://github.com/nlplab/brat'
+                clone = 'git clone https://github.com/spyysalo/standoff2conll'
                 os.system(clone)
             os.chdir(path)
             cwd = os.getcwd()
             new_path = cwd.replace(path.replace('.', '', 1), '')
+            os.system('python standoff2conll.py ' + new_path + out_dir.replace('.', '', 1) + ' ' + new_path + out_dir.replace('.', '', 1))
             print(path)
-            os.system('python anntoconll.py ' + new_path + ann_filename.replace('.', '', 1))
+            print(new_path)
 
         # ========== extract trimmed text from each case and write to txt file ==========
         # out_dir = "./out"
