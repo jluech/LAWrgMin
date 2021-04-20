@@ -7,9 +7,9 @@ import {report} from "./data.js";
 export class ReportSection extends React.Component {
     render() {
         return (
-            <div>
+            <div id="introduction">
                 <div className="light">
-                    <h2 id="introduction" className="section-title">
+                    <h2 className="section-title">
                         {report[0].section}
                     </h2>
                     <div className="textbox">

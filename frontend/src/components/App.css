@@ -27,8 +27,18 @@ div.header-footer-content-box {
     padding-top: 6em;
 }
 
-Link {
-    color: plum;
+a.active {
+    color: white;
+    font-weight: 700;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 1em 1em
+}
+
+a:hover {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 1em 1em;
 }
 
 .App-footer {
