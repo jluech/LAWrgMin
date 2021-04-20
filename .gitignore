@@ -12,6 +12,10 @@ miners/targer_instance/data/out
 corpus_processing/datasets
 corpus_processing/out
 
+###ignore brat due to size
+corpus_processing/brat
+
+
 
 # IDEA project folder
 .idea
