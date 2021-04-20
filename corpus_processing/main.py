@@ -3,7 +3,6 @@ import numpy as np
 from operator import itemgetter
 import os
 import sys
-from nltk.tokenize import TweetTokenizer     # Simple tokenizer
 from shutil import copyfile
 
 
@@ -24,11 +23,13 @@ def is_major_argument(argument, case):
                 return True
     return False
 
+
 def get_start_end_trimmed(trimmed, sentence):
     trimmed_sentence = sentence.replace("  ", "").replace("\r", "").replace("\n\n", "\n").strip()
     start = trimmed.find(trimmed_sentence)
     end = start + len(trimmed)
     return start, end, trimmed_sentence
+
 
 def parse_corpus_data():
     with open(echr_corpus_path) as corpus_file:
@@ -89,9 +90,9 @@ def parse_corpus_data():
                     clause = find_clause_from_id(clauses, premise_id)
                     start, end, trimmed_sentence = get_start_end_trimmed(trimmed, text[clause['start']:clause['end']])
                     case_annotated = case_annotated + '\nT' + str(tag_counter) + '\tPremise ' + str(start) + ' ' + str(end) + '\t' + trimmed_sentence
-                    tag_counter = tag_counter + 1
 
-                    case_annotated = case_annotated + '\nR' + str(relation_counter) + '\tsupports Arg1:T' + str(claim_id) + ' Arg2:T' + str(tag_counter)
+                    case_annotated = case_annotated + '\nR' + str(relation_counter) + '\tsupports Arg1:T' + str(tag_counter) + ' Arg2:T' + str(claim_id)
+                    tag_counter = tag_counter + 1
 
             out_dir = "./out/" + case['name'].replace('.txt', '')
             if not os.path.exists(out_dir):
@@ -112,7 +113,7 @@ def parse_corpus_data():
             casefile = open(filename, "x")
             casefile.write(trimmed)
             casefile.close()
-            print(out_dir+'/annotation.conf')
+            print(out_dir + '/annotation.conf')
             copyfile('annotation.conf', out_dir+'/annotation.conf')
 
             path = './brat/tools'
