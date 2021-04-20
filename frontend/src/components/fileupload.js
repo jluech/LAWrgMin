@@ -38,20 +38,20 @@ export class FileUpload extends React.Component {
         if (this.state.selectedFile) {
             return (
                 <div>
-                    <h2>File Details:</h2>
+                    <h2 className={"section"}>File Details:</h2>
 
-                    <p>File Name: {this.state.selectedFile.name}</p>
+                    <p className={"section"}>File Name: {this.state.selectedFile.name}</p>
 
-                    <p>File Type: {this.state.selectedFile.type}</p>
+                    <p className={"section"}>File Type: {this.state.selectedFile.type}</p>
 
-                    <p>Last Modified: {this.state.selectedFile.lastModifiedDate.toDateString()}</p>
+                    <p className={"section"}>Last Modified: {this.state.selectedFile.lastModifiedDate.toDateString()}</p>
                 </div>
             );
         } else {
             return (
                 <div>
                     <br />
-                    <h4>Choose before Pressing the Upload button</h4>
+                    <h4 className={"section"}>Choose before Pressing the Upload button</h4>
                 </div>
             );
         }
@@ -60,7 +60,7 @@ export class FileUpload extends React.Component {
     render() {
         return (
             <div style={{marginLeft:"10%"}}>
-                <h3>Or browse a file of your computer</h3>
+                <h3 className={"section"}>Or browse a file of your computer</h3>
                 <div>
                     <input type="file" onChange={this.onFileChange} />
                     <button onClick={this.onFileUpload}>Upload!</button>
