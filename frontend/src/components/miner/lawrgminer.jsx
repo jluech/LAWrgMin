@@ -4,8 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FileDocumentMultipleOutlineIcon from "mdi-react/FileDocumentMultipleOutlineIcon";
 
 import "../../scss/lawrgminer.scss";
-import {FileUpload} from "./fileupload";
-import {DragAndDrop} from "./draganddrop";
+import {FileUpload} from "./file-upload";
+import {DragAndDrop} from "./drag-and-drop";
 import {Arguments} from "./arguments";
 import {Claims} from "./claims";
 
