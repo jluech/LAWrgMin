@@ -3,7 +3,7 @@ import List from "devextreme-react/list";
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
 
-import {products} from "./mockdata.js";
+import {products} from "./mock-data.js";
 
 function ItemTemplate(data) {
     return <div>{data.Category}</div>;
