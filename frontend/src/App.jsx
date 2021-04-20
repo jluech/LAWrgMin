@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./App.css";
+import "./App.scss";
 import {Header} from "./layout/header";
 import {Lawrgminer} from "./components/miner/lawrgminer";
 import {Footer} from "./layout/footer";
