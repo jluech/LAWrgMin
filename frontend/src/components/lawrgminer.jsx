@@ -3,6 +3,7 @@ import {FileUpload} from "./fileupload";
 import FileDocumentMultipleOutlineIcon from 'mdi-react/FileDocumentMultipleOutlineIcon';
 import {DragAndDrop} from "./draganddrop";
 
+
 export class Lawrgminer extends React.Component {
     constructor() {
         super();
@@ -38,6 +39,7 @@ export class Lawrgminer extends React.Component {
                     <hr className="solid" style={{position: "relative", top: "1em", left: "3em"}} />
 
                     <span style={{display: "flex", justifyContent:"center", alignItems:"center"}}>
+
 
                     </span>
                 </div>
