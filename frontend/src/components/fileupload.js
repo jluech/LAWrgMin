@@ -63,12 +63,8 @@ export class FileUpload extends React.Component {
                 <h3 className={"section"}>Or browse a file of your computer</h3>
                 <div>
                     <input type="file" onChange={this.onFileChange} />
-                    <link style={{
-                        border: "1px solid white",
-                        borderRadius:"10px",
-                        padding:"1em 2em",
-                        fontSize:"20px"
-                    }} onClick={this.onFileUpload}>Upload!</link>
+                    <button
+                    onClick={this.onFileUpload}>Upload!</button>
                 </div>
                 {this.fileData()}
             </div>
