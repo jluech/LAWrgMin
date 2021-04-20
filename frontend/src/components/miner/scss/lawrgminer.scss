@@ -1,0 +1,50 @@
+.lawrgminer {
+  background-color: #071032;
+}
+
+.miner-input {
+  .input-drag-drop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .section-drag-drop {
+      display: flex;
+      height: 300px;
+      width: 300px;
+      border: dashed grey 4px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.miner-results {
+  .miner-results-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .miner-results-claims {
+    margin-left: 10%;
+    margin-right: 5%;
+
+    & > h5 {
+      color: white;
+    }
+  }
+
+  .miner-results-arguments {
+    margin-right: 10%;
+
+    & > h5 {
+      color: white;
+    }
+  }
+
+  .miner-results-export-btn {
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+}
