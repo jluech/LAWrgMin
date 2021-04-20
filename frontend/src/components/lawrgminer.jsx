@@ -19,7 +19,7 @@ export class Lawrgminer extends React.Component {
     render() {
         return (
             <div id="lawrgminer" style={{backgroundColor: "#071032"}}>
-                <h2 id="introduction" className="section-title">
+                <h2 className="section-title">
                     I am the LAWrgMiner
                 </h2>
                 <h3 className="section-title">Argumentation Mining in Law</h3>
