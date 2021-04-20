@@ -1,19 +1,18 @@
 import React from "react";
 
 import footer from "../images/footerimage.jpg";
-import "../App.scss";
 
 export class Footer extends React.Component {
     render() {
         return (
-            <div className="App">
+            <div className="text-left">
                 <footer
-                    className="App-footer"
+                    className="app-footer"
                     style={{
                         backgroundImage: `url(${footer})`,
                     }}
                 >
-                    <div className="header-footer-content-box" style={{position: "relative", left: "10%"}}>
+                    <div className="footer-content-box" style={{position: "relative", left: "10%"}}>
                         <h3>AI Technology and Law</h3>
                         <hr className="solid" />
                         <h6>Course: AI: Technology and Law (FS21)</h6>

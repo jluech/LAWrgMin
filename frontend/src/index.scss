@@ -1,3 +1,17 @@
+// shared styles
+@import "scss/shared";
+@import "scss/variables";
+
+// layout styles
+@import "scss/app";
+@import "scss/header";
+@import "scss/footer";
+
+// component styles
+@import "scss/lawrgminer";
+@import "scss/report-section";
+
+
 // globally applicable styles
 body {
     margin: 0;

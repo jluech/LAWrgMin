@@ -2,19 +2,13 @@ import React from "react";
 import {Link} from "react-scroll";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import header_img from "../images/header_img.jpg";
 import uzh from "../images/uzh.svg";
 
 export class Header extends React.Component {
     render() {
         return (
-            <div className="App">
-                <header
-                    className="App-header"
-                    style={{
-                        backgroundImage: `url(${header_img})`,
-                    }}
-                >
+            <div className="text-left">
+                <header className="app-header">
                     <div>
                         <img src={uzh} alt={""} />
                         <ul
@@ -36,6 +30,7 @@ export class Header extends React.Component {
                                 </Link>
                             </li>
                         </ul>
+
                         <div style={{marginLeft: "30%", marginTop: "10%"}}>
                             <h1>LAWrgMiner Project</h1>
                             <hr className="solid" />

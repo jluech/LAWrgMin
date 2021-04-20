@@ -1,0 +1,20 @@
+@import "variables";
+
+.app-footer {
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $backgroundColor;
+  /* min-height: 100vh; */
+  align-items: flex-end;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+div.footer-content-box {
+  padding-bottom: 2em;
+  padding-top: 6em;
+}
