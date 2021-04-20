@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import glob
-import time
 import json
 import os
+import time
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -80,8 +80,8 @@ def process(file):
 		os.remove(out_path)
 
 	# ===== write output to file =====
-	# output = {"results": raw_results}
-	output = {"results": merged_results}
+	output = {"results": raw_results}
+#	output = {"results": merged_results}
 	# output = {"results": text_only}
 
 	print("\n> Writing output to file...")
@@ -91,9 +91,9 @@ def process(file):
 
 if __name__ == "__main__":
 	# ===== collect input files =====
-	files = glob.glob("data/in/*.txt")
+	files = glob.glob(os.path.abspath("./data/in/*.txt"))
 	# print("initial glob", files)
-	files = [f.split("/")[-1].split('.')[0] for f in files]
+	files = [f.split(("/" if "/" in f else "\\"))[-1].split('.')[0] for f in files]
 	# print("split", files)
 	files.sort()
 	# print("sorted", files)
@@ -109,11 +109,11 @@ if __name__ == "__main__":
 		print("= Done processing file")
 		times.append(end_time - start_time)
 	
+	# ===== write stats to file =====
 	nr_files = len(files)
 	timed = sum(times)
 	avg_time = timed / nr_files
 
-	# ===== write stats to file =====
 	print("\n> Writing overall stats to file...")
 	stats_path = "data/out/stats.txt"
 	if os.path.exists(stats_path):

@@ -1,10 +1,16 @@
 # TARGER
-### ignore models due to size
+### ignore files due to size
+corpus_processing/datasets
+corpus_processing/out
 miners/targer_instance/models
+miners/targer_instance/lstm/embeddings
 
 ### ignore input/output folders due to volatility
 miners/targer_instance/data/in
 miners/targer_instance/data/out
+
+### ignore external repository
+corpus_processing/standoff2conll
 
 
 # IDEA project folder
