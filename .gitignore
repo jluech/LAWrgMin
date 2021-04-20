@@ -1,18 +1,17 @@
 # TARGER
 ### ignore files due to size
+corpus_processing/datasets
+corpus_processing/out
 miners/targer_instance/models
 miners/targer_instance/lstm/embeddings
-
 
 ### ignore input/output folders due to volatility
 miners/targer_instance/data/in
 miners/targer_instance/data/out
 
-### ignore echr dataset due to size
-corpus_processing/datasets
-corpus_processing/out
+### ignore external repository
+corpus_processing/standoff2conll
 
-###ignore brat due to size
 
 # IDEA project folder
 .idea
