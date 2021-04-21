@@ -1,14 +1,40 @@
 @import "variables";
 
 .lawrgminer {
+  padding: 0 10%;
   background-color: $backgroundColorMiner;
 }
 
 .miner-input {
+  display: flex;
+
+  .input-textarea {
+    margin-left: 10%;
+    margin-right: 5%;
+
+    width: 100%;
+    height: 100%;
+
+    & > textarea {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    & > button {
+      margin-top: 1rem;
+    }
+  }
+
   .input-drag-drop {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-right: 10%;
+
+    width: 100%;
 
     .section-drag-drop {
       display: flex;
@@ -17,6 +43,10 @@
       border: dashed grey 4px;
       justify-content: center;
       align-items: center;
+
+      h3 {
+        margin: 0;
+      }
     }
   }
 }

@@ -19,12 +19,18 @@ export class Lawrgminer extends React.Component {
 
     render() {
         return (
-            <div className={"lawrgminer"} id="lawrgminer">
+            <div className={"lawrgminer"}>
                 <h2 className="section-title">I am the LAWrgMiner</h2>
                 <h3 className="section-title">Argumentation Mining in Law</h3>
+                <h4 className="section-title">1. Text Input</h4>
                 <div className={"miner-input"}>
-                    <h4 className="section-title">1. Text Input</h4>
-                    <span className={"input-drag-drop"}>
+                    <div className={"input-textarea"}>
+                        <textarea name="miner-input-textarea" id="miner-input-textarea"
+                                  cols="30" rows="10"
+                        />
+                        <button>Start Tagging</button>
+                    </div>
+                    <div className={"input-drag-drop"}>
                         <DragAndDrop>
                             <div className="section section-drag-drop">
                                 <h3>Drag a PDF here!</h3>
@@ -32,11 +38,11 @@ export class Lawrgminer extends React.Component {
                             </div>
                         </DragAndDrop>
                         <FileUpload className="section section-file-upload" />
-                    </span>
+                    </div>
                 </div>
                 <br />
                 {/*TODO: refactor to remove br tags and properly style hr*/}
-                <hr className="solid" style={{position: "relative", top: "1em", left: "3em"}} />
+                <hr className="solid" style={{position: "relative", top: "1em"}} />
                 <br />
                 <div className={"miner-results"}>
                     <h4 className="section-title">2. Results</h4>
