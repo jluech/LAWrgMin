@@ -2,6 +2,7 @@ import logging
 import os
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
 import utils
@@ -10,13 +11,17 @@ logging.basicConfig(level=logging.INFO)
 
 
 # App initialization.
+frontend_host = utils.__retrieve_frontend_host()
 backend = Flask(__name__)
+cors = CORS(backend, resources={
+    r"/status": {"origins": frontend_host},
+    r"/api/*": {"origins": frontend_host}
+})
 
 # Create a directory in a known location to save uploaded files to.
 utils.__set_files_dir(backend.instance_path)
 
 
-@backend.route("/", methods=["GET"])
 @backend.route("/status", methods=["GET"])
 def status():
     logging.info("{__method} status - OK".format(__method=request.method))

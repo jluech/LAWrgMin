@@ -3,6 +3,11 @@ import json
 import os
 
 files_dir = ""
+frontend_host = "http://localhost:3000"
+
+
+def __retrieve_frontend_host():
+    return frontend_host
 
 
 # --- Currently in charge of handling the file ids for uploaded files of different tagging runs ---
