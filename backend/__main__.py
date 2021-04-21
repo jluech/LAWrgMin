@@ -59,14 +59,32 @@ def tag_with_text():
     })
 
 
-# @backend.route("/tagWithFile", methods=["POST"])
-@backend.route("/tagWithFile", methods=["GET"])
+# @backend.route("/api/tagWithFile", methods=["POST"])
+@backend.route("/api/tagWithFile", methods=["GET"])
 def tag_with_file():
     logging.info("{__method} tagWithFile".format(__method=request.method))
-    return "Hi file"
+
+    # Saves all the files that were uploaded with the request.
+    file_handler = get_file_handler()
+    file_id = file_handler.file_id
+    files_dir = utils.get_uploaded_files_path(file_id)
+
+    file_keys = [*request.files]
+    file_names = []
+    for file_key in file_keys:
+        file = request.files[file_key]
+        file_name = secure_filename(file.filename)
+        file_names.append(file_name)
+        file.save(os.path.join(files_dir, file_name))
+
+    # Prepare return in json format.
+    return jsonify({
+        "id": file_handler.file_id,
+        "status": "created"
+    })
 
 
-@backend.route("/exportToCsv/<int:file_id>", methods=["GET"])
+@backend.route("/api/exportToCsv/<int:file_id>", methods=["GET"])
 def export_to_csv(file_id):
     logging.info("{__method} exportToCsv {__id}".format(__method=request.method, __id=file_id))
     return "Hi " + str(file_id)
