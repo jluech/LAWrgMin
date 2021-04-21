@@ -14,7 +14,17 @@ export class Lawrgminer extends React.Component {
         super();
         this.state = {
             files: ["testfile.pdf"],
+            inputText: ""
         };
+    }
+
+    adjustInputText(event) {
+        this.setState({inputText: event.target.value}, () => console.log("setting new text:", this.state.inputText)); // TODO
+    }
+
+    tagWithText() {
+        const {inputText} = this.state;
+        console.log("tagging input text\n", inputText); // TODO
     }
 
     render() {
@@ -27,8 +37,9 @@ export class Lawrgminer extends React.Component {
                     <div className={"input-textarea"}>
                         <textarea name="miner-input-textarea" id="miner-input-textarea"
                                   cols="30" rows="10"
+                                  onChange={this.adjustInputText.bind(this)}
                         />
-                        <button>Start Tagging</button>
+                        <button onClick={this.tagWithText.bind(this)}>Start Tagging</button>
                     </div>
                     <div className={"input-drag-drop"}>
                         <DragAndDrop>
