@@ -9,16 +9,16 @@ import {ReportSection} from "./components/report/report-section";
 export class App extends React.Component {
     render() {
         return (
-            <div className="text-left">
+            <>
                 <Header />
 
-                <body>
+                <div className={"content-wrapper"}>
                     <ReportSection />
                     <Lawrgminer />
-                </body>
+                </div>
 
                 <Footer />
-            </div>
+            </>
         );
     }
 }
