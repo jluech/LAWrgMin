@@ -4,8 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 10%;
-  padding-right: 10%;
 }
 
 p.text {
@@ -16,11 +14,13 @@ p.text {
   padding-bottom: 1em;
 }
 
-div.light {
+.light {
+  padding: 0 10%;
   background-color: slategray;
 }
 
-div.dark {
+.dark {
+  padding: 0 10%;
   background-color: $backgroundColor;
 }
 
