@@ -28,24 +28,31 @@ def status():
     return "OK"
 
 
-# @backend.route("/tagWithText", methods=["POST"])
-@backend.route("/tagWithText", methods=["GET"])
+@backend.route("/api/tagWithText", methods=["POST"])
 def tag_with_text():
     logging.info("{__method} tagWithText".format(__method=request.method))
 
-    # Saves all the files that were uploaded with the request.
-    file_keys = [*request.files]
+    request_data = request.get_json()
+    text = request_data["text"]
+
+    # Retrieve file data and prepare storage folder.
     file_handler = get_file_handler()
     file_id = file_handler.file_id
     files_dir = utils.get_uploaded_files_path(file_id)
-    file_names = []
-    for file_key in file_keys:
-        file = request.files[file_key]
-        file_name = secure_filename(file.filename)
-        file_names.append(file_name)
-        file.save(os.path.join(files_dir, file_name))
 
-    # Prepares return in json format.
+    if not os.path.exists(files_dir):
+        utils.create_tagging_subdir(file_id)
+    os.chdir(files_dir)
+
+    file_name = secure_filename("tagging_req_{__id}.txt".format(__id=file_id))
+    if os.path.exists(file_name):
+        os.remove(file_name)
+
+    # Write provided text to .txt file for further processing
+    with open(file_name, "x") as file:
+        file.write(text)
+
+    # Prepare return in json format.
     return jsonify({
         "id": file_handler.file_id,
         "status": "created"
