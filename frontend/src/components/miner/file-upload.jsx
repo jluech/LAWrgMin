@@ -60,9 +60,9 @@ export class FileUpload extends React.Component {
 
     render() {
         return (
-            <div style={{marginLeft: "10%"}}>
+            <div className={"upload-wrapper"}>
                 <h3 className={"section"}>Or browse a file of your computer</h3>
-                <div>
+                <div className={"upload-input"}>
                     <input type="file" onChange={this.onFileChange} />
                     <button onClick={this.onFileUpload}>Upload!</button>
                 </div>
