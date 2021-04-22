@@ -107,7 +107,7 @@ def parse_corpus_data():
             os.chdir(path)
             new_path = os.getcwd().replace(path.replace('.', '', 1), '')
             file_out_dir = new_path + out_dir.replace('.', '', 1)
-            os.system('python standoff2conll.py {__file_out_dir} {__file_out_dir}'.format(__file_out_dir=file_out_dir))
+            os.system('python standoff2conll.py {__file_out_dir}'.format(__file_out_dir=file_out_dir))
 
 
 if __name__ == "__main__":
