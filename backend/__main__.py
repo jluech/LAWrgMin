@@ -1,5 +1,6 @@
 import logging
 import os
+import sys
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -17,9 +18,6 @@ cors = CORS(backend, resources={
     r"/status": {"origins": frontend_host},
     r"/api/*": {"origins": frontend_host}
 })
-
-# Create a directory in a known location to save uploaded files to.
-utils.__set_files_dir(backend.instance_path)
 
 
 @backend.route("/status", methods=["GET"])
@@ -94,5 +92,17 @@ def get_file_handler(file_id=None):
     return utils.FileHandler(file_id)
 
 
+def cleanup_instance_files():
+    files_path = os.path.join(backend.instance_path, 'files')
+    utils.remove_dir_tree(files_path)
+
+
 if __name__ == "__main__":
+    args = sys.argv[1:]  # ignore first arg as it's the script
+    if args.__len__() > 0 and args.__contains__("--cleanup-files"):
+        cleanup_instance_files()
+
+    # Create a directory in a known location to save uploaded files to.
+    utils.__set_files_dir(backend.instance_path)
+
     backend.run(host="0.0.0.0")
