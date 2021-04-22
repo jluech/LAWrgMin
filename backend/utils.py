@@ -3,6 +3,11 @@ import json
 import os
 
 files_dir = ""
+frontend_host = "http://localhost:3000"
+
+
+def __retrieve_frontend_host():
+    return frontend_host
 
 
 # --- Currently in charge of handling the file ids for uploaded files of different tagging runs ---
@@ -43,6 +48,19 @@ def get_filename_from_path(file_path):
 
 def create_tagging_subdir(file_id):
     os.makedirs(os.path.join(files_dir, str(file_id)))
+
+
+def remove_dir_tree(dir_path):
+    if os.path.exists(dir_path):
+        dir_contents = os.listdir(dir_path)
+        if os.path.isdir(dir_path) and len(dir_contents) > 0:
+            for entity in dir_contents:
+                entity_path = "/".join([dir_path, entity])
+                if os.path.isdir(entity_path):
+                    remove_dir_tree(entity_path)
+                    os.rmdir(entity_path)
+                else:
+                    os.remove(entity_path)
 
 
 def __set_files_dir(path):
