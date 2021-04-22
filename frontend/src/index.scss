@@ -1,5 +1,20 @@
+// shared styles
+@import "scss/shared";
+@import "scss/variables";
+
+// layout styles
+@import "scss/app";
+@import "scss/header";
+@import "scss/footer";
+
+// component styles
+@import "scss/file-upload.scss.css";
+@import "scss/lawrgminer";
+@import "scss/report-section";
+
+
+// globally applicable styles
 body {
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
         "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;

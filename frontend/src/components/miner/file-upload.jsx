@@ -18,31 +18,32 @@ export class FileUpload extends React.Component {
 
     // On file upload (click the upload button)
     onFileUpload = () => {
-        // Create an object of formData
-        const formData = new FormData();
+        const {selectedFile} = this.state;
 
-        // Update the formData object
-        formData.append("myFile", this.state.selectedFile, this.state.selectedFile.name);
+        if (selectedFile) {
+            // Create an object of formData
+            const formData = new FormData();
 
-        // Details of the uploaded file
-        console.log(this.state.selectedFile);
+            // Update the formData object
+            formData.append("myFile", selectedFile, selectedFile.name);
 
-        // Request made to the backend api
-        // Send formData object
-        axios.post("api/uploadfile", formData);
+            // Details of the uploaded file
+            console.log(this.state.selectedFile);
+
+            // Request made to the backend api to send formData object
+            axios.post("api/uploadfile", formData);
+        }
     };
 
     // File content to be displayed after file upload is complete
-    fileData = () => {
+    buildFileDataHtml = () => {
         if (this.state.selectedFile) {
             return (
                 <div>
                     <h2 className={"section"}>File Details:</h2>
 
                     <p className={"section"}>File Name: {this.state.selectedFile.name}</p>
-
                     <p className={"section"}>File Type: {this.state.selectedFile.type}</p>
-
                     <p className={"section"}>
                         Last Modified: {this.state.selectedFile.lastModifiedDate.toDateString()}
                     </p>
@@ -60,13 +61,13 @@ export class FileUpload extends React.Component {
 
     render() {
         return (
-            <div style={{marginLeft: "10%"}}>
+            <div className={"upload-wrapper"}>
                 <h3 className={"section"}>Or browse a file of your computer</h3>
-                <div>
+                <div className={"upload-input"}>
                     <input type="file" onChange={this.onFileChange} />
                     <button onClick={this.onFileUpload}>Upload!</button>
                 </div>
-                {this.fileData()}
+                {this.buildFileDataHtml()}
             </div>
         );
     }

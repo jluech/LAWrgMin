@@ -1,24 +1,24 @@
 import React from "react";
 
-import "./App.css";
+import "./scss/app.scss";
 import {Header} from "./layout/header";
 import {Lawrgminer} from "./components/miner/lawrgminer";
 import {Footer} from "./layout/footer";
-import {ReportSection} from "./components/report/reportSection";
+import {ReportSection} from "./components/report/report-section";
 
 export class App extends React.Component {
     render() {
         return (
-            <div className="App">
+            <>
                 <Header />
 
-                <body>
+                <div className={"content-wrapper"}>
                     <ReportSection />
                     <Lawrgminer />
-                </body>
+                </div>
 
                 <Footer />
-            </div>
+            </>
         );
     }
 }
