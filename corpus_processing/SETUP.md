@@ -23,9 +23,11 @@ At the end of said method, replace the `stdout` log with the following piece of 
 
 ```python
 filename = str(files).replace(']', '').replace('[', '').replace('.ann', '.conll').replace('\'', '')
+conll_data = conll_data.replace('\t', ' ')
 if os.path.exists(filename):
     os.remove(filename)
-casefile = open(filename, "x")
+casefile = open(filename, 'x')
+casefile.write('-DOCSTART- 0\n\n')
 casefile.write(conll_data)
 casefile.close()
 ```

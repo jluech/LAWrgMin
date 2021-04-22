@@ -34,7 +34,7 @@ def prepare_echr_files():
             else:
                 file_dir = "/".join([orig_dir, "lstm", "/".join(test_file.split("/")[:-1])])
                 file_name = "test.txt"
-            print(file_dir)
+            os.makedirs(file_dir, exist_ok=True)
             os.chdir(file_dir)
             append_write = "a" if os.path.exists("./"+file_name) else "x"
             with open(file_name, append_write) as file:
