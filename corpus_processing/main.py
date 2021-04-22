@@ -23,7 +23,7 @@ def is_major_argument(argument, case):
 
 
 def get_start_end_trimmed(trimmed, sentence):
-    trimmed_sentence = sentence.replace("  ", "").replace("\r", "").replace("\n", " ").strip()
+    trimmed_sentence = sentence.replace("  ", "").replace("\r", "").replace("\n", " ").replace("\t", " ").strip()
     start = trimmed.find(trimmed_sentence)
     end = start + len(trimmed_sentence)
     return start, end, trimmed_sentence
@@ -45,7 +45,7 @@ def parse_corpus_data():
             os.chdir(orig_wd)
 
             text = case['text']
-            trimmed = text.replace("  ", "").replace("\r", "").replace("\n", " ").strip()
+            trimmed = text.replace("  ", "").replace("\r", "").replace("\n", " ").replace("\t", " ").strip()
 
             clauses = case['clauses']
 
