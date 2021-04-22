@@ -3,22 +3,22 @@ import subprocess
 import sys
 
 targer_main_file = "main.py"
-targer_files_dir = "data/NER/CoNNL_2003_shared_task"
-# targer_files_dir = "data/NER/ECHR"
+# targer_files_dir = "data/NER/CoNNL_2003_shared_task"
+targer_files_dir = "data/NER/ECHR"
 train_file = "/".join([targer_files_dir, "train.txt"])
 dev_file = "/".join([targer_files_dir, "dev.txt"])
 test_file = "/".join([targer_files_dir, "test.txt"])
 
 data_formatting = "connl-ner-2003"
 evaluation_type = "f1-alpha-match-10"
-epochs = "10"  # min-epochs is 50 by default
+epochs = "50"  # min-epochs is 50 by default
 
 
 def prepare_echr_files():
     orig_dir = os.getcwd()
     os.makedirs(targer_files_dir, exist_ok=True)
 
-    number_of_files = 6
+    number_of_files = 43
     for idx in range(number_of_files):
         idx_two_digit = idx if idx >= 10 else "0"+str(idx)
         os.chdir("../../corpus_processing/out/{__idx}/".format(__idx=idx_two_digit))
