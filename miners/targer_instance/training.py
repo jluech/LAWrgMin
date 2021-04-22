@@ -20,6 +20,9 @@ def prepare_echr_files():
 
     number_of_files = 43
     for idx in range(number_of_files):
+        if idx == 36:
+            continue  # ECHR contains cases 0-35, 37-42
+
         idx_two_digit = idx if idx >= 10 else "0"+str(idx)
         os.chdir("../../corpus_processing/out/{__idx}/".format(__idx=idx_two_digit))
         with open("{__idx}.conll".format(__idx=idx_two_digit), "r") as echr_file:
