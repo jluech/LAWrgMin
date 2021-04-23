@@ -46,15 +46,25 @@ def prepare_echr_files():
 
 
 if __name__ == "__main__":
+    loadPath = ""
+
     args = sys.argv[1:]  # ignore first arg as it's the script
-    if args.__len__() > 0 and args.__contains__("--prepare"):
-        prepare_echr_files()
+    if args.__len__() > 0:
+        if args.__contains__("--prepare"):
+            prepare_echr_files()
+        if args.__contains__("--load"):
+            loadIdx = args.index("--load")
+            loadPath = args[loadIdx + 1]
+            print("> Loading word-seq-indexer from", loadPath)
+
+    # load = "--word-seq-indexer" if len(wsiPath) else ""
+    load = "--load" if len(loadPath) else ""
 
     os.chdir("lstm")  # need to call it relative to the main file
     # so other files being loaded during the process have the correct working directory
 
     subprocess.run(["python", targer_main_file, "--train", train_file, "--dev", dev_file, "--test", test_file,
-                    "-d", data_formatting, "--evaluator", evaluation_type, "-e", epochs, "--opt", "adam",
+                    "-d", data_formatting, "--evaluator", evaluation_type, "-e", epochs, load, loadPath, "--opt", "adam",
                     "--lr", "0.001", "--save-best", "yes", "--patience", "20", "--rnn-hidden-dim", "200",
                     "--gpu", "-1"])
     os.chdir("..")
