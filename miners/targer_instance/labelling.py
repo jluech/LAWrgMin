@@ -8,6 +8,9 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
+in_dir = "data/in"
+out_dir = "data/out"
+
 
 def process(file):
 	# ===== load file =====
@@ -74,7 +77,6 @@ def process(file):
 	# print(text_only)
 
 	# ===== prepare output directory =====
-	out_dir = "data/out"
 	out_path = "/".join([out_dir, file + ".out"])
 	if not os.path.exists(out_dir):
 		os.mkdir(out_dir)
@@ -93,12 +95,9 @@ def process(file):
 
 def trigger_labelling_of_files():
 	# ===== collect input files =====
-	files = glob.glob(os.path.abspath("./data/in/*.txt"))
-	# print("initial glob", files)
+	files = glob.glob(os.path.abspath("/".join([in_dir, "*.txt"])))
 	files = [f.split(("/" if "/" in f else "\\"))[-1].split('.')[0] for f in files]
-	# print("split", files)
 	files.sort()
-	# print("sorted", files)
 	print("=== Found files:", files, "===")
 
 	# ===== process files and measure execution time =====
@@ -114,7 +113,6 @@ def trigger_labelling_of_files():
 	# ===== write stats to file =====
 	nr_files = len(files)
 	timed = sum(times)
-	avg_time = timed / nr_files
 
 	print("\n> Writing overall stats to file...")
 	stats_path = "data/out/stats.txt"
