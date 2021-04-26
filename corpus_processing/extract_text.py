@@ -3,7 +3,8 @@ import os
 
 import textract
 
-default_directory = "../data_static"  # default input, always output
+default_in_directory = "../data_static"  # default input, adjustable by providing args
+out_directory = "../miners/targer_instance/data/in"
 
 
 # function to read .pdf, .docx or .html files; requires absolute file path
@@ -12,7 +13,7 @@ def extract_text(filepath):
     decoded = text.decode('utf8')
 
     filename = ".".join(filepath.split("/")[-1].split(".")[:-1])
-    output_path = "{__outdir}/{__name}.txt".format(__outdir=os.path.abspath(default_directory), __name=filename)
+    output_path = "{__outdir}/{__name}.txt".format(__outdir=os.path.abspath(out_directory), __name=filename)
     if os.path.exists(output_path):
         os.remove(output_path)
 
@@ -35,9 +36,9 @@ if __name__ == "__main__":
             else:
                 extract_text(arg)
     else:
-        files = [f for f in os.listdir(default_directory) if not f.startswith(".")]  # filter hidden files
+        files = [f for f in os.listdir(default_in_directory) if not f.startswith(".")]  # filter hidden files
         origin_dir = os.path.abspath(os.curdir)
-        os.chdir(default_directory)
+        os.chdir(default_in_directory)
         for file in files:
             extract_text("{__abs}/{__file}".format(__abs=os.path.abspath(os.curdir), __file=file))
         os.chdir(origin_dir)
