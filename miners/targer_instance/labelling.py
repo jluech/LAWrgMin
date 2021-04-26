@@ -44,7 +44,7 @@ def process(file):
 		current_label = ""
 		words = []
 		for word in sentence:
-			if float(word["prob"]) < 0.9:
+			if word.keys().__contains__("prob") and float(word["prob"]) < 0.9:
 				print("prob < 0.9 in", word)
 				current_label = ""  # cut out unsure classification
 				continue
