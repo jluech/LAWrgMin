@@ -7,6 +7,7 @@ miners/targer_instance/lstm/embeddings
 
 ### ignore input/output folders due to volatility
 backend/instance/**
+data_static/**
 miners/targer_instance/data/in
 miners/targer_instance/data/out
 miners/targer_instance/lstm/data/NER/

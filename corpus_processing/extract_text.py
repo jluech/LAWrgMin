@@ -27,7 +27,13 @@ if __name__ == "__main__":
             for file in args:
                 extract_text(os.path.abspath(file))
         else:
-            extract_text(os.path.abspath(args[0]))
+            arg = os.path.abspath(args[0])
+            if os.path.isdir(arg):
+                for file in os.listdir(arg):
+                    print(file)
+                    extract_text("/".join([arg, file]))
+            else:
+                extract_text(arg)
     else:
         files = [f for f in os.listdir(default_directory) if not f.startswith(".")]  # filter hidden files
         origin_dir = os.path.abspath(os.curdir)
