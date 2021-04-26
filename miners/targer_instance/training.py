@@ -11,7 +11,7 @@ test_file = "/".join([targer_files_dir, "test.txt"])
 
 data_formatting = "connl-ner-2003"
 evaluation_type = "f1-alpha-match-10"
-epochs = "50"  # min-epochs is 50 by default
+epochs = "50"
 
 
 def prepare_echr_files():
@@ -68,3 +68,4 @@ if __name__ == "__main__":
                     "--lr", "0.001", "--save-best", "yes", "--patience", "20", "--rnn-hidden-dim", "200",
                     "--gpu", "-1"])
     os.chdir("..")
+    print("> Done")
