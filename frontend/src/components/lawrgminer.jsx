@@ -1,11 +1,13 @@
 import React from "react";
-import {FileUpload} from "./fileupload";
+//import {FileUpload} from "./fileupload";
 import FileDocumentMultipleOutlineIcon from 'mdi-react/FileDocumentMultipleOutlineIcon';
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {DragAndDrop} from "./draganddrop";
 import {Arguments} from "./arguments";
 import {Claims} from "./claims";
+//import {Link} from "react-scroll";
+import axios from "axios";
 
 
 export class Lawrgminer extends React.Component {
@@ -13,8 +15,60 @@ export class Lawrgminer extends React.Component {
         super();
         this.state = {
             files: ["testfile.pdf"],
+            // Initially, no file is selected
+            selectedFile: null,
+            results_display: "none"
         };
     }
+
+    // On file select (from the pop up)
+    onFileChange = (event) => {
+        // Update the state
+        this.setState({selectedFile: event.target.files[0]});
+    };
+
+    // On file upload (click the upload button)
+    onFileUpload = () => {
+        // Create an object of formData
+        const formData = new FormData();
+
+        // Update the formData object
+        formData.append("myFile", this.state.selectedFile, this.state.selectedFile.name);
+
+        // Details of the uploaded file
+        console.log(this.state.selectedFile);
+
+        // Request made to the backend api
+        // Send formData object
+        axios.post("api/uploadfile", formData);
+
+        this.setState({results_display:"block"})
+    };
+
+    // File content to be displayed after
+    // file upload is complete
+    fileData = () => {
+        if (this.state.selectedFile) {
+            return (
+                <div>
+                    <h2 className={"section"}>File Details:</h2>
+
+                    <p className={"section"}>File Name: {this.state.selectedFile.name}</p>
+
+                    <p className={"section"}>File Type: {this.state.selectedFile.type}</p>
+
+                    <p className={"section"}>Last Modified: {this.state.selectedFile.lastModifiedDate.toDateString()}</p>
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    <br />
+                    <h4 className={"section"}>Choose before Pressing the Upload button</h4>
+                </div>
+            );
+        }
+    };
 
     render() {
         return (
@@ -33,13 +87,20 @@ export class Lawrgminer extends React.Component {
                                 <FileDocumentMultipleOutlineIcon/>
                             </div>
                         </DragAndDrop>
-                        <FileUpload className="section"/>
+                        <div style={{marginLeft:"10%"}} className="section">
+                            <h3 className={"section"}>Or browse a file of your computer</h3>
+                            <div>
+                                <input type="file" onChange={this.onFileChange} />
+                                <Button onClick={this.onFileUpload} href="#results">Upload!</Button>
+                            </div>
+                            {this.fileData()}
+                        </div>
                     </span>
                 </div>
                 <br/>
                 <hr className="solid" style={{position: "relative", top: "1em", left: "3em"}} />
                 <br/>
-                <div>
+                <div id="results" style={{display:this.state.results_display}}>
                     <h4 className="section-title">2. Results</h4>
                     <span style={{display: "flex", justifyContent:"center", alignItems:"center"}}>
                         <div style={{marginLeft:"10%", marginRight:"5%"}}>

@@ -6,7 +6,7 @@ export class FileUpload extends React.Component {
         super();
         this.state = {
             // Initially, no file is selected
-            selectedFile: null,
+            selectedFile: null
         };
     }
 
@@ -63,8 +63,7 @@ export class FileUpload extends React.Component {
                 <h3 className={"section"}>Or browse a file of your computer</h3>
                 <div>
                     <input type="file" onChange={this.onFileChange} />
-                    <button
-                    onClick={this.onFileUpload}>Upload!</button>
+                    <button onClick={this.onFileUpload}>Upload!</button>
                 </div>
                 {this.fileData()}
             </div>

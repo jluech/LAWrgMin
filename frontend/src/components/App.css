@@ -32,7 +32,7 @@ a.active {
     font-weight: 700;
     border: 1px solid;
     border-radius: 10px;
-    padding: 1em 1em
+    padding: 1em 1em;
 }
 
 a:hover {
