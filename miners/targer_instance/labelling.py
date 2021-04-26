@@ -25,7 +25,8 @@ def process(file):
 
 	# ===== select model =====
 	from Model import Model
-	model = Model("IBM.h5")
+	# model = Model("IBM.h5")
+	model = Model("ECHR_tagger.hdf5")
 	# from ModelNewES import ModelNewES
 	# model = ModelNewES()
 	# from ModelNewSciArg import ModelNewSciArg
