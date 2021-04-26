@@ -82,7 +82,7 @@ def process(file):
 
 	# ===== write output to file =====
 	output = {"results": raw_results}
-#	output = {"results": merged_results}
+	# output = {"results": merged_results}
 	# output = {"results": text_only}
 
 	print("\n> Writing output to file...")
@@ -90,7 +90,7 @@ def process(file):
 		json.dump(output, f)
 
 
-if __name__ == "__main__":
+def trigger_labelling_of_files():
 	# ===== collect input files =====
 	files = glob.glob(os.path.abspath("./data/in/*.txt"))
 	# print("initial glob", files)
@@ -109,7 +109,7 @@ if __name__ == "__main__":
 		end_time = time.time()
 		print("= Done processing file")
 		times.append(end_time - start_time)
-	
+
 	# ===== write stats to file =====
 	nr_files = len(files)
 	timed = sum(times)
@@ -126,4 +126,7 @@ if __name__ == "__main__":
 		for idx, file in enumerate(files):
 			f.write(file + ":\t" + str(round(times[idx], 2)) + "\n")
 
+
+if __name__ == "__main__":
+	trigger_labelling_of_files()
 	print("=== Done ===")
