@@ -24,19 +24,20 @@ def process(file):
 	model.label_with_probs(input_text)
 
 	# ===== select model =====
-	from Model import Model
+	# from Model import Model
 	# model = Model("IBM.h5")
-	model = Model("ECHR_tagger.hdf5")
 	# from ModelNewES import ModelNewES
 	# model = ModelNewES()
 	# from ModelNewSciArg import ModelNewSciArg
 	# model = ModelNewSciArg()
+	from ModelNewECHR import ModelNewECHR
+	model = ModelNewECHR()
 	# from Model import Model
 	# model = Model()
 
 	# ===== process and label input text =====
-	# raw_results = model.label(input_text)
-	raw_results = model.label_with_probs(input_text)
+	raw_results = model.label(input_text)
+	# raw_results = model.label_with_probs(input_text)
 
 	# ===== merge fragments with same label - losing probability =====
 	merged_results = []
