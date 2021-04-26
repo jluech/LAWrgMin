@@ -4,7 +4,7 @@ import os
 from shutil import copyfile
 
 
-echr_corpus_path = "/home/adrian/Desktop/FS2021/AI/Project/LAWrgMin/corpus_processing/datasets/echr_corpus/ECHR_Corpus.json"  # local linux path, not repo specific
+echr_corpus_path = "/".join([os.getcwd(), "datasets/echr_corpus/ECHR_Corpus.json"])
 
 
 def find_clause_from_id(clauses, id):
@@ -23,7 +23,7 @@ def is_major_argument(argument, case):
 
 
 def get_start_end_trimmed(trimmed, sentence):
-    trimmed_sentence = sentence.replace("  ", "").replace("\r", "").replace("\n", " ").strip()
+    trimmed_sentence = sentence.replace("  ", "").replace("\r", "").replace("\n", " ").replace("\t", " ").strip()
     start = trimmed.find(trimmed_sentence)
     end = start + len(trimmed_sentence)
     return start, end, trimmed_sentence
@@ -39,13 +39,13 @@ def parse_corpus_data():
         # clauses: dict
         # arguments: dict
 
-        owd = os.getcwd()
+        orig_wd = os.getcwd()
 
         for index, case in enumerate(data):
-            os.chdir(owd)
+            os.chdir(orig_wd)
 
             text = case['text']
-            trimmed = text.replace("  ", "").replace("\r", "").replace("\n", " ").strip()
+            trimmed = text.replace("  ", "").replace("\r", "").replace("\n", " ").replace("\t", " ").strip()
 
             clauses = case['clauses']
 
@@ -103,14 +103,11 @@ def parse_corpus_data():
 
             path = './standoff2conll'
             if not os.path.exists(path):
-                clone = 'git clone https://github.com/spyysalo/standoff2conll'
-                os.system(clone)
+                os.system('git clone https://github.com/spyysalo/standoff2conll')
             os.chdir(path)
-            cwd = os.getcwd()
-            new_path = cwd.replace(path.replace('.', '', 1), '')
-            os.system('python standoff2conll.py ' + new_path + out_dir.replace('.', '', 1) + ' ' + new_path + out_dir.replace('.', '', 1))
-            print(path)
-            print(new_path)
+            new_path = os.getcwd().replace(path.replace('.', '', 1), '')
+            file_out_dir = new_path + out_dir.replace('.', '', 1)
+            os.system('python standoff2conll.py {__file_out_dir}'.format(__file_out_dir=file_out_dir))
 
 
 if __name__ == "__main__":
