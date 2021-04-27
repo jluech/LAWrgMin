@@ -30,6 +30,7 @@ def get_start_end_trimmed(trimmed, sentence):
 
 
 def parse_corpus_data():
+    print('Transforming ECHR dataset to brat standoff format...')
     with open(echr_corpus_path) as corpus_file:
         # ========== load and parse data from json file to dictionary ==========
         data = json.load(corpus_file)  # corpus yields list of 42 decision entries as json-dicts
@@ -107,8 +108,16 @@ def parse_corpus_data():
             os.chdir(path)
             new_path = os.getcwd().replace(path.replace('.', '', 1), '')
             file_out_dir = new_path + out_dir.replace('.', '', 1)
-            os.system('python standoff2conll.py {__file_out_dir}'.format(__file_out_dir=file_out_dir))
 
+            print('Converting standoff format into .connl for case ' + case['name'] + '...')
+
+            # Run command with disabled output
+            os.system('python standoff2conll.py {__file_out_dir}'.format(__file_out_dir=file_out_dir) + ' >/dev/null 2>&1')
+
+            print('Case ' + case['name'] + ' finished')
+
+
+    print('Done!')
 
 if __name__ == "__main__":
     parse_corpus_data()
