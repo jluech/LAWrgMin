@@ -41,12 +41,8 @@ export class FileUpload extends React.Component {
             return (
                 <div>
                     <h2 className={"section"}>File Details:</h2>
-
                     <p className={"section"}>File Name: {this.state.selectedFile.name}</p>
                     <p className={"section"}>File Type: {this.state.selectedFile.type}</p>
-                    <p className={"section"}>
-                        Last Modified: {this.state.selectedFile.lastModifiedDate.toDateString()}
-                    </p>
                 </div>
             );
         } else {
@@ -62,10 +58,10 @@ export class FileUpload extends React.Component {
     render() {
         return (
             <div className={"upload-wrapper"}>
-                <h3 className={"section"}>Or browse a file of your computer</h3>
+                <h3 className={"section"}>Or browse a PDF on your computer</h3>
                 <div className={"upload-input"}>
                     <input type="file" onChange={this.onFileChange} />
-                    <button onClick={this.onFileUpload}>Upload!</button>
+                    <button onClick={this.tagWithFile}>Upload!</button>
                 </div>
                 {this.buildFileDataHtml()}
             </div>

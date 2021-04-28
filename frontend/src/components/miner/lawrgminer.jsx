@@ -17,7 +17,8 @@ export class Lawrgminer extends React.Component {
         super();
         this.state = {
             files: ["testfile.pdf"],
-            inputText: ""
+            inputText: "",
+            inputFile: ""
         };
     }
 
@@ -31,6 +32,22 @@ export class Lawrgminer extends React.Component {
 
         const request_url = `${api_host}/api/tagWithText`
         axios.post(request_url, {"text": inputText})
+            .then((reply) => {
+                console.log(reply.data); // TODO
+                console.log(reply.status); // TODO
+            })
+            .catch((err) => {
+                console.log("error during request:", request_url, "\n", err);
+                alert(`Something went wrong!\nError during request: ${request_url}`);
+            });
+    }
+
+    tagWithFile() {
+        const {inputFile} = this.state;
+        console.log("tagging input file\n", inputFile); // TODO
+
+        const request_url = `${api_host}/api/tagWithFile`
+        axios.post(request_url, {"text": inputFile})
             .then((reply) => {
                 console.log(reply.data); // TODO
                 console.log(reply.status); // TODO
@@ -57,13 +74,13 @@ export class Lawrgminer extends React.Component {
                         <button onClick={this.tagWithText.bind(this)}>Start Tagging</button>
                     </div>
                     <div className={"input-drag-drop"}>
-                        <DragAndDrop>
+                        <DragAndDrop tagWithFile={this.tagWithFile} es6Function = {this.es6Function}>
                             <div className="section section-drag-drop">
                                 <h3>Drag a PDF here!</h3>
                                 <FileDocumentMultipleOutlineIcon/>
                             </div>
                         </DragAndDrop>
-                        <FileUpload className="section section-file-upload"/>
+                        <FileUpload className="section section-file-upload" tagWithFile={this.tagWithFile}/>
                     </div>
                 </div>
 
