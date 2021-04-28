@@ -2,19 +2,9 @@ import React from "react";
 import axios from "axios";
 
 export class FileUpload extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            // Initially, no file is selected
-            selectedFile: null,
-        };
+    constructor(props) {
+        super(props);
     }
-
-    // On file select (from the pop up)
-    onFileChange = (event) => {
-        // Update the state
-        this.setState({selectedFile: event.target.files[0]});
-    };
 
     // On file upload (click the upload button)
     onFileUpload = () => {
@@ -37,12 +27,12 @@ export class FileUpload extends React.Component {
 
     // File content to be displayed after file upload is complete
     buildFileDataHtml = () => {
-        if (this.state.selectedFile) {
+        if (this.props.inputFile) {
             return (
                 <div>
                     <h2 className={"section"}>File Details:</h2>
-                    <p className={"section"}>File Name: {this.state.selectedFile.name}</p>
-                    <p className={"section"}>File Type: {this.state.selectedFile.type}</p>
+                    <p className={"section"}>File Name: {this.props.inputFile.name}</p>
+                    <p className={"section"}>File Type: {this.props.inputFile.type}</p>
                 </div>
             );
         } else {
@@ -60,8 +50,8 @@ export class FileUpload extends React.Component {
             <div className={"upload-wrapper"}>
                 <h3 className={"section"}>Or browse a PDF on your computer</h3>
                 <div className={"upload-input"}>
-                    <input type="file" onChange={this.onFileChange} />
-                    <button onClick={this.tagWithFile}>Upload!</button>
+                    <input type="file" onChange={this.props.adjustInputFile} />
+                    <button onClick={this.props.tagWithFile}>Upload!</button>
                 </div>
                 {this.buildFileDataHtml()}
             </div>

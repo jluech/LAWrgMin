@@ -16,14 +16,23 @@ export class Lawrgminer extends React.Component {
     constructor() {
         super();
         this.state = {
-            files: ["testfile.pdf"],
             inputText: "",
-            inputFile: ""
+            inputFile: null
         };
+        this.adjustInputFile = this.adjustInputFile.bind(this);
+        this.tagWithFile = this.tagWithFile.bind(this);
+
     }
 
     adjustInputText(event) {
         this.setState({inputText: event.target.value}, () => console.log("setting new text:", this.state.inputText)); // TODO
+    }
+
+    adjustInputFile(event) {
+        console.log(this.state.inputFile)
+        this.setState({inputFile: event.target.value}, () => console.log("setting new file:", this.state.inputFile.name)); // TODO
+        console.log(this.state.inputFile)
+
     }
 
     tagWithText() {
@@ -46,17 +55,34 @@ export class Lawrgminer extends React.Component {
         const {inputFile} = this.state;
         console.log("tagging input file\n", inputFile); // TODO
 
-        const request_url = `${api_host}/api/tagWithFile`
-        axios.post(request_url, {"text": inputFile})
-            .then((reply) => {
-                console.log(reply.data); // TODO
-                console.log(reply.status); // TODO
-            })
-            .catch((err) => {
-                console.log("error during request:", request_url, "\n", err);
-                alert(`Something went wrong!\nError during request: ${request_url}`);
-            });
+
+        if (inputFile) {
+            // Create an object of formData
+            const formData = new FormData();
+
+            // Update the formData object
+            formData.append("file", inputFile);
+
+            // Details of the uploaded file
+            console.log(this.state.selectedFile);
+
+            // Request made to the backend api to send formData object
+            console.log("tagging input file\n", inputFile); // TODO
+
+            const request_url = `${api_host}/api/tagWithFile`
+
+            axios.post(request_url, {"file": formData})
+                .then((reply) => {
+                    console.log(reply.data); // TODO
+                    console.log(reply.status); // TODO
+                })
+                .catch((err) => {
+                    console.log("error during request:", request_url, "\n", err);
+                    alert(`Something went wrong!\nError during request: ${request_url}`);
+                });
+        }
     }
+
 
     render() {
         return (
@@ -74,38 +100,42 @@ export class Lawrgminer extends React.Component {
                         <button onClick={this.tagWithText.bind(this)}>Start Tagging</button>
                     </div>
                     <div className={"input-drag-drop"}>
-                        <DragAndDrop tagWithFile={this.tagWithFile} es6Function = {this.es6Function}>
+                        <DragAndDrop tagWithFile={this.tagWithFile.bind(this)} es6Function={this.es6Function}>
                             <div className="section section-drag-drop">
                                 <h3>Drag a PDF here!</h3>
-                                <FileDocumentMultipleOutlineIcon/>
+                                <FileDocumentMultipleOutlineIcon />
                             </div>
                         </DragAndDrop>
-                        <FileUpload className="section section-file-upload" tagWithFile={this.tagWithFile}/>
+                        <FileUpload className="section section-file-upload"
+                                    tagWithFile={this.tagWithFile}
+                                    adjustInputFile={this.adjustInputFile}
+                                    inputFile={this.state.inputFile}
+                        />
                     </div>
                 </div>
 
-                <br/>
+                <br />
                 {/*TODO: refactor to remove br tags and properly style hr*/}
-                <hr className="solid" style={{position: "relative", top: "1em"}}/>
-                <br/>
+                <hr className="solid" style={{position: "relative", top: "1em"}} />
+                <br />
 
                 <h4 className="section-title">2. Results</h4>
                 <div className={"miner-results"}>
                     <div className={"miner-results-list"}>
                         <div className={"miner-results-claims"}>
                             <h5>Claims</h5>
-                            <Claims/>
+                            <Claims />
                         </div>
                         <div className={"miner-results-arguments"}>
                             <h5>Arguments</h5>
-                            <Arguments/>
+                            <Arguments />
                         </div>
                     </div>
                     <Button className={"miner-results-export-btn"} variant="outline-light">
                         Export Data
                     </Button>
                 </div>
-                <br/>
+                <br />
             </div>
         );
     }
