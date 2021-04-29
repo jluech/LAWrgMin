@@ -1,29 +1,9 @@
 import React from "react";
-import axios from "axios";
 
 export class FileUpload extends React.Component {
     constructor(props) {
         super(props);
     }
-
-    // On file upload (click the upload button)
-    onFileUpload = () => {
-        const {selectedFile} = this.state;
-
-        if (selectedFile) {
-            // Create an object of formData
-            const formData = new FormData();
-
-            // Update the formData object
-            formData.append("myFile", selectedFile, selectedFile.name);
-
-            // Details of the uploaded file
-            console.log(this.state.selectedFile);
-
-            // Request made to the backend api to send formData object
-            axios.post("api/uploadfile", formData);
-        }
-    };
 
     // File content to be displayed after file upload is complete
     buildFileDataHtml = () => {

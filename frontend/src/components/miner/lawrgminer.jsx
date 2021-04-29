@@ -2,10 +2,10 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FileDocumentMultipleOutlineIcon from "mdi-react/FileDocumentMultipleOutlineIcon";
+// import FileDocumentMultipleOutlineIcon from "mdi-react/FileDocumentMultipleOutlineIcon";
 
 import {FileUpload} from "./file-upload";
-import {DragAndDrop} from "./drag-and-drop";
+// import {DragAndDrop} from "./drag-and-drop";
 import {Arguments} from "./arguments";
 import {Claims} from "./claims";
 
@@ -64,7 +64,7 @@ export class Lawrgminer extends React.Component {
             formData.append("file", inputFile);
 
             // Details of the uploaded file
-            console.log(this.state.selectedFile);
+            console.log(this.state.inputFile);
 
             // Request made to the backend api to send formData object
             console.log("tagging input file\n", inputFile); // TODO
@@ -99,21 +99,12 @@ export class Lawrgminer extends React.Component {
                         />
                         <button onClick={this.tagWithText.bind(this)}>Start Tagging</button>
                     </div>
-                    <div className={"input-drag-drop"}>
-                        <DragAndDrop tagWithFile={this.tagWithFile.bind(this)} es6Function={this.es6Function}>
-                            <div className="section section-drag-drop">
-                                <h3>Drag a PDF here!</h3>
-                                <FileDocumentMultipleOutlineIcon />
-                            </div>
-                        </DragAndDrop>
-                        <FileUpload className="section section-file-upload"
-                                    tagWithFile={this.tagWithFile}
-                                    adjustInputFile={this.adjustInputFile}
-                                    inputFile={this.state.inputFile}
-                        />
-                    </div>
+                    <FileUpload className="section section-file-upload"
+                                tagWithFile={this.tagWithFile}
+                                adjustInputFile={this.adjustInputFile}
+                                inputFile={this.state.inputFile}
+                    />
                 </div>
-
                 <br />
                 {/*TODO: refactor to remove br tags and properly style hr*/}
                 <hr className="solid" style={{position: "relative", top: "1em"}} />
