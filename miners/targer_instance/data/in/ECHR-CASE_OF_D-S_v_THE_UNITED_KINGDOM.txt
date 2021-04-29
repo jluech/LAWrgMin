@@ -1,0 +1,250 @@
+D.S. v. THE UNITED KINGDOM JUDGMENT
+
+D.S. v. THE UNITED KINGDOM JUDGMENT
+
+
+
+
+
+
+
+
+
+
+
+
+
+FOURTH SECTION
+
+CASE OF D.S. v. THE UNITED KINGDOM
+
+(Application no. 70988/12)
+
+
+
+
+
+
+
+
+
+JUDGMENT
+
+
+Art 8 • Private life • Regime in England and Wales for disclosure of criminal record information prior to 2013 amendments • Disclosure of applicant’s criminal data pursuant to that regime not “in accordance with the law”
+
+
+
+
+
+STRASBOURG
+
+30 March 2021
+
+This judgment will become final in the circumstances set out in Article 44 § 2 of the Convention. It may be subject to editorial revision.
+
+
+
+In the case of D.S. v. the United Kingdom,
+
+The European Court of Human Rights (Fourth Section), sitting as a Chamber composed of:
+
+	Yonko Grozev, President,
+	Tim Eicke,
+	Faris Vehabović,
+	Iulia Antoanella Motoc,
+	Armen Harutyunyan,
+	Pere Pastor Vilanova,
+	Jolien Schukking, judges,
+and Andrea Tamietti, Section Registrar,
+
+Having regard to:
+
+the application against the United Kingdom of Great Britain and Northern Ireland lodged with the Court under Article 34 of the Convention for the Protection of Human Rights and Fundamental Freedoms (“the Convention”) by a British national, Ms D.S. (“the applicant”), on 25 September 2012;
+
+the decision to give notice to the United Kingdom Government (“the Government”) of the applicant’s complaint concerning the disclosure of her criminal record information;
+
+the decision not to have the applicant’s name disclosed;
+
+the parties’ observations;
+
+Having deliberated in private on 11 March 2021,
+
+Delivers the following judgment, which was adopted on that date:
+
+INTRODUCTION
+
+1.  The application concerns the past disclosure of the applicant’s criminal record information and the amended disclosure regime which entered into force law after this Court’s judgment in M.M. v. the United Kingdom, no. 24029/07, 13 November 2012. The applicant relies, in particular, on Article 8 of the Convention.
+
+THE FACTS
+
+2.  The applicant was born in 1964 and lives in Croydon. She was represented by Thomas Sanchez Solicitors, based in London.
+
+3.  The Government were represented by their Agents, Ms Anna McLeod and, subsequently, Mr Samuel Linehan, both of the Foreign and Commonwealth Office.
+
+4.  In May 1990, the applicant was given a six-month conditional discharge in respect of a criminal offence relating to property damage. At the time, she was advised by a police officer that the conditional discharge would be deleted from her criminal record after six months.
+
+5.  In January 2010, the applicant was asked by her employer to apply for an enhanced criminal record certificate (“ECRC”). Pursuant to the legislation then in force, all previous convictions were subject to mandatory disclosure in criminal record certificates. On 11 July 2010, the conditional discharge appeared on the ECRC provided. The applicant was made redundant in April 2012 but does not claim that the disclosure of her conditional discharge was a factor in the redundancy.
+
+6.  On 13 July 2012, she wrote to the Metropolitan Police requesting the destruction of her fingerprints, DNA and the supporting entry on the Police National Computer (“PNC”). On 15 July 2012, the Metropolitan Police refused her request.
+
+7.  The applicant subsequently secured new employment. The conditional discharge was again disclosed in an ECRC issued on 22 August 2012. The applicant has not suggested that the disclosure had any impact on her employment.
+
+8.  Following the introduction of the present application, the applicant made a subject access request to the Association of Chief Police Officers (“ACPO”) for information about her held on the PNC. The request was made pursuant to the Data Protection Act 1998 (see paragraph 17 below). In a letter from the ACPO dated 19 November 2015, the applicant was provided with a record of the information about her held on the PNC. This included details of the conditional discharge and the factual circumstances which had led to its imposition.
+
+9.  In May 2013 the rules concerning disclosure of criminal record information were amended (see paragraph 12 below). The applicant’s conditional discharge was no longer subject to mandatory disclosure and did not appear on an ECRC issued on 5 June 2015.
+
+Relevant legal framework and practice
+
+Disclosure of criminal record information on ECRCs
+
+Information to be disclosed
+
+The former provisions
+
+10.  Under section 113B of the Police Act 1997 (“the 1997 Act”) a person can make an application for an ECRC, provided that the application is countersigned by a “registered person” (who is the employer, where the certificate is sought in the context of relevant employment). The relevant domestic law applicable at the time of the disclosure of the applicant’s criminal record information is set out in detail in the Court’s judgment in M.M. v. the United Kingdom, cited above, §§ 48-57. In so far as any specific provisions described there applied only to Northern Ireland, similar provisions applied in England and Wales. In short, an ECRC issued under section 113B contained a record of all previous convictions as well as other “soft intelligence” held by the police and deemed relevant by them. The law required that a copy of the certificate be sent to the registered person.
+
+11.  On 18 June 2014, the Supreme Court delivered its judgment in R (T and another) v. Secretary of State for the Home Department and another [2014] UKSC 35. The issue in the appeal was whether the relevant provisions of the 1997 Act, as they stood prior to their amendment in 2013 (see paragraph 12 below), were compatible with Article 8 of the Convention. The court held that in order for the regime to be “in accordance with the law,” there needed to be safeguards that ensured that the national authorities had addressed the issue of the necessity for the interference and that allowed the proportionality of an interference to be adequately examined. Since the 1997 Act lacked any such safeguards at the relevant time, this Court had been correct to conclude in M.M. v. the United Kingdom, cited above, that the scheme was not in accordance with the law.
+
+The new rules
+
+12.  In the meantime, while R (T and another) was pending before the Supreme Court, the Government brought forward an order to amend the relevant provisions of the 1997 Act. The amended rules came into force on 29 May 2013. Under the amended provisions, a conviction imposed on an adult will not be disclosed on an ECRC if the following conditions apply:
+
+(1)  eleven years have elapsed since the date of conviction;
+
+(2)  it is the person’s only offence;
+
+(3)  it did not result in a custodial sentence; and
+
+(4)  it was not for a specified offence (mainly offences of violence, sexual offences and other offences relevant to safeguarding children and vulnerable persons).
+
+13.  The requirement to send a copy of an ECRC to the registered person (see paragraph 10 above) was subsequently repealed. The ECRC is therefore sent only to the person who has made the application.
+
+Judicial consideration of the new rules
+
+14.  On 30 January 2019, the Supreme Court delivered judgment in In re Gallagher and R (P, G & W) v. Secretary of State for the Home Department and others [2019] UKSC 3 (see the discussion of the case in M.C. v. the United Kingdom, no. 70988/12, §§ 20-31, 30 March 2021). The cases concerned the disclosure regime in the 1997 Act as amended in May 2013. Lord Sumption, for the majority, said that following the introduction of the new provisions, the filtering rules governing disclosure of criminal records were highly prescriptive and the categories of disclosable convictions were exactly defined. It was no longer the case that any conviction was liable to indiscriminate disclosure without exception. The current regime was therefore in accordance with the law for the purposes of Article 8 of the Convention.
+
+15.  As for proportionality, the majority considered that the legislative scheme governing the disclosure of criminal records was a good example of legislation by reference to pre-defined categories being justified. The court held that, with two exceptions, the carefully drawn categories in the legislative scheme were not disproportionate. The first exception concerned the rule that if an applicant had more than one conviction of any type, all his or her convictions would be disclosed. The second exception concerned the inclusion within the disclosure rules of warnings and reprimands issued for young offenders. The Supreme Court made declarations of incompatibility with Article 8 in respect of these two aspects of the rules. In response to the declarations of incompatibility, the Government amended the 1997 Act to remove the requirement to automatically disclose offences resulting in a youth caution, reprimand or warning, and all convictions where a person has more than one conviction.
+
+The independent monitor
+
+16.  On 10 September 2012 a new section 117B of the 1997 Act came into force. Pursuant to that section, a person who believes that soft intelligence provided in an ECRC is not relevant or ought not to be included in the ECRC may apply to the person appointed as independent monitor. If the independent monitor, after discussion with the police, agrees that the information is not relevant or ought not to be included in the ECRC, he or she must inform the Secretary of State and the Secretary of State must issue a new certificate excluding the information.
+
+			Data protection
+
+17.  The relevant provisions of the Data Protection Act 1998, which applied at the time the applicant’s criminal record information was subject to mandatory disclosure, are set out in the Court’s judgment in M.M. v. the United Kingdom, cited above, §§ 6571. The Data Protection Act 1998 was subsequently repealed and replaced by the Data Protection Act 2018 (“the 2018 Act”). Section 45 of the 2018 Act sets out a data subject’s right of access to personal data and information held by a data controller. It came into force on 25 May 2018.
+
+THE LAW
+
+			Alleged violation of Article 8 of the Convention
+
+18.  The applicant complained that the provisions of the 1997 Act regulating disclosure of criminal record information violated her right to respect for private life as protected by Article 8 of the Convention. As a result, her conditional discharge had been unlawfully disclosed. She further alleged that the post-29 May 2013 disclosure regime remained incompatible with Article 8 on account of the eleven-year period which must elapse before a conviction no longer needs to be disclosed and because she does not know what information would be disclosed about her in an ECRC.
+
+19.  Article 8 of the Convention reads as follows:
+
+“1.  Everyone has the right to respect for his private ... life ...
+
+2.  There shall be no interference by a public authority with the exercise of this right except such as is in accordance with the law and is necessary in a democratic society in the interests of national security, public safety or the economic well-being of the country, for the prevention of disorder or crime, for the protection of health or morals, or for the protection of the rights and freedoms of others.”
+
+Admissibility
+
+The parties’ submissions
+
+20.  The Government did not contest the admissibility of the applicant’s complaint concerning the period prior to 29 May 2013. However, they argued that, in so far as the application related to the regime for disclosure of criminal record information which came into force on 29 May 2013, this part of the application ought to be declared inadmissible on the basis that the applicant had failed to exhaust domestic remedies. The judgment of the Supreme Court in R (P, G & W) (see paragraphs 14-15 above) demonstrated that the applicant could have challenged the regime before the domestic courts as the claimants there had. The Government also contended that the applicant’s complaints about the post-29 May 2013 regime were manifestly ill-founded. They were of the view that the new disclosure regime was highly prescriptive and as a result the applicant would be able to discern from the filtering rules that her conditional discharge would no longer be subject to mandatory disclosure. In order to find out what information the police held on her, the applicant could make a subject access request under data protection legislation (see paragraph 17 above). Any ECRC would be sent to her directly and not to a prospective employer (see paragraph 13 above). If she disagreed with any disclosure of soft intelligence she could make an application to the independent monitor to have the ECRC reviewed and, if justified, corrected (see paragraph 16 above).
+
+21.  The applicant argued that she had pursued her complaint before the domestic authorities, including by applying to the police for deletion of her criminal record from the PNC (see paragraph 6 above). In her submission, she continued to be materially affected by the current regime: it contained a latent defect which was capable of violating her Article 8 rights since there was no mechanism in the regime which would allow her to know, before she applied for an ECRC, what information (including soft intelligence) would be disclosed. She also complained that the period of eleven years which had to elapse before a conviction would not be disclosed was too long.
+
+The Court’s assessment
+
+The complaint about the period before 29 May 2013
+
+22. In so far as the applicant complains specifically about the 2010 disclosure (see paragraph 5 above), the Court notes that the complaint has been lodged outside the six-month period set out in Article 35 § 1 of the Convention and is therefore inadmissible.
+
+23.  In the light of its previous case-law (see M.M. v. the United Kingdom, cited above, §§ 187-190) and the Government’s observations, the Court declares the complaint concerning the legal provisions applicable prior to 29 May 2013 and the disclosure on 22 August 2012 admissible.
+
+The complaint about the period after 29 May 2013
+
+24.  The Court considers that it is not necessary to examine whether the applicant has exhausted domestic remedies in respect of her complaints concerning the period after 29 May 2013 since they are in any event inadmissible for the following reasons.
+
+25.  It is not disputed that following the 2013 modifications to the 1997 Act (see paragraph 12 above), the applicant’s conditional discharge will no longer be mandatorily disclosed on an ECRC. That the position under the law is indeed reflected in the practice is demonstrated by the fact that an ECRC issued on 5 June 2015 did not disclose the conditional discharge (see paragraph 9 above).
+
+26.  Article 34 of the Convention enables applications to be lodged with this Court from those claiming to be victims of a violation. It entitles individuals to contend that a law violates their rights by itself, in the absence of an individual measure of implementation, if they run the risk of being directly affected by it (see, for example, Norris v. Ireland, 26 October 1988, § 31, Series A no. 142). Given that the applicant’s conditional discharge has fallen outside the disclosure requirements since the entry into force of the legislative amendments in 2013, she has failed to show that she has at any time been a victim, within the meaning of Article 34 of the Convention, of the provisions of the 1997 Act in the version in force since 29 May 2013 about which she now complains. Her complaint about the length of time which must elapse before a conviction is no longer subject to mandatory disclosure is therefore incompatible ratione personae with the provisions of the Convention and must be rejected in accordance with Article 35 §§ 3 (a) and 4.
+
+27.  As regards the applicant’s complaint that she cannot know what information might be disclosed in an ECRC, the Court notes, first, that she has not suggested that there is or even may be any information, aside from the conditional discharge, held about her by the police which might conceivably be included in a future ECRC. The only disclosure contained in the ECRCs to which she has referred in the present proceedings was the conditional discharge. Second, the Court does not accept that the applicant has no means by which she could, if she wished to do so, periodically check what information was held on her by the police in order that she might assess whether information would be disclosed under the applicable disclosure regime. It observes that in 2015 the applicant was able to make a subject access request to the police under the Data Protection Act 1998 (now replaced by the Data Protection Act 2018 – see paragraph 17 above) which allowed her to obtain a full record of information held on the PNC about her, including details of her conditional discharge (see paragraph 8 above). Finally, any future ECRC would be provided to the applicant only, which would enable her to apply to the independent monitor to challenge the inclusion of any soft intelligence before disclosing the ECRC to an employer (see paragraphs 13 and 16 above).
+
+28.  In these circumstances, the Court finds that there is no evidence to suggest that the current disclosure regime fails to protect the applicant’s Article 8 rights in this respect. This complaint is therefore manifestly illfounded and must be rejected in accordance with Article 35 §§ 3 (a) and 4 of the Convention.
+
+Merits
+
+29. In their written observations to the Court, the Government accepted that the disclosure of the applicant’s conditional discharge in August 2012 was pursuant to a regime that was not “in accordance with the law” and was therefore in violation of Article 8. Having regard to its findings in M.M. v. the United Kingdom, cited above, §§ 204 and 206-207, in respect of the relevant domestic law applicable at the time of the disclosure of the applicant’s criminal record information, the Court finds that the provisions regulating disclosure of the applicant’s data during this period were not in accordance with the law. There has therefore been a violation of Article 8 of the Convention in this respect.
+
+			Other alleged violations of the convention
+
+30.  Relying on Article 7, the applicant complained that a heavier penalty had been imposed than the one which was applicable at the time the criminal offence was committed. Under Article 13 of the Convention, she complained about a lack of an effective remedy because there was no way to stop the disclosure of her conviction on ECRCs. She also complained under Article 14 that she had been discriminated against on the basis of the disclosed conviction and under Article 2 of Protocol No. 1 that she had been unable to further her education as a result of the disclosed conviction.
+
+31.  Having regard to the facts of the case, the submissions of the parties and its findings under Article 8 of the Convention, the Court is satisfied that the substance of the applicant’s additional complaints has been addressed in the context of its examination under Article 8 above. In these circumstances it considers that it is not necessary to examine the admissibility and merits of the complaints under Articles 7, 13 and 14 of the Convention and Article 2 of Protocol No. 1.
+
+			Application of Article 41 of the Convention
+
+32.  Article 41 of the Convention provides:
+
+“If the Court finds that there has been a violation of the Convention or the Protocols thereto, and if the internal law of the High Contracting Party concerned allows only partial reparation to be made, the Court shall, if necessary, afford just satisfaction to the injured party.”
+
+Damage
+
+33.  The applicant claimed compensation for non-pecuniary damage in the sum of thirty thousand pounds sterling (GBP) for the distress and anxiety caused by the past disclosure of her criminal record and in relation to her complaint regarding the alleged violation of Article 8 under the current disclosure regime. She claimed inter alia that the risk of disclosure of her criminal record information had caused her to abandon plans to take up volunteer positions.
+
+34.  The Government submitted that their acceptance of a violation of Article 8 of the Convention in respect of the past disclosure of the applicant’s conditional discharge would in itself constitute just satisfaction. The sum claimed by the applicant was excessive and was not justified either on the basis of any alleged loss suffered by her or by reference to any previous case-law of the Court.
+
+35.  The Court has found that the provisions regulating the disclosure of the applicant’s conditional discharge prior to 29 May 2013 were not in accordance with the law. At the same time, it has declared inadmissible the applicant’s complaint concerning the post-29 May 2013 disclosure regime. There is no evidence that the risk of disclosure, or disclosure itself, of the conditional discharge caused the applicant any real loss of opportunity, either in terms of her career in the social care sector or as regards volunteer positions for which she claimed she would otherwise have applied. Although she likely suffered some degree of distress as a result of the pre29 May 2013 provisions, the Court notes that the law has now been changed and her conditional discharge is no longer subject to mandatory disclosure on an ECRC. It therefore concludes that the finding of a violation constitutes in itself sufficient just satisfaction.
+
+Cost and expenses
+
+36.  The applicant also claimed GBP 6,000 in costs and expenses pursuant to a conditional fee agreement (“CFA”) with her solicitors. She provided an invoice in this sum for “advising and work done” on the application “as per the terms” of the CFA. She did not provide a copy of the CFA.
+
+37.  The Government submitted that the applicant should not be awarded any sum by way of costs and expenses. Alternatively, they submitted that the amount claimed was excessive having regard to the fact that the applicant’s solicitors were not involved in the formulation of the initial application to the Court.
+
+38.  According to the Court’s case-law, an applicant is entitled to the reimbursement of costs and expenses only in so far as it has been shown that these have been actually and necessarily incurred and are reasonable as to quantum (see Buzadji v. the Republic of Moldova [GC], no. 23755/07, § 130, 5 July 2016). Moreover, costs are only recoverable to the extent that they relate to the violation found (see Denisov v. Ukraine [GC], no. 76639/11, § 146, 25 September 2018).
+
+39.  Pursuant to the Court’s instructions, the applicant instructed a legal representative for the written stage of the Court’s procedure. Her representatives provided written observations on the admissibility and merits of the application and responded to requests from the Court for further information and documents. The applicant has provided an invoice which refers only to a lump sum for “advising and work done” on the application pursuant to the CFA. No reference has been made in the invoice to the specific work actually carried out, the number of hours worked or the hourly rate charged. Moreover, the Government conceded in their initial written submissions that the disclosure in respect of which the Court has found a violation was not in accordance with the law. There was, therefore, no need for extensive written pleadings directed at this complaint, and the Court has not upheld any of the other complaints covered by the applicant’s pleadings.
+
+40.  In the present case, regard being had to the documents in its possession and to the above considerations, the Court considers it reasonable to award the sum of 1,000 euros for the proceedings before the Court.
+
+Default and interest
+
+41.  The Court considers it appropriate that the default interest rate should be based on the marginal lending rate of the European Central Bank, to which should be added three percentage points.
+
+FOR THESE REASONS, THE COURT, UNANIMOUSLY,
+
+Declares the complaint concerning the legal provisions applicable prior to 29 May 2013 and the disclosure on 22 August 2012 admissible and the remainder of the Article 8 complaints inadmissible;
+
+Holds that there has been a violation of Article 8 of the Convention;
+
+Holds that it is not necessary to examine the admissibility and merits of the complaints under Articles 7, 13 and 14 of the Convention and Article 2 of Protocol No. 1;
+
+Holds that the finding of a violation constitutes in itself sufficient just satisfaction for the non-pecuniary damage sustained by the applicant;
+
+Holds
+
+that the respondent State is to pay the applicant, within three months from the date on which the judgment becomes final in accordance with Article 44 § 2 of the Convention, EUR 1,000 (one thousand euros), plus any tax that may be chargeable to the applicant, in respect of costs and expenses, to be converted into the currency of the respondent State at the rate applicable at the date of settlement;
+
+that from the expiry of the above-mentioned three months until settlement simple interest shall be payable on the above amount at a rate equal to the marginal lending rate of the European Central Bank during the default period plus three percentage points;
+
+Dismisses the remainder of the applicant’s claim for just satisfaction.
+
+Done in English, and notified in writing on 30 March 2021, pursuant to Rule 77 §§ 2 and 3 of the Rules of Court.
+
+Andrea Tamietti 	Yonko Grozev
+	Registrar	President
+
+
+
+
+
+
+
+
+
+2
+
+13

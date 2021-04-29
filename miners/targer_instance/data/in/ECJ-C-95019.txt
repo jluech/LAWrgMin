@@ -1,0 +1,497 @@
+4/1/2021
+
+CURIA - Documents
+
+InfoCuria
+Case-law
+
+English (en)
+
+Home > Search form > List of results > Documents
+Language of document : English
+
+ECLI:EU:C:2021:230
+
+Provisional text
+JUDGMENT OF THE COURT (Fifth Chamber)
+24 March 2021 (*)
+(Reference for a preliminary ruling – Company law – Directive 2006/43/EC – Statutory audit of annual and
+consolidated accounts – Article 22a(1)(a) – Recruitment of a statutory auditor by an audited entity – Waiting
+period – Prohibition on taking up a key management post in the audited entity – Infringement – Gravity and
+duration of the infringement – Expression ‘taking up a post’ – Scope – Conclusion of an employment contract with
+the audited entity – Independence of statutory auditors – External appearance)
+In Case C‑950/19,
+REQUEST for a preliminary ruling under Article 267 TFEU from the Helsingin hallinto-oikeus (Administrative Court,
+Helsinki, Finland), made by decision of 13 December 2019, received at the Court on 17 December 2019, in the
+proceedings brought by
+A
+intervening party:
+Patentti- ja rekisterihallituksen tilintarkastuslautakunta,
+THE COURT (Fifth Chamber),
+composed of E. Regan (Rapporteur), President of the Chamber, M. Ilešič, E. Juhász, C. Lycourgos and I. Jarukaitis,
+Judges,
+Advocate General: M. Campos Sánchez‑Bordona,
+Registrar: A. Calot Escobar,
+having regard to the written procedure,
+after considering the observations submitted on behalf of:
+the European Commission, by H. Støvlbæk, I. Koskinen and L. Armati, acting as Agents,
+after hearing the Opinion of the Advocate General at the sitting on 10 December 2020,
+gives the following
+Judgment
+This request for a preliminary ruling concerns the interpretation of Article 22a(1)(a) of Directive 2006/43/EC of
+the European Parliament and of the Council of 17 May 2006 on statutory audits of annual accounts and
+consolidated accounts, amending Council Directives 78/660/EEC and 83/349/EEC and repealing Council Directive
+84/253/EEC (OJ 2006 L 157, p. 87), as amended by Directive 2014/56/EU of the European Parliament and of the
+Council of 16 April 2014 (OJ 2014 L 158, p. 196) (‘Directive 2006/43’).
+The application has been made in proceedings brought by A, a statutory auditor approved by the Finnish Chamber
+of Commerce, against a decision of the Patentti- ja rekisterihallituksen tilintarkastuslautakunta (the Audit
+Committee at the Patent and Registration Office, Finland) (‘the ‘competent national authority’), concerning the
+latter’s decision to impose a fine on him following his recruitment to a key management post in a company after
+carrying out the statutory audit at that company.
+Legal context
+European Union law
+Recitals 5, 8, 9, 11 and 13 of Directive 2006/43 read as follows:
+This Directive aims at high level – though not full – harmonisation of statutory audit requirements. A Member
+State requiring statutory audit may impose more stringent requirements, unless otherwise provided for by this
+Directive.
+In order to protect third parties, all approved auditors and audit firms should be entered in a register which is
+accessible to the public and which contains basic information concerning statutory auditors and audit firms.
+Statutory auditors should adhere to the highest ethical standards. They should therefore be subject to
+professional ethics, covering at least their public-interest function, their integrity and objectivity and their
+professional competence and due care. The public-interest function of statutory auditors means that a broader
+community of people and institutions rely on the quality of a statutory auditor’s work. Good audit quality
+contributes to the orderly functioning of markets by enhancing the integrity and efficiency of financial
+statements. …
+…
+Statutory auditors and audit firms should be independent when carrying out statutory audits. They may inform
+the audited entity of matters arising from the audit, but should abstain from the internal decision processes of the
+audited entity. If they find themselves in a situation where the significance of the threats to their independence,
+even after application of safeguards to mitigate those threats, is too high, they should resign or abstain from the
+audit engagement. …
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239245&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+1/7
+
+4/1/2021
+
+CURIA - Documents
+
+It is important to ensure consistently high quality in all statutory audits required by [Union] law. …’
+Article 1 of Directive 2006/43, entitled ‘Subject matter’, which appears in Chapter I, entitled ‘Subject matter and
+definitions’, provides as follows:
+‘This Directive establishes rules concerning the statutory audit of annual and consolidated accounts.
+…’
+In Chapter I, Article 2 thereof, headed ‘Definitions’, provides:
+‘For the purposes of this Directive, the following definitions shall apply:
+“statutory auditor” means a natural person who is approved in accordance with this Directive by the competent
+authorities of a Member State to carry out statutory audits;
+“audit firm” means a legal person or any other entity, regardless of its legal form, that is approved in accordance
+with this Directive by the competent authorities of a Member State to carry out statutory audits;
+“key audit partner(s)”means:
+the statutory auditor(s) designated by an audit firm for a particular audit engagement as being primarily
+responsible for carrying out the statutory audit on behalf of the audit firm; or
+in the case of a group audit, at least the statutory auditor(s) designated by an audit firm as being primarily
+responsible for carrying out the statutory audit at the level of the group and the statutory auditor(s) designated as
+being primarily responsible at the level of material subsidiaries; or
+the statutory auditor(s) who sign(s) the audit report.
+…’
+Appearing in Chapter IV of that directive, entitled ‘Professional ethics, independence, objectivity, confidentiality
+and professional secrecy’, Article 22 thereof, entitled ‘Independence and objectivity’, provides:
+‘1.
+Member States shall ensure that, when carrying out a statutory audit, a statutory auditor or an audit firm,
+and any legal person in a position to directly or indirectly influence the outcome of the statutory audit, is
+independent of the audited entity and is not involved in the decision-taking of the audited entity.
+Independence shall be required at least during both the period covered by the financial statements to be audited
+and the period during which the statutory audit is carried out.
+Member States shall ensure that a statutory auditor or an audit firm takes all reasonable steps to ensure that,
+when carrying out a statutory audit, his, her or its independence is not affected by any existing or potential conflict
+of interest or business or other direct or indirect relationship involving the statutory auditor or the audit firm
+carrying out the statutory audit and, where appropriate, its network managers, auditors, employees, any other
+natural persons whose services are placed at the disposal or under the control of the statutory auditor or the audit
+firm, or any person directly or indirectly linked to the statutory auditor or the audit firm by control.
+The statutory auditor or the audit firm shall not carry out a statutory audit if there is any threat of self-review, selfinterest, advocacy, familiarity or intimidation created by financial, personal, business, employment or other
+relationships between:
+the statutory auditor, the audit firm, its network, and any natural person in a position to influence the outcome of
+the statutory audit, and
+the audited entity,
+as a result of which an objective, reasonable and informed third party, taking into account the safeguards applied,
+would conclude that the statutory auditor’s or the audit firm’s independence is compromised.
+…
+4.
+Member States shall ensure that persons or firms referred to in paragraph 2 do not participate in or
+otherwise influence the outcome of a statutory audit of any particular audited entity if they:
+have had an employment, or a business or other relationship with that audited entity within the period referred
+[to] in paragraph 1 that may cause, or may be generally perceived as causing, a conflict of interest.
+5.
+Persons or firms referred to in paragraph 2 shall not solicit or accept pecuniary or non-pecuniary gifts or
+favours from the audited entity or any entity related to an audited entity unless an objective, reasonable and
+informed third party would consider the value thereof as trivial or inconsequential.
+Article 22a of Directive 2006/43, entitled ‘Employment by audited entities of former statutory auditors or of
+employees of statutory auditors or audit firms’, which also appears in Chapter IV thereof, contains paragraph 1
+which reads as follows:
+‘Member States shall ensure that a statutory auditor or a key audit partner who carries out a statutory audit on
+behalf of an audit firm does not, before a period of at least one year, or in the case of statutory audit of publicinterest entities a period of at least two years, has elapsed since he or she ceased to act as a statutory auditor or
+key audit partner in connection with the audit engagement:
+take up a key management position in the audited entity;
+where applicable, become a member of the audit committee of the audited entity or, where such committee does
+not exist, of the body performing equivalent functions to an audit committee;
+become a non-executive member of the administrative body or a member of the supervisory body of the audited
+entity.’
+Appearing in Chapter V of that Directive, entitled ‘Auditing standards and audit reporting’, Article 28 thereof, which
+is headed ‘Audit reporting’, provides as follows:
+‘1.
+The statutory auditor(s) or the audit firm(s) shall present the results of the statutory audit in an audit
+report. …
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239245&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+2/7
+
+4/1/2021
+
+CURIA - Documents
+
+2.
+The audit report shall be in writing and shall:
+…
+include an audit opinion, which shall be either unqualified, qualified or an adverse opinion and shall state clearly
+the opinion of the statutory auditor(s) or the audit firm(s) as to:
+whether the annual financial statements give a true and fair view in accordance with the relevant financial
+reporting framework; …
+Recitals 1, 6 to 8 and 10 of Directive 2014/56, which amended Directive 2006/43, state as follows:
+Directive [2006/43] lays down the conditions for the approval and registration of persons that carry out statutory
+audits, the rules on independence, objectivity and professional ethics applying to those persons, and the
+framework for their public oversight. However, it is necessary to further harmonise those rules at Union level in
+order to allow for more transparency and predictability of the requirements applying to such persons and to
+enhance their independence and objectivity in the performance of their tasks. …
+It is particularly relevant to reinforce independence as an essential element when carrying out statutory audits. In
+order to enhance the independence of statutory auditors and audit firms from the audited entity when they are
+carrying out statutory audits, a statutory auditor or an audit firm, and any natural person in a position to directly
+or indirectly influence the outcome of the statutory audit, should be independent of the audited entity and should
+not be involved in the audited entity’s decision-making process. …
+Statutory auditors and audit firms should be independent when carrying out statutory audits of audited entities,
+and conflicts of interest should be avoided. In order for the independence of statutory auditors and audit firms to
+be determined, the concept of a network in which statutory auditors and audit firms operate has to be taken into
+account. The independence requirement should at least be fulfilled during the period covered by the audit report,
+including both the period covered by the financial statements to be audited and the period during which the
+statutory audit is carried out.
+Statutory auditors, audit firms and their employees should in particular refrain from carrying out the statutory
+audit of an entity if they have a business interest or financial interest in it, and from trading in financial
+instruments issued, guaranteed or otherwise supported by an audited entity, other than holdings in diversified
+collective investment schemes. The statutory auditor or the audit firm should abstain from participating in the
+internal decision-making processes of the audited entity. Statutory auditors, audit firms and their employees
+directly involved in the statutory audit engagement should be prevented from taking up duties in the audited entity
+at managerial or board level until an appropriate period has elapsed since the end of the audit engagement.
+Adequate internal organisation of statutory auditors and audit firms should help to prevent any threats to their
+independence. Thus, owners or shareholders of an audit firm, as well as those managing it, should not intervene in
+the carrying-out of a statutory audit in any way which jeopardises the independence and objectivity of the
+statutory auditor who carries out the statutory audit on behalf of the audit firm. Additionally, statutory auditors and
+audit firms should establish appropriate internal policies and procedures in relation to employees and other persons
+involved in the statutory audit activity within their organisations, in order to ensure compliance with their statutory
+obligations. Those policies and procedures should in particular seek to prevent and address any threats to
+independence and should ensure the quality, integrity and thoroughness of the statutory audit. Those policies and
+procedures should be proportionate, in view of the scale and complexity of the business of the statutory auditor or
+the audit firm.’
+Finnish law
+Entitled ‘Recruitment of a statutory auditor by an audited entity’, Paragraph 11 of Chapter 4 of the
+tilintarkastuslaki (1141/2015) (Law on Statutory Audits (1141/2015)) of 18 September 2015, which is itself
+entitled ‘Other provisions concerning the statutory auditor’, provides:
+‘A statutory auditor or a key audit partner who carries out a statutory audit for an audit firm is prohibited, until at
+least one year has elapsed since that audit, from:
+taking up a key management position in the audited entity;
+membership of the audit committee of the audited entity or of the body performing the functions of an audit
+committee;
+becoming a non-executive member of the administrative body or a member of the supervisory body of the audited
+entity.
+The period is two years where the subject of the audit is a public-interest entity.
+…’
+Entitled ‘Fine and determination thereof, Paragraph 5 of Chapter 10 of that law, itself entitled ‘Sanctions’,
+provides:
+‘The audit committee may impose a fine where a statutory auditor fails to observe the periods referred to in
+Paragraph 11 of Chapter 4 concerning the recruitment of a statutory auditor to an audited entity.
+The fine for failure to comply with the period referred to in Paragraph 11 of Chapter 4 is capped at a maximum
+amount of EUR 50 000.
+The fine shall be paid to the State.’
+Entitled ‘Factors to be taken into account in determining the sanction’, Paragraph 7 of Chapter 10 states:
+‘In determining the penalty, all relevant circumstances should be taken into account. Those are:
+the gravity and the duration of the infringement;
+…’
+The dispute in the main proceedings and the questions referred for a preliminary ruling
+
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239245&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+3/7
+
+4/1/2021
+
+CURIA - Documents
+
+From 2014 until 12 July 2018, the applicant in the main proceedings carried out the statutory audit of the
+accounts of X Oyj (‘the audited company’) in his capacity as a key audit partner on behalf of an audit firm.
+On 5 February 2018, the applicant, in that capacity, completed the statutory audit of the accounts of that
+company for the 2017 financial year.
+On 12 July 2018, the applicant in the main proceedings concluded an employment contract with that company.
+According to a stock exchange announcement published by the audited company on 17 July 2018, the applicant in
+the main proceedings was appointed as head of the finance department and member of the management group
+and was to commence his employment in February 2019.
+On 31 August 2018, the applicant in the main proceedings ceased to perform his duties at the audit firm that
+employed him. In a statement submitted on the same day by the latter to the Auditors’ Supervisory Body, the
+audited company confirmed in writing that the applicant would not perform any significant management, financial
+or data communication functions for that company until the publication of the audit report for the 2018 financial
+year.
+By a decision of 13 November 2018 (‘the contested decision’), the competent national authority imposed a fine of
+EUR 50 000 on the applicant in the main proceedings, on the ground that he had failed to comply with the socalled ‘waiting period’ of two years laid down in Paragraph 11 of Chapter 4 of the Law on Statutory Audits for public
+interest entities. That authority considered that the waiting period should be calculated from the date on which the
+applicant had ceased to perform his duties in the audit firm as a key audit partner in the statutory audit of the
+audited company, that is on 12 July 2018. However, since that date, the applicant has held a key management
+position, as Chief Financial Officer, within that company, resulting from the conclusion of an employment contract
+with it.
+On 14 December 2018, another audit firm was entered on the Commercial Register as the entity responsible for
+the statutory audit of the audited company’s accounts.
+On 5 February 2019, following the completion of the statutory audit of the latter’s accounts by that other audit
+firm for the 2018 financial year, the applicant in the main proceedings started to perform his duties in the audited
+company as Chief Financial Officer and member of the Board of Directors.
+The applicant in the main proceedings brought an action before the Helsingin hallinto-oikeus (Administrative
+Court, Helsinki, Finland) for a reduction of the fine imposed on him by the contested decision by at least half.
+In support of that action, the applicant in the main proceedings submits that the contested decision is based on an
+erroneous interpretation of the gravity and duration of the infringement, since the expression ‘taking up a post’ in
+Article 22a(1)(a) of Directive 2006/43 necessarily refers to a situation in which the person concerned has actually
+commenced his or her employment. As long as that is not the case, the latter, while he or she may feel morally
+bound to the company that recruited him or her, is not actually performing his or her duties and does not influence
+the conduct of the audited company’s business. However, a key factor in the assessment to be carried out with
+regard to independence is the capacity of the person concerned to influence the annual accounts of his or her new
+employer. It follows, in the present case, that the applicant must be regarded as having taken up the post in
+question from the date on which he commenced his duties in the audited company as Chief Financial Officer in
+February 2019.
+Furthermore, the applicant in the main proceedings points out that circumstances are likely to change before the
+actual commencement of employment. Thus, in the present case, given the fact that another audit firm carried out
+the statutory audit of the audited company’s accounts for the 2018 financial year, it must be held that the waiting
+period started to run from the date of completion of that company’s statutory audit, on 5 February 2018, which the
+applicant had carried out for the 2017 financial year. If the waiting period had been set with regard to actual
+independence, that period would have run, in the present case, for one full year, whereas, from a strictly formal
+perspective, that period lasted approximately seven months – from 12 July 2018, the date on which the
+employment contract with the audited company was signed and 5 February 2019, the date on which the statutory
+audit of that company’s accounts for the 2018 financial year relating to the year was completed.
+Furthermore, the applicant in the main proceedings argued that the information concerning his recruitment had
+been notified in a transparent manner so that third parties also would understand that the situation had been
+carefully considered and safeguards had been put in place. Thus, due to the change of audit firm responsible for
+the statutory audit of the audited company’s accounts for the 2018 financial year, he was not employed by that
+company while the audit firm which had employed him was still auditing the company’s accounts. The application
+of Paragraph 5 of Chapter 10 of the Law on Statutory Audit must therefore be subject to the condition that the
+audit relationship in question still continues after the recruitment of the statutory auditor by the audited entity.
+The competent national authority submits that, in the contested decision, it took into account the circumstances
+mentioned in Paragraph 7 of Chapter 10 of the Law on Statutory Audits on the imposition of sanctions.
+It is true that the expression ‘take up a post’, within the meaning of Paragraph 11 of Chapter 4 of that law, could
+be interpreted as referring both to the signing of the employment contract relating to the post in question and to
+the actual commencement of duties. It is also true that circumstances may change between those two events.
+There is no justification for sanctioning an act that has not yet occurred.
+However, a number of factors support the first interpretation. In particular, since the waiting period is intended to
+ensure the independence of a statutory auditor, external factors and appearances should be duly taken into
+account. However, the conclusion of an employment contract, a fortiori when it has been disclosed on the markets,
+constitutes a fact noticeable to third parties, which directly influences the behaviour and attitude of the person
+recruited, his or her employer and the actors concerned. A statutory auditor who has entered into such an
+employment contract is, therefore, bound to his or her new employer, in the sense that he or she is bound to a
+certain loyalty to the new employer and is required to act in accordance with the latter’s interests, even before he
+or she actually commences his or her duties. A statutory auditor who is recruited to a management position in an
+
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239245&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+4/7
+
+4/1/2021
+
+CURIA - Documents
+
+audited entity thereby ceases to be independent upon conclusion of the employment contract. The actual date of
+commencement of employment is, by contrast, not decisive.
+The national court considers that the outcome of the dispute in the main proceedings, regarding whether the
+competent national authority could impose a fine of EUR 50 000 on the applicant in the main proceedings for
+failure to comply with the waiting period referred to in Paragraph 11 of Chapter 4 of the Law on Statutory Audits,
+depends on the method of calculating the length of that period. In order to determine the gravity and duration of
+the infringement of which the person concerned is accused, in accordance with Paragraph 7 of Chapter 10 of that
+law, it is necessary to determine the moment from which he is regarded as having taken up a key managerial
+position in the audited company, within the meaning of Paragraph 11 of Chapter 4 thereof, which implements in
+national law Article 22a(1) of Directive 2006/43.
+In those circumstances, the Helsingin hallinto-oikeus (Adminsitrative Court, Helsinki) decided to stay the
+proceedings and to refer the following questions to the Court for a preliminary ruling:
+Is Article 22a(1) of Directive [2006/43] to be interpreted as meaning that a key audit partner takes up a position
+of the kind referred to in that provision upon conclusion of the employment contract?
+If the answer to the [first] question is in the negative: Is Article 22a(1) [of that directive] to be interpreted as
+meaning that a key audit partner takes up a position of the kind referred to in this provision upon commencing
+employment in the position concerned?’
+Consideration of the questions referred
+By its two questions, which must be considered together, the national court asks, in substance, whether
+Article 22a(1)(a) of Directive 2006/43 must be interpreted as meaning that a statutory auditor, such as a key audit
+partner appointed by an audit firm in the context of a statutory audit engagement, must be regarded as holding a
+key management post in an audited entity, within the meaning of that provision, as soon as he or she concludes an
+employment contract for the post with the audited entity, or only when he or she actually commences to perform
+his or her duties.
+As a preliminary point, it must be recalled that Article 22a(1) of Directive 2006/43 provides that, where a
+statutory auditor or key audit partner, who carries out a statutory audit on behalf of an audit firm, is recruited by
+an audited entity, a minimum waiting period of one year or, if recruited by a public interest entity, as the case may
+be, of two years must elapse, starting from the termination of his duties as statutory auditor or key audit partner
+in the statutory audit engagement, during which, pursuant to Article 22a(1)(a) thereof, such an auditor is
+prohibited from ‘taking up’ a key management post in the audited entity.
+It is apparent from the information provided by the referring court that the questions referred to the Court arise in
+the context of a dispute in which the applicant in the main proceedings, while not contesting that he has infringed
+the two-year waiting period applicable in the present case, nevertheless seeks a reduction in the fine imposed on
+him by the competent national authority as a result of that infringement, on the ground that, on the same day that
+he had ceased his duties as lead audit partner in the statutory audit of the company’s accounts, he concluded an
+employment contract with a company by which he was appointed Chief Financial Officer and a member of the
+company’s management committee. According to that authority, in that regard, it is irrelevant that the applicant in
+the main proceedings did not actually take up his position until a later date, slightly more than six months after the
+conclusion of that employment contract and approximately one year after the completion of the last statutory audit
+he had carried out for that company on behalf of that audit firm.
+It follows, since it is not disputed that the waiting period was not observed, that court, by its questions, as it
+explicitly points out in the order for reference, seeks only to determine the gravity and duration of that
+infringement, by clarifying the scope of the expression ‘taking up a post’, used in Article 22a(1)(a) of Directive
+2006/43, in order to define the moment at which that infringement must be regarded as having been committed.
+In that connection it must be recalled that in accordance with settled case-law, for the purpose of interpreting a
+provision of EU law, it is necessary to consider not only its wording but also the context in which it occurs and the
+objectives pursued by the rules of which it is part (see, in particular, judgment of 6 October 2020, Jobcenter
+Krefeld, C‑181/19, EU:C:2020:794, paragraph 61 and the case-law cited).
+As far as concerns the wording of Article 22a(1)(a) of Directive 2006/43, it should be noted that the verbs used in
+some language versions of that provision, such as ‘nastoupit’ in the Czech version, ‘übernimmt’ in the German
+version, ‘occuper’, in the French version and ‘prevzeti’ in the Slovenian version, might suggest that that provision
+requires that the person concerned is preparing to or is actually performing his or her functions in the audited
+entity.
+However, other language versions of the same provision suggest that it might be sufficient for the application of
+the same provision that the person concerned accepts the post by making the commitment to perform his or her
+functions, so that the conclusion of an employment contract would be the relevant moment to be taken into
+account in that respect. Such an interpretation is apparent, inter alia, from the verbs used in the Spanish
+(‘asuma’), Italian (‘accettare’), Dutch (‘aanvaardt’) and Polish (‘zajęli’) language versions.
+In those circumstances, a purely literal interpretation of Article 22a(1)(a) of Directive 2006/43, based on the text
+of one or more language versions, to the exclusion of the others, cannot prevail. According to the Court’s settled
+case-law, the wording used in one language version of a provision of EU law cannot serve as the sole basis for the
+interpretation of that provision or be made to override the other language versions. Provisions of EU law must be
+interpreted and applied uniformly in the light of the versions existing in all languages of the European Union (see,
+in particular, judgment of 8 October 2020, Combinova, C‑476/19, EU:C:2020:802, paragraph 31 and the case-law
+cited).
+In view of the disparity between the various language versions of Article 22a(1)(a) of Directive 2006/43, it is
+necessary to examine the context in which that provision is set out, as well as the objectives pursued by it and the
+legislation of which it forms part.
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239245&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+5/7
+
+4/1/2021
+
+CURIA - Documents
+
+In that regard, it must be observed that, as is apparent from Article 1 thereof, read in the light of recitals 5, 8, 9,
+11 and 13 thereof, that directive aims to achieve a high degree of harmonisation of statutory audit requirements,
+in particular, by imposing high ethical standards on statutory auditors, specifically with regard to their integrity,
+independence and objectivity, in order to guarantee, in the interest of both the entities audited and third parties,
+the quality of the audits and thereby contribute to the proper functioning of the markets by ensuring that the
+annual financial statements provide a true and fair view of those entities.
+Article 22a of Directive 2006/43, inserted into that Directive by Directive 2014/56, supports that aim, since that
+provision, as is apparent, in particular, from recital 1 of the latter directive, is part of a set of rules introduced by
+the Union legislature in Chapter IV of Directive 2006/43, entitled ‘Professional ethics, independence, objectivity,
+confidentiality and professional secrecy’, including Articles 22 to 24 thereof, in order to strengthen, through further
+harmonisation, in particular, the independence of statutory auditors in the performance of their duties.
+As can be seen from recitals 6 to 8 and 10 of Directive 2014/56, those rules aim, in substance, first, to ensure
+that statutory auditors are not involved in the internal decision-making process of audited entities and to avoid
+conflicts of interest, in particular by excluding the audit of entities to which those auditors are linked by an
+economic or financial interest, and, second, to protect them from the intervention of owners, shareholders or
+managers of the audit firm which employs them, in order to ensure, by preventing any interference which might
+influence, directly or indirectly the outcome of their audit, as presented in the audit report provided for in Article 28
+of Directive 2006/43, the quality and integrity of that report and, therefore, its reliability for the audited entity and
+third parties, in accordance with the objective pursued by that Directive, set out in paragraph 39 of the present
+judgment.
+It follows that the requirement of independence has not only an internal aspect, in that it aims at ensuring that
+the audited entity can rely on the audit carried out by the statutory auditor conducting it, but also an external
+aspect, in that it aims at preserving the confidence of third parties, such as creditors and investors, in the reliability
+of the audit. That external aspect is all the more important as that trust is crucial in order to ensure the protection
+of the value of partners’ and shareholders’ shareholdings and, thus, the proper functioning of the markets as a
+whole for investors. Statutory audits must therefore not only be reliable but also be perceived as such by third
+parties.
+It is from that dual perspective, internal and external, that the EU legislature, as is apparent, in particular, from
+recital 8 of Directive 2014/56, has prohibited a statutory auditor from holding positions at managerial or board
+level of an audited entity, not only during the period covered by the audit report, but also, as reflected in the
+provisions of Article 22a(1) of that Directive, for an appropriate period after the termination of his functions as
+statutory auditor or as key audit partner in a statutory audit engagement.
+As the Advocate General observed, in substance, in paragraphs 52 to 55 of his Opinion, such a prohibition thereby
+intends to eliminate, as far as possible, the incentive for a statutory auditor to plan or conclude a contractual
+relationship with an audited entity during the period in which he carried out the statutory audit as well as during a
+specified subsequent period. In particular, by that prohibition, the EU legislature seeks to prevent such an auditor
+from being tempted to favour his own interests, actual or potential, by producing an audit report which is
+complacent towards such an entity and which the latter would reward in the short or medium term by offering him
+a key management position within the entity.
+However, it must be observed that the very existence of a contractual relationship between a statutory auditor and
+an audited entity, or even the initiation of negotiations to that end, is likely not only to give rise to a conflict of
+interest, but also to give the appearance of one.
+As the European Commission has rightly pointed out in its written observations, taking into account the obligations
+of loyalty and good faith which arise from such a contractual relationship and the proximity which it seems to
+establish between the parties to it, such a relationship is likely to be perceived by third parties as being likely to
+influence or to have influenced the audit of the audited entity carried out by the statutory auditor concerned and,
+therefore, to affect the confidence of those third parties in the reliability of the result of that audit.
+In particular, it should be emphasised in that regard that, even where a statutory auditor has ceased his duties or
+those of a key audit partner in the context of a statutory audit engagement of a particular entity, the negotiation or
+conclusion of a contractual relationship between such an auditor and that entity may be sufficient to introduce
+retrospectively a doubt in the minds of third parties as to the quality and integrity of the audit carried out prior to
+the termination of such duties.
+It thus appears that, having regard, in particular, to the importance of the perception of third parties with regard
+to the independence of a statutory auditor, the statutory auditor is to be regarded as holding a position within an
+audited entity within the meaning of Article 22a(1)(a) of Directive 2006/43 from the moment a contractual
+relationship between them is concluded, even if he or she has not yet actually taken up his or her post in that
+entity.
+That interpretation is consistent with the provisions of Article 22 of Directive 2006/43, which are specifically
+intended to define the scope of the independence of statutory auditors, in combination with which the scope of
+Article 22a(1) thereof must be determined, since, as it already appears from paragraph 40 of the present
+judgment, all those provisions have been adopted by the Union legislature with a view to strengthening that
+independence.
+According to paragraph 1 of Article 22, Member States, in order to ensure that a statutory auditor is not involved
+in the decision-making process of an audited entity, must ensure that all reasonable steps are taken to prevent any
+conflict of interest from arising between that auditor and such an entity which might result, in particular, from any
+financial, personal, business or employment relationship, whether direct or indirect, existing or potential, ‘which
+would lead an objective, reasonable and informed third party to conclude that the auditor’s independence is
+compromised.
+
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239245&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+6/7
+
+4/1/2021
+
+CURIA - Documents
+
+Similarly, according to Article 22(4)(c), Member States are required to ensure that statutory auditors may not
+participate in a statutory audit of an audited entity if they have been linked to the audited entity during the audit
+period by an employment contract, a business relationship or any other type of relationship ‘which could cause, or
+could be generally perceived as causing, a conflict of interest’.
+Similarly, it follows from paragraph 5 of Article 22 that a statutory auditor may not solicit or accept gifts or favours
+from the audited entity where the value of such gifts or favours ‘is likely to be regarded’ by an objective,
+reasonable and informed third party as material or not insignificant.
+As the Advocate General pointed out in paragraph 69 of his Opinion, it is clear from those provisions that,
+according to the Union legislature, a relationship which is likely to give rise to a conflict of interest, actual or
+potential, is as likely to undermine the reliability of the result of a statutory audit as a relationship which may
+reasonably be perceived by third parties as being the possible cause of such a conflict of interest.
+In the light of all the above considerations, the answer to the questions referred is that Article 22a(1)(a) of
+Directive 2006/43 must be interpreted as meaning that a statutory auditor, such as a key audit partner appointed
+by an audit firm in the context of a statutory audit engagement, must be regarded as holding a key management
+position in an audited entity, within the meaning of that provision, as soon as he or she concludes an employment
+contract with the latter relating to that post, even if he or she has not yet begun to actually perform his or her
+duties in that post.
+Costs
+Since these proceedings are, for the parties to the main proceedings, a step in the action pending before the
+national court, the decision on costs is a matter for that court. Costs incurred in submitting observations to the
+Court, other than the costs of those parties, are not recoverable.
+On those grounds, the Court (Fifth Chamber) hereby rules:
+Article 22a(1)(a) of Directive 2006/43/EC of the European Parliament and of the Council of 17 May
+2006 on statutory audits of annual accounts and consolidated accounts, amending Council Directives
+78/660/EEC and 83/349/EEC and repealing Council Directive 84/253/EEC, as amended by Directive
+2014/56/EU of the European Parliament and of the Council of 16 April 2014 must be interpreted as
+meaning that a statutory auditor, such as a key audit partner, appointed by an audit firm in the context
+of a statutory audit engagement, must be regarded as holding a key management position in an
+audited entity, within the meaning of that provision, as soon as he or she concludes an employment
+contract with the latter relating to that post, even if he or she has not yet begun to actually perform his
+or her duties in that post.
+[Signatures]
+*
+
+Language of the proceedings: Finnish.
+
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239245&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+7/7
+
+

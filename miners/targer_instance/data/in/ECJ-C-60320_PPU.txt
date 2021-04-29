@@ -1,0 +1,486 @@
+4/1/2021
+
+CURIA - Documents
+
+InfoCuria
+Case-law
+
+English (en)
+
+Home > Search form > List of results > Documents
+Language of document : English
+
+ECLI:EU:C:2021:231
+
+JUDGMENT OF THE COURT (Fifth Chamber)
+24 March 2021 (*)
+(Reference for a preliminary ruling – Urgent preliminary ruling procedure – Area of freedom, security and justice –
+Judicial cooperation in civil matters – Regulation (EC) No 2201/2003 – Article 10 – Jurisdiction in matters of
+parental responsibility – Abduction of a child – Jurisdiction of the courts of a Member State – Territorial scope –
+Removal of a child to a third State – Habitual residence acquired in that third State)
+In Case C‑603/20 PPU,
+REQUEST for a preliminary ruling under Article 267 TFEU from the High Court of Justice (England & Wales), Family
+Division (United Kingdom), made by decision of 6 November 2020, received at the Court on 16 November 2020, in
+the proceedings
+SS
+v
+MCP,
+THE COURT (Fifth Chamber),
+composed of E. Regan (Rapporteur), President of the Chamber, K. Lenaerts, President of the Court, acting as a
+Judge of the Fifth Chamber, M. Ilešič, C. Lycourgos and I. Jarukaitis, Judges,
+Advocate General: A. Rantos,
+Registrar: A. Calot Escobar,
+having regard to the request of 6 November 2020 by the referring court, received at the Court on 16 November
+2020, that the reference for a preliminary ruling be dealt with under the urgent procedure, in accordance with
+Article 107 of the Court’s Rules of Procedure,
+having regard to the decision of 2 December 2020 of the Fifth Chamber granting that request,
+having regard to the written procedure and further to the hearing on 4 February 2021,
+after considering the observations submitted on behalf of:
+SS, by A. Tayo, Barrister, instructed by J. Dsouza, Solicitor,
+MCP, by A. Metzer QC and C. Proudman, Barrister, instructed by H. Choudhery, Solicitor,
+the European Commission, by M. Wilderspin, acting as Agent,
+after hearing the Opinion of the Advocate General at the sitting on 23 February 2021,
+gives the following
+Judgment
+This request for a preliminary ruling concerns the interpretation of Article 10 of Council Regulation (EC)
+No 2201/2003 of 27 November 2003 concerning jurisdiction and the recognition and enforcement of judgments in
+matrimonial matters and the matters of parental responsibility, repealing Regulation (EC) No 1347/2000 (OJ 2000
+L 338, p. 1), as amended by Council Regulation (EC) No 2116/2004 of 2 December 2004 (OJ 2004 L 367, p. 1)
+(‘Regulation No 2201/2003’).
+The request has been made in proceedings between SS, the father of a young child, P, and MCP, the mother of
+that child, concerning an action brought by the father seeking an order for the return of the child to the United
+Kingdom and a ruling on access rights.
+Legal context
+International law
+The 1980 Hague Convention
+The Convention on the Civil Aspects of International Child Abduction, signed on 25 October 1980 in the framework
+of the Hague Conference on Private International Law (‘the 1980 Hague Convention’), entered into force on
+1 December 1983. All the Member States of the European Union are contracting parties to that convention.
+The 1980 Hague Convention contains various provisions intended to ensure the prompt return of a child who is
+wrongfully removed or retained.
+Article 16 of the 1980 Hague Convention provides that, after receiving notice of a wrongful removal or retention of
+a child, within the meaning of Article 3 of that convention, the judicial or administrative authorities of the
+contracting State to which the child has been removed or in which it has been retained are not to decide on the
+merits of rights of custody until it has been determined that the child is not to be returned under that convention
+or unless an application under that convention is not lodged within a reasonable time following receipt of the
+notice.
+The 1996 Hague Convention
+The Convention on Jurisdiction, Applicable Law, Recognition, Enforcement and Co-operation in Respect of Parental
+Responsibility and Measures for the Protection of Children, signed at the Hague on 19 October 1996 (‘the 1996
+Hague Convention’), has been ratified or acceded to by all the Member States of the European Union.
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239243&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+1/7
+
+4/1/2021
+
+CURIA - Documents
+
+That convention lays down rules intended to improve the protection of children in international situations and to
+avoid conflicts between the legal systems of the signatory States in respect of jurisdiction, applicable law,
+recognition and enforcement of measures for the protection of children.
+As regards child abductions, Article 7(1)(a) and (b) of that convention provide:
+In case of wrongful removal or retention of the child, the authorities of the Contracting State in which the child was
+habitually resident immediately before the removal or retention keep their jurisdiction until the child has acquired a
+habitual residence in another State, and:
+each person, institution or other body having rights of custody has acquiesced in the removal or retention; or
+the child has resided in that other State for a period of at least one year after the person, institution or any other
+body having rights of custody has or should have had knowledge of the whereabouts of the child, no request for
+return lodged within that period is still pending, and the child is settled in his or her new environment.’
+Article 52(2) and (3) of the 1996 Hague Convention read as follows:
+This Convention does not affect the possibility for one or more Contracting States to conclude agreements which
+contain, in respect of children habitually resident in any of the States Parties to such agreements, provisions on
+matters governed by this Convention.
+Agreements to be concluded by one or more Contracting States on matters within the scope of this Convention do
+not affect, in the relationship of such States with other Contracting States, the application of the provisions of this
+Convention.’
+European Union law
+Recitals 12 and 33 of Regulation No 2201/2003 state:
+The grounds of jurisdiction in matters of parental responsibility established in the present Regulation are shaped
+in the light of the best interests of the child, in particular on the criterion of proximity. This means that jurisdiction
+should lie in the first place with the Member State of the child’s habitual residence, except for certain cases of a
+change in the child’s residence or pursuant to an agreement between the holders of parental responsibility.
+This Regulation recognises the fundamental rights and observes the principles of the Charter of Fundamental
+Rights of the European Union. In particular, it seeks to ensure respect for the fundamental rights of the child as set
+out in Article 24 of the Charter of Fundamental Rights of the European Union’.
+Article 1(1) and (2) of that regulation, that article being headed ‘Scope’, are worded as follows:
+This Regulation shall apply, whatever the nature of the court or tribunal, in civil matters relating to:
+the attribution, exercise, delegation, restriction or termination of parental responsibility.
+The matters referred to in paragraph 1(b) may, in particular, deal with:
+rights of custody and rights of access;
+Article 2 of that Regulation, headed ‘Definitions’, provides:
+‘For the purposes of this Regulation:
+the term “parental responsibility” shall mean all rights and duties relating to the person or the property of a child
+which are given to a natural or legal person by judgment, by operation of law or by an agreement having legal
+effect. The term shall include rights of custody and rights of access;
+the term “wrongful removal or retention” shall mean a child’s removal or retention where:
+it is in breach of rights of custody acquired by judgment or by operation of law or by an agreement having legal
+effect under the law of the Member State where the child was habitually resident immediately before the removal
+or retention;
+and
+provided that, at the time of removal or retention, the rights of custody were actually exercised, either jointly or
+alone, or would have been so exercised but for the removal or retention. Custody shall be considered to be
+exercised jointly when, pursuant to a judgment or by operation of law, one holder of parental responsibility cannot
+decide on the child's place of residence without the consent of another holder of parental responsibility.’
+Within Chapter II of that regulation, entitled ‘Jurisdiction’, in Section 2 thereof entitled ‘Parental responsibility’,
+Article 8(1), that article being headed ‘General jurisdiction’, provides:
+‘1.
+The courts of a Member State shall have jurisdiction in matters of parental responsibility over a child who is
+habitually resident in that Member State at the time the court is seised.
+2.
+Paragraph 1 shall be subject to the provisions of Articles 9, 10 and 12.’
+Article 10 of Regulation No 2201/2003, headed ‘Jurisdiction in cases of child abduction’ provides:
+‘In case of wrongful removal or retention of the child, the courts of the Member State where the child was
+habitually resident immediately before the wrongful removal or retention shall retain their jurisdiction until the
+child has acquired a habitual residence in another Member State and:
+each person, institution or other body having rights of custody has acquiesced in the removal or retention;
+the child has resided in that other Member State for a period of at least one year after the person, institution or
+other body having rights of custody has had or should have had knowledge of the whereabouts of the child and the
+child is settled in his or her new environment and at least one of the following conditions is met:
+within one year after the holder of rights of custody has had or should have had knowledge of the whereabouts of
+the child, no request for return has been lodged before the competent authorities of the Member State where the
+child has been removed or is being retained;
+
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239243&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+2/7
+
+4/1/2021
+
+CURIA - Documents
+
+a request for return lodged by the holder of rights of custody has been withdrawn and no new request has been
+lodged within the time limit set in paragraph (i);
+a case before the court in the Member State where the child was habitually resident immediately before the
+wrongful removal or retention has been closed pursuant to Article 11(7);
+a judgment on custody that does not entail the return of the child has been issued by the courts of the Member
+State where the child was habitually resident immediately before the wrongful removal or retention.’
+Article 12 of that regulation, on prorogation of jurisdiction, is worded as follows:
+‘1.
+The courts of a Member State exercising jurisdiction by virtue of Article 3 on an application for divorce, legal
+separation or marriage annulment shall have jurisdiction in any matter relating to parental responsibility connected
+with that application where:
+at least one of the spouses has parental responsibility in relation to the child;
+and
+the jurisdiction of the courts has been accepted expressly or otherwise in an unequivocal manner by the spouses
+and by the holders of parental responsibility, at the time the court is seised, and is in the superior interests of the
+child.
+…
+3.
+The courts of a Member State shall also have jurisdiction in relation to parental responsibility in proceedings
+other than those referred to in paragraph 1 where:
+the child has a substantial connection with that Member State, in particular by virtue of the fact that one of the
+holders of parental responsibility is habitually resident in that Member State or that the child is a national of that
+Member State; and
+the jurisdiction of the courts has been accepted expressly or otherwise in an unequivocal manner by all the parties
+to the proceedings at the time the court is seised and is in the best interests of the child.’
+4.
+Where the child has his or her habitual residence in the territory of a third State which is not a contracting
+party to [the 1996 Hague Convention], jurisdiction under this Article shall be deemed to be in the child’s interest,
+in particular if it is found impossible to hold proceedings in the third State in question.’
+Article 14 of that regulation, headed ‘Residual jurisdiction’, provides:
+‘Where no court of a Member State has jurisdiction pursuant to Articles 8 to 13, jurisdiction shall be determined, in
+each Member State, by the laws of that State.’
+Article 60 of that regulation, headed ‘Relations with certain multilateral conventions’, provides:
+‘In relations between Member States, this Regulation shall take precedence over the following Conventions in so far
+as they concern matters governed by this Regulation:
+…
+[the 1980 Hague Convention];’.
+Article 61 of Regulation No 2201/2003, which deals with relations with the 1996 Hague Convention, provides:
+‘As concerns the relation with [the 1996 Hague Convention], this Regulation shall apply:
+where the child concerned has his or her habitual residence on the territory of a Member State;
+The dispute in the main proceedings and the question referred for a preliminary ruling
+SS and MCP, two Indian citizens who both have leave to remain in the United Kingdom, were a couple, but not
+legally married, when their child P, a citizen of the United Kingdom, was born in 2017.
+SS is named as the father on the birth certificate, and consequently he has, in accordance with the findings of the
+referring court, parental responsibility with respect to P.
+In October 2018 the mother, MCP, went to India with the child. After several months, the mother returned to the
+United Kingdom without the child.
+Except for a short stay in the United Kingdom in April 2019, the child has remained in India, where she lives with
+her maternal grandmother.
+In the opinion of the referring court, it is very probable that the conduct of the mother amounts to the child’s
+wrongful removal to, and/or retention in, India.
+The father’s wish is that P should live with him in the United Kingdom and, in the alternative, that he should be
+able to have contact with her through rights of access.
+For that purpose, on 26 August 2020 he submitted an application to the referring court, seeking, first, an order for
+the return of the child to the United Kingdom and, second, a ruling on rights of access.
+According to the referring court, the mother has challenged the jurisdiction of the courts of England & Wales, since
+the child is not habitually resident in the United Kingdom.
+Before giving a ruling, the referring court considers that it is necessary to determine whether it has jurisdiction on
+the basis of Regulation No 2201/2003. In that regard, that court found, first, that, at the time when it was seised,
+the child was habitually resident in India and was fully integrated into an Indian social and family environment, her
+concrete factual connections with the United Kingdom being non-existent, apart from citizenship, and, second, that
+the mother had at no time unequivocally accepted that the courts of England &Wales had jurisdiction to deal with
+issues of parental responsibility concerning P. Further to that finding, the referring court decided that its jurisdiction
+could not be based on Article 8 and Article 12(3) of that regulation.
+With respect to Article 10 of that regulation, which establishes the grounds of jurisdiction in cases of wrongful
+removal or retention of a child, the referring court harbours doubts, in particular, as to whether that provision can
+apply to a conflict of jurisdiction between the courts of a Member State and the courts of a third State.
+In that regard, the referring court considers that it follows clearly from the wording of that provision and from the
+interpretation set out in section 4.2.1.1 of the Practice Guide for the application of Regulation No 2201/2003,
+published by the European Commission, that the rule laid down in Article 10 of that regulation concerns only
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239243&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+3/7
+
+4/1/2021
+
+CURIA - Documents
+
+conflicts of jurisdiction between Member States and not those between a Member State and a third State. The
+referring court states that the Court has already upheld that interpretation in paragraph 33 of the judgment of
+17 October 2018, UD (C‑393/18 PPU, EU:C:2018:835), following, in that regard, the Opinion of Advocate General
+Saugmandsgaard Øe of 20 September 2018, delivered in the same case (C‑393/18 PPU, EU:C:2018:749). Some
+domestic case‑law, however, gives that provision a wider territorial reach.
+In those circumstances, the High Court of Justice (England & Wales), Family Division, decided to stay the
+proceedings and to refer the following question to the Court of Justice for a preliminary ruling:
+‘Does Article 10 of [Regulation No 2201/2003] retain jurisdiction, without limit of time, in a Member State if a child
+habitually resident in that Member State was wrongfully removed to (or retained in) a non-Member State where
+she, following such removal (or retention), in due course became habitually resident?’
+Request for the urgent preliminary ruling procedure
+The referring court requested that the present reference for a preliminary ruling be dealt with under the urgent
+preliminary ruling procedure provided for in Article 107 of the Rules of Procedure of the Court.
+In that regard, it is common ground, first, that the reference for a preliminary ruling concerns the interpretation of
+Regulation No 2201/2003, which was adopted in particular on the basis of Article 61(c) EC, now Article 67 TFEU,
+which is in Title V of Part Three of the FEU Treaty, relating to the area of freedom, security and justice, meaning
+that the reference falls within the scope of the urgent preliminary ruling procedure defined in Article 107 of the
+Rules of Procedure and, second, that the answer to the question referred is decisive for the outcome of the dispute
+in the main proceedings, since the jurisdiction of the court seised under EU law is dependent on that answer.
+As regards the criterion of urgency, since the young child has lived permanently in India since October 2018,
+except for a short stay in the United Kingdom, there is a risk that the prolongation of that situation may cause
+serious, possibly irremediable, damage to the relationship between the child and her father, or even between the
+child and both parents. That situation may bring about irreparable harm to her emotional and psychological
+development in general, having regard, in particular, to the fact that the child is at a developmentally sensitive age.
+Further, since the social and family integration of the child is already well advanced in the third country where she
+currently is habitually resident, according to the findings of the referring court, the prolongation of that situation
+may further jeopardise the integration of the child in her family and social environment in the event of any return
+to the United Kingdom.
+In those circumstances, on 2 December 2020 the Fifth Chamber of the Court, acting on a proposal from the
+Judge-Rapporteur and after hearing the Advocate General, decided to accede to the referring court’s request that
+the present reference for a preliminary ruling be dealt with under the urgent preliminary ruling procedure.
+Consideration of the question referred for a preliminary ruling
+By its question, the referring court seeks to ascertain, in essence, whether Article 10 of Regulation No 2201/2003
+must be interpreted as meaning that, if the finding is made that a child has acquired, at the time when the
+application relating to parental responsibility is brought, his or her habitual residence in a third State following
+abduction to that State, the courts of the Member State where the child was habitually resident immediately before
+his or her abduction, retain their jurisdiction indefinitely.
+In accordance with settled case-law, in interpreting a provision of EU law, it is necessary to consider not only its
+wording, but also the context in which it occurs and the objectives pursued by the rules of which it is part
+(judgment of 6 October 2020, Jobcenter Krefeld, C‑181/19, EU:C:2020:794, paragraph 61 and the case‑law cited).
+The origins of a provision of EU law may also provide information relevant to its interpretation (judgment of
+20 December 2017, Acacia and D’Amato, C‑397/16 and C‑435/16, EU:C:2017:992, paragraph 31 and the case-law
+cited).
+As regards, first, the wording of Article 10 of Regulation No 2201/2003, it is clear that that article provides, with
+respect to jurisdiction in the event of child abduction, that the courts of the Member State where the child was
+habitually resident immediately before his or her wrongful removal or retention are to retain that jurisdiction, but
+that that jurisdiction is to be transferred to the courts of another Member State as soon as the child has acquired a
+habitual residence in the latter Member State and, in addition, one of the alternative conditions set out in Article 10
+is satisfied.
+It is apparent, accordingly, from the wording of Article 10 of Regulation No 2201/2003 that the criteria selected in
+that provision for the purposes of conferring jurisdiction in cases of child abduction relate to a situation which is
+confined to the territory of the Member States. Jurisdiction is conferred, as a general rule, on the courts of the
+Member State where the child was habitually resident before he or she was wrongfully removed to, or retained in,
+another Member State, subject to the qualification that that jurisdiction may be transferred, if certain specific
+conditions are met, to the courts of the Member State in which that child has acquired his or her new habitual
+residence following the wrongful removal or retention.
+The fact that that article uses the expression ‘Member State’ and not the words ‘State’ or ‘third State’, and that it
+provides that the conferral of jurisdiction is subject to current or previous habitual residence ‘in a Member State’,
+while making no reference to the possibility of a residence being acquired in the territory of a third State, also
+implies that that article deals solely with jurisdiction in cases of child abductions from one Member State to
+another.
+It should be added that the Court has previously held, in the context of proceedings relating to the interpretation
+of Article 8 of Regulation No 2201/2003, that the wording of Article 10 of that regulation necessarily implies that
+the application of that latter provision is dependent on a potential conflict of jurisdiction between courts in a
+number of Member States (judgment of 17 October 2018, UD, C‑393/18 PPU, EU:C:2018:835, paragraph 33).
+Further, it must be stated, as the Commission did at the hearing, that Article 10 of Regulation No 2201/2003
+consists of a single sentence, meaning that it is apparent from the very structure of that provision that it forms an
+indivisible whole. Consequently, that provision cannot be read as having two distinct components, one of which
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239243&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+4/7
+
+4/1/2021
+
+CURIA - Documents
+
+separately provides that the indefinite retention, as a matter of principle, of jurisdiction by the courts of a Member
+State, in the event of the abduction of a child to a third State, is justified.
+As regards, second, the context of Article 10 of Regulation No 2201/2003, it should be observed that that
+provision constitutes a special ground of jurisdiction with respect to the general ground laid down in Article 8(1) of
+that regulation, which provides that the courts of the Member State where a child is habitually resident are, as a
+general rule, to have jurisdiction in matters of parental responsibility.
+According to the wording of Article 8(2) of that regulation, Article 8(1) is to be subject to the provisions of
+Articles 9, 10 and 12.
+In that regard, it must be emphasised, in the first place, that the special ground of jurisdiction provided for in
+Article 10 of Regulation No 2201/2003 defeats what would otherwise be the effect of the application of the general
+ground of jurisdiction, laid down in Article 8(1) of that regulation, in a case of child abduction, namely the transfer
+of jurisdiction to the Member State where the child may have acquired a new habitual residence, following his or
+her abduction. Since that transfer of jurisdiction might secure a procedural advantage for the perpetrator of the
+wrongful act, Article 10 of that regulation provides, as has been stated in paragraph 39 of the present judgment,
+that the courts of the Member State where the child was habitually resident before the wrongful removal or
+retention are, nonetheless, to retain their jurisdiction unless certain conditions are met.
+However, where the child has acquired a habitual residence outside the European Union, after being wrongfully
+removed to or retained in a third State, there is no room for the application of Article 8(1) of that regulation, given
+the absence of habitual residence in a Member State. Indeed, that provision does not deal with such a situation. It
+follows that, in those circumstances, the rule laid down in Article 10 of that regulation, whereby it is possible to set
+aside the jurisdiction which could be claimed, on the basis of the general ground, by the courts of the Member
+State where the new habitual residence has been acquired, loses its raison d’être, and there is not, therefore, any
+reason to apply it. Consequently, Article 10 does not justify indefinite retention of jurisdiction by the courts of the
+Member State where the child was habitually resident before his or her wrongful removal or retention, when that
+child has been abducted to a third State.
+In the second place, it must be recalled that a special ground of jurisdiction must be interpreted restrictively and
+cannot, therefore, give rise to an interpretation that goes beyond the situations expressly envisaged by the
+regulation concerned (see, to that effect, judgments of 3 October 2013, Pinckney, C‑170/12, EU:C:2013:635,
+paragraph 25; of 16 January 2014, Kainz, C‑45/13, EU:C:2014:7, paragraph 22 and the case-law cited; and of
+25 January 2018, Schrems, C‑498/16, EU:C:2018:37, paragraph 27).
+Consequently, a rule of that sort must not be interpreted taking into account only one part of its wording so as to
+apply that part independently. That would indeed be the case if an interpretation of Article 10 of Regulation
+No 2201/2003 were based exclusively on one element in the first part of that article, in order to reach the
+conclusion that, where a child has been abducted to a third State, the courts of the Member State where that child
+was habitually resident previously are to retain their jurisdiction, as a matter of principle and indefinitely, given
+that the other condition laid down in the same article, concerning the acquisition of a habitual residence in another
+Member State, cannot be satisfied.
+In the third place, such an interpretation would bring within the scope of Article 10 a situation, namely the
+abduction of a child to a third State, that the EU legislature did not intend to include.
+In that regard, it is apparent from the legislative history of Regulation No 2201/2003 that the EU legislature
+wanted to establish strict rules with respect to child abductions within the European Union, but that it did not
+intend those rules to apply to child abductions to a third State, since such abductions were to be covered, inter
+alia, by international conventions such as the 1980 Hague Convention, which was already in force in all the
+Member States at the time of the Proposal for a Council Regulation concerning jurisdiction and the recognition and
+enforcement of judgments in matrimonial matters and in matters of parental responsibility, repealing Regulation
+(EC) No 1347/2000 and amending Regulation (EC) No 44/2001 in matters relating to maintenance, presented by
+the Commission on 3 May 2002 (COM(2002) 222 final) (OJ 2002 C 203 E, p. 155) (the ‘proposal for a regulation’),
+which gave rise to Regulation No 2201/2003, and the 1996 Hague Convention, to which many Member States had
+not yet been able to accede at that time.
+That emerges very clearly from the explanatory memorandum of that proposal for a regulation, which states that,
+‘for the purpose of covering international situations, the Commission presented … a proposal for a Council decision
+authorising the Member States to sign the 1996 Hague Convention’ (COM(2002) 222 final/2, p. 3).
+The desire of the EU legislature to ensure the coexistence of the EU body of rules in relation to child abduction
+with the body of rules established by international conventions is set out in the explanatory statement of the report
+of the European Parliament Committee on Citizens’ Freedoms and Rights, Justice and Home Affairs of 7 November
+2002, on the proposal for a regulation (final A5‑0385/2002, p. 19), which states that that proposal, in providing a
+clear and coherent body of rules for child abduction within the European Union, constitutes ‘an instrument which
+may provide a more integrated system within the European Union and operate alongside the 1980 and 1996 Hague
+Conventions in the international sphere’.
+If Article 10 of Regulation No 2201/2003 were to be interpreted as meaning that the Member State where a child
+was previously habitually resident retained its jurisdiction indefinitely where the child had been abducted to a third
+State, that would have the consequence that, where the child has acquired a habitual residence in a third State
+which is a contracting party to the 1996 Hague Convention, following an abduction, Article 7(1) and Article 52(3) of
+that convention would be deprived of any effect.
+Article 7(1) of the 1996 Hague Convention makes provision, like Article 10 of Regulation No 2201/2003, for a
+transfer of jurisdiction to the courts of the State where the child has acquired a new habitual residence, if certain
+conditions are satisfied. Those conditions are connected, in particular, to the passage of time together with
+acquiescence or inaction on the part of the person concerned who holds a right of custody, the child having become
+settled in his or her new environment.
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239243&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+5/7
+
+4/1/2021
+
+CURIA - Documents
+
+That possibility of a transfer of jurisdiction would, however, be definitively precluded if, by virtue of Article 10 of
+the regulation, the courts of a Member State were to retain indefinitely their jurisdiction. By the same token, that
+retention of jurisdiction would also be contrary to Article 52(3) of the 1996 Hague Convention, which prohibits rules
+agreed between one or more contracting States on matters regulated by that convention – such as the body of
+rules laid down by Regulation No 2201/2003 – from affecting, in the relationships of those States with the other
+contracting States, the application of the provisions of that convention. To the extent that jurisdiction in matters of
+parental responsibility could not be transferred to those courts of contracting States, those relations would
+necessarily be affected.
+The consequence would be that the Member States, which have all ratified or acceded to the 1996 Hague
+Convention, would find themselves compelled to act, pursuant to EU law, in a way that was incompatible with their
+international obligations.
+It is apparent from the foregoing that the specific body of rules which the EU legislature intended to establish by
+means of the adoption of Regulation No 2201/2003 concerns child abductions from one Member State to another.
+It follows that the relevant ground of jurisdiction, namely the ground deriving from Article 10 of Regulation
+No 2201/2003, cannot be interpreted in such a way as to apply to child abduction to a third State.
+Third, it is clear that an interpretation of Article 10 of Regulation No 2201/2003 that resulted in an indefinite
+retention of jurisdiction would not be compatible with one of the fundamental objectives pursued by that
+regulation, namely that of respecting the best interests of the child, by giving priority, for that purpose, to the
+criterion of proximity (see, to that effect, judgments of 15 February 2017, W and V, C‑499/15, EU:C:2017:118,
+paragraph 51 and the case-law cited, and of 17 October 2018, UD, C‑393/18 PPU, EU:C:2018:835, paragraph 48).
+According to the explanatory memorandum of the proposal for a regulation (COM(2002) 222 final/2, p. 12), the
+EU legislature wanted to establish, precisely with respect to the conferral of jurisdiction in a case of child abduction,
+a balance between, on the one hand, the need to prevent the perpetrator of the abduction from reaping the benefit
+of his or her wrongful act (see, to that effect, judgment of 1 July 2010, Povse, C‑211/10 PPU, EU:C:2010:400,
+paragraph 43) and, on the other, the value of allowing the court that is closest to the child to hear actions relating
+to parental responsibility.
+If the jurisdiction of the courts of the Member State of origin were to be retained unconditionally and indefinitely,
+notwithstanding the fact that the abduction to the third State has, in the meantime, met, inter alia, acquiescence
+on the part of any person, institution or other body holding rights of custody, and without there being any condition
+allowing for account to be taken of the specific circumstances characterising the situation of the child concerned, or
+for the best interests of that child to be protected, that retention of jurisdiction would prevent the court regarded
+as best placed to assess the measures to be adopted in the best interests of the child from being able to hear
+applications in relation to such measures. Such an outcome would be contrary to the objective pursued by
+Regulation No 2201/2003, which must be read, as is clear from recital 33 of that regulation, in the light of
+Article 24 of the Charter of Fundamental Rights of the European Union.
+Further, the interpretation of Article 10 of Regulation No 2201/2003 in such a way as to result in retention of
+jurisdiction for an unlimited period would also disregard the logic of the mechanism of prompt return or non-return
+established by the 1980 Hague Convention. If, in accordance with Article 16 of that convention, it is established
+that the conditions laid down by that convention for return of the child are not satisfied, or if an application under
+that convention has not been made within a reasonable time, the authorities of the State to which the child has
+been removed or in which the child has been retained become the authorities of the State of habitual residence of
+the child, and should, as the courts that are geographically closest to that place of habitual residence, have the
+power to exercise their jurisdiction in matters of parental responsibility. That convention remains applicable, in
+particular, in relations between the Member States and the other contracting parties to that convention, in
+accordance with Article 60(e) of that regulation.
+It follows from the foregoing that there is no justification for an interpretation of Article 10 of Regulation
+No 2201/2003 that would result in indefinite retention of jurisdiction in the Member State of origin in a case of
+child abduction to a third State, neither in the wording of that article, nor in its context, nor in the travaux
+préparatoires, nor in the objectives of that regulation. Such an interpretation would also deprive of effect the
+provisions of the 1996 Hague Convention in a case of child abduction to a third State which is a contracting party
+to that convention, and would be contrary to the logic of the 1980 Hague Convention.
+It follows that, in a situation where a child has been abducted to a third State, where the child has acquired,
+following that abduction, a habitual residence, and the court of a Member State seised of an action on parental
+responsibility finds that, in the absence of agreement on jurisdiction between the parties to the proceedings, its
+jurisdiction cannot be based on Article 12 of Regulation No 2201/2003, as is the case in the main proceedings, the
+court of the Member State concerned will have to establish its jurisdiction on the basis of any bilateral or
+multilateral international conventions that may be applicable, or, in the absence of such an international
+convention, on the basis of the rules of its national law, in accordance with Article 14 of that regulation.
+In the light of all the foregoing, the answer to the question referred is that Article 10 of Regulation No 2201/2003
+must be interpreted as meaning that it is not applicable to the situation where a finding is made that a child has, at
+the time when an application relating to parental responsibility is brought, acquired his or her habitual residence in
+a third State following abduction to that State. In that situation, the jurisdiction of the court seised will have to be
+determined in accordance with the applicable international conventions, or, in the absence of any such international
+convention, in accordance with Article 14 of that regulation.
+Costs
+Since these proceedings are, for the parties to the main proceedings, a step in the action pending before the
+national court, the decision on costs is a matter for that court. Costs incurred in submitting observations to the
+Court, other than the costs of those parties, are not recoverable.
+On those grounds, the Court (Fifth Chamber) hereby rules:
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239243&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+6/7
+
+4/1/2021
+
+CURIA - Documents
+
+Article 10 of Council Regulation (EC) No 2201/2003 of 27 November 2003 concerning jurisdiction and
+the recognition and enforcement of judgments in matrimonial matters and the matters of parental
+responsibility, repealing Regulation (EC) No 1347/2000, as amended by Council Regulation (EC)
+No 2116/2004 of 2 December 2004, must be interpreted as meaning that it is not applicable to a
+situation where a finding is made that a child has, at the time when an application relating to parental
+responsibility is brought, acquired his or her habitual residence in a third State following abduction to
+that State. In that situation, the jurisdiction of the court seised will have to be determined in
+accordance with the applicable international conventions, or, in the absence of any such international
+convention, in accordance with Article 14 of that regulation.
+Regan Lenaerts Ilešič
+Lycourgos Jarukaitis
+Delivered in open court in Luxembourg on 24 March 2021.
+A. Calot Escobar
+Registrar
+*
+
+E. Regan
+
+President of the Fifth Chamber
+
+Language of the case: English
+
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239243&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=28…
+
+7/7
+
+

@@ -1,0 +1,390 @@
+4/1/2021
+
+CURIA - Documents
+
+InfoCuria
+Case-law
+
+English (en)
+
+Home > Search form > List of results > Documents
+Language of document : English
+
+ECLI:EU:C:2021:226
+
+Provisional text
+JUDGMENT OF THE COURT (Grand Chamber)
+23 March 2021 (*)
+(Reference for a preliminary ruling – Air transport – Regulation (EC) No 261/2004 – Article 5(3) – Common rules
+on compensation and assistance to passengers in the event of cancellation or long delay of flights – Exemption
+from the obligation to pay compensation – Concept of ‘extraordinary circumstances’ – Pilots’ strike organised within
+a legal framework – Circumstances that are ‘internal’ and ‘external’ to the operating air carrier’s activity –
+Articles 16, 17 and 28 of the Charter of Fundamental Rights of the European Union – No impairment of the air
+carrier’s freedom to conduct a business, right to property and right of negotiation)
+In Case C‑28/20,
+REQUEST for a preliminary ruling under Article 267 TFEU from the Attunda tingsrätt (Attunda District Court,
+Sweden), made by decision of 16 January 2020, received at the Court on 21 January 2020, in the proceedings
+Airhelp Ltd
+v
+Scandinavian Airlines System Denmark – Norway – Sweden,
+THE COURT (Grand Chamber),
+composed of K. Lenaerts, President, R. Silva de Lapuerta, Vice-President, J.‑C. Bonichot, A. Arabadjiev, A. Prechal,
+L. Bay Larsen, A. Kumin and N. Wahl, Presidents of Chambers, T. von Danwitz, C. Toader, M. Safjan, D. Šváby
+(Rapporteur), I. Jarukaitis, N. Jääskinen and J. Passer, Judges,
+Advocate General: P. Pikamäe,
+Registrar: C. Strömholm, Administrator,
+having regard to the written procedure and further to the hearing on 16 December 2020,
+after considering the observations submitted on behalf of:
+Airhelp Ltd, by M. Bexelius, E. Arbrandt and S. Nilsson, advokater,
+Scandinavian Airlines System Denmark – Norway – Sweden, by F. Sjövall and J. Fermbäck, advokater,
+the Danish Government, by J. Nymann-Lindegren, M. Jespersen and M.S. Wolff, acting as Agents,
+the German Government, by U. Kühne, M. Hellmann and J. Möller, acting as Agents,
+the Spanish Government, by L. Aguilera Ruiz, acting as Agent,
+the French Government, by E. de Moustier and A. Ferrand, acting as Agents,
+the European Commission, by K. Simonsson, N. Yerrell and E. Ljung Rasmussen, acting as Agents,
+after hearing the Opinion of the Advocate General at the sitting on 16 March 2021,
+gives the following
+Judgment
+This request for a preliminary ruling concerns the interpretation of Article 5(3) of Regulation (EC) No 261/2004 of
+the European Parliament and of the Council of 11 February 2004 establishing common rules on compensation and
+assistance to passengers in the event of denied boarding and of cancellation or long delay of flights, and repealing
+Regulation (EEC) No 295/91 (OJ 2004 L 46, p. 1).
+The request has been made in proceedings between Airhelp Ltd and Scandinavian Airlines System Denmark –
+Norway – Sweden (‘SAS’) concerning the latter’s refusal to compensate S., whose rights are now held by Airhelp,
+for the cancellation of his flight.
+Legal context
+EU law
+Recitals 1, 14 and 15 of Regulation No 261/2004 state:
+Action by the [European Union] in the field of air transport should aim, among other things, at ensuring a high
+level of protection for passengers. Moreover, full account should be taken of the requirements of consumer
+protection in general.
+As under the [Convention for the Unification of Certain Rules for International Carriage by Air, concluded in
+Montreal on 28 May 1999 and approved on behalf of the European Community by Council Decision 2001/539/EC of
+5 April 2001 (OJ 2001 L 194, p. 38)], obligations on operating air carriers should be limited or excluded in cases
+where an event has been caused by extraordinary circumstances which could not have been avoided even if all
+reasonable measures had been taken. Such circumstances may, in particular, occur in cases of political instability,
+meteorological conditions incompatible with the operation of the flight concerned, security risks, unexpected flight
+safety shortcomings and strikes that affect the operation of an operating air carrier.
+Extraordinary circumstances should be deemed to exist where the impact of an air traffic management decision
+in relation to a particular aircraft on a particular day gives rise to a long delay, an overnight delay, or the
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239181&pageIndex=0&doclang=EN&mode=req&dir=&occ=first&part=1&cid=28…
+
+1/6
+
+4/1/2021
+
+CURIA - Documents
+
+cancellation of one or more flights by that aircraft, even though all reasonable measures had been taken by the air
+carrier concerned to avoid the delays or cancellations.’
+Article 2 of that regulation, headed ‘Definitions’, provides:
+‘For the purposes of this Regulation:
+“operating air carrier” means an air carrier that performs or intends to perform a flight under a contract with a
+passenger or on behalf of another person, legal or natural, having a contract with that passenger;
+“cancellation” means the non-operation of a flight which was previously planned and on which at least one place
+was reserved.’
+As set out in Article 5 of the regulation, which is headed ‘Cancellation’:
+‘1.
+In case of cancellation of a flight, the passengers concerned shall:
+have the right to compensation by the operating air carrier in accordance with Article 7, unless:
+they are informed of the cancellation at least two weeks before the scheduled time of departure; or
+they are informed of the cancellation between two weeks and seven days before the scheduled time of departure
+and are offered re-routing, allowing them to depart no more than two hours before the scheduled time of
+departure and to reach their final destination less than four hours after the scheduled time of arrival; or
+they are informed of the cancellation less than seven days before the scheduled time of departure and are offered
+re-routing, allowing them to depart no more than one hour before the scheduled time of departure and to reach
+their final destination less than two hours after the scheduled time of arrival.
+…
+3.
+An operating air carrier shall not be obliged to pay compensation in accordance with Article 7, if it can prove
+that the cancellation is caused by extraordinary circumstances which could not have been avoided even if all
+reasonable measures had been taken.
+…’
+Article 7 of the regulation, headed ‘Right to compensation’, provides in paragraph 1:
+‘Where reference is made to this Article, passengers shall receive compensation amounting to:
+EUR 250 for all flights of 1 500 kilometres or less;
+EUR 400 for all intra-Community flights of more than 1 500 kilometres, and for all other flights between 1 500 and
+3 500 kilometres;
+EUR 600 for all flights not falling under (a) or (b).
+Swedish law
+Paragraph 45 of the lagen (1976:580) om medbestämmande i arbetslivet (Law on workers’ participation in
+decisions (1976:580)) provides, inter alia:
+‘Where an employers’ organisation, employer or workers’ organisation is considering taking industrial action or
+extending ongoing industrial action, it shall notify in writing the opposing party and the Medlingsinstitutet
+[(National Mediation Office, Sweden)] at least seven working days in advance. Every day except Saturday, Sunday,
+any other public holiday, Midsummer Eve, Christmas Eve and New Year’s Eve is regarded as a working day. The
+time limit shall be calculated from the same time of day as that at which the industrial action commences.’
+The dispute in the main proceedings and the questions referred for a preliminary ruling
+S. had booked a seat on an internal flight from Malmö to Stockholm (Sweden). That flight, which was to be
+operated by SAS on 29 April 2019, was cancelled on the day of the flight because of a strike by its pilots in
+Denmark, Sweden and Norway (‘the strike at issue’).
+It is apparent from the documents before the Court that in the summer of 2018 the workers’ organisations
+representing SAS pilots in Denmark, Sweden and Norway (‘the pilots’ trade unions’) decided to terminate the
+collective agreement concluded with SAS, which was, in the normal course of events, to cover the period 20172020. Negotiations with a view to concluding a new collective agreement began in March 2019.
+Since the pilots’ trade unions took the view that those negotiations had failed or, at the very least, had not
+progressed sufficiently, they called on their members to strike. The strike at issue thus began on 26 April 2019 and
+continued until 2 May 2019. It therefore lasted seven days, and resulted in SAS cancelling more than 4 000 flights.
+The strike thus affected approximately 380 000 passengers, including S., who assigned to Airhelp any rights that
+he had vis-à-vis SAS relating to his claim for compensation for the cancellation of his flight.
+On 2 May 2019 a new three-year collective agreement was concluded, which is therefore intended to apply until
+2022.
+Airhelp brought proceedings before the referring court, the Attunda tingsrätt (Attunda District Court, Sweden),
+claiming that it should order SAS to pay it the compensation of EUR 250 provided for in Article 5(1)(c) of
+Regulation No 261/2004, read in conjunction with Article 7(1)(a) thereof, together with default interest from
+10 September 2019 until the date of payment.
+SAS submits that it was not required to pay the compensation claimed as the strike at issue constitutes an
+extraordinary circumstance which could not have been avoided even if all reasonable measures had been taken,
+having regard to the exorbitant nature of the demands for a salary increase made by the pilots’ trade unions.
+It contends that the strike at issue is an ‘extraordinary circumstance’ within the meaning of Article 5(3) of
+Regulation No 261/2004, since it is not inherent in the normal exercise of its activity and is beyond its actual
+control. A decision by four trade unions to hold a simultaneous strike does not fall within the normal exercise of
+SAS’s activity, which consists in providing air transport services. Furthermore, strikes are very uncommon in the
+Swedish labour market and the strike at issue, which in principle involved every SAS pilot, was one of the biggest
+strikes ever recorded in the air transport industry. SAS could not therefore reorganise its activity so as to be able
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239181&pageIndex=0&doclang=EN&mode=req&dir=&occ=first&part=1&cid=28…
+
+2/6
+
+4/1/2021
+
+CURIA - Documents
+
+to operate the planned flights. Moreover, as the strike at issue was lawful, SAS could not order the employees to
+return to work.
+SAS further submits that the answer provided by the Court in the judgment of 17 April 2018, Krüsemann and
+Others (C‑195/17, C‑197/17 to C‑203/17, C‑226/17, C‑228/17, C‑254/17, C‑274/17, C‑275/17, C‑278/17 to
+C‑286/17 and C‑290/17 to C‑292/17, ‘Krüsemann’, EU:C:2018:258), which states that a ‘wildcat strike’ is inherent
+in the normal exercise of the activity of an operating air carrier, cannot be applied to the case in the main
+proceedings. The strike at issue was not prompted by a measure taken by SAS, nor was it a spontaneous response
+by SAS’s staff to a measure taken by SAS as part of its normal management.
+Finally, since, under Swedish law, notice of a strike does not have to be lodged until one week before the strike
+begins, SAS was, in any event, unable to avoid the obligation to pay compensation imposed in Article 5(1)(c)(i) of
+Regulation No 261/2004, read in conjunction with Article 7(1)(a) thereof.
+Airhelp disputes the fact that the strike at issue constitutes an ‘extraordinary circumstance’ within the meaning of
+Article 5(3) of Regulation No 261/2004. The conclusion of collective agreements falls within the ordinary course of
+business of an airline and labour disputes may arise at that time. Furthermore, in the course of negotiations for the
+purpose of concluding such an agreement, it is open to the parties to have recourse to industrial action such as a
+strike or lockout. In any event, in the light of the evolution of SAS pilots’ salaries in the preceding years, this
+labour dispute could have been foreseen by SAS.
+The referring court is therefore uncertain whether the concept of ‘extraordinary circumstances’ within the meaning
+of Article 5(3) of Regulation No 261/2004 encompasses a strike which has been announced by workers’
+organisations following the giving of notice and has been lawfully initiated.
+In those circumstances, the Attunda tingsrätt (Attunda District Court) decided to stay the proceedings and to refer
+the following questions to the Court of Justice for a preliminary ruling:
+Does a strike by airline pilots who are employed by an air carrier and who are needed to carry out a flight
+constitute an “extraordinary circumstance” within the meaning of Article 5(3) of Regulation No 261/2004, when the
+strike is not implemented in connection with a measure decided upon or announced by the air carrier but of which
+notice is given and which is lawfully initiated by workers’ organisations as industrial action intended to induce the
+air carrier to increase wages, provide benefits or amend employment conditions in order to meet the organisations’
+demands?
+What significance, if any, is to be attached to the fairness of the workers’ organisations’ demands and, in
+particular, to the fact that the wage increase demanded is significantly higher than the wage increases which
+generally apply to the national labour markets in question?
+What significance, if any, is to be attached to the fact that the air carrier, in order to avoid a strike, accepts a
+proposal for settlement from a national body responsible for mediating labour disputes but the workers’
+organisations do not?’
+Consideration of the questions referred
+By its three questions, which it is appropriate to examine together, the referring court asks, in essence, whether
+Article 5(3) of Regulation No 261/2004 must be interpreted as meaning that strike action which is entered into
+upon a call by a trade union of the staff of an operating air carrier, in compliance with the conditions laid down by
+national legislation, in particular the notice period imposed by it, which is intended to assert the demands of that
+carrier’s workers and which is followed by one or more categories of staff whose presence is necessary to operate a
+flight constitutes an ‘extraordinary circumstance’ within the meaning of that provision.
+First of all, it should be recalled that, where a flight is cancelled, Article 5 of Regulation No 261/2004 provides that
+the passengers concerned have the right to compensation from the operating air carrier, in accordance with
+Article 7(1) of the regulation, unless they have been informed of the cancellation beforehand within the deadlines
+laid down in Article 5(1)(c)(i) to (iii).
+However, Article 5(3) of Regulation No 261/2004, read in the light of recitals 14 and 15 thereof, releases the
+operating air carrier from that obligation to pay compensation if it can prove that the cancellation is caused by
+‘extraordinary circumstances’ which could not have been avoided even if all reasonable measures had been taken.
+Moreover, where such circumstances do arise, it is also incumbent on the operating air carrier to demonstrate that
+it adopted measures appropriate to the situation, deploying all its resources in terms of staff or equipment and the
+financial means at its disposal, in order to prevent that situation from resulting in the cancellation of the flight in
+question. It cannot, however, be required to make sacrifices that are intolerable in the light of the capacities of its
+undertaking at the relevant time (see, to that effect, judgment of 11 June 2020, Transportes Aéros Portugueses,
+C‑74/19, EU:C:2020:460, paragraph 36 and the case-law cited).
+According to the Court’s settled case-law, the concept of ‘extraordinary circumstances’ within the meaning of
+Article 5(3) of Regulation No 261/2004 refers to events which, by their nature or origin, are not inherent in the
+normal exercise of the activity of the air carrier concerned and are beyond that carrier’s actual control; those two
+conditions are cumulative and their fulfilment must be assessed on a case-by-case basis (see, to that effect,
+judgments of 22 December 2008, Wallentin-Hermann, C‑549/07, EU:C:2008:771, paragraph 23; of 17 September
+2015, van der Lans, C‑257/14, EU:C:2015:618, paragraph 36; of 17 April 2018, Krüsemann, paragraphs 32 and
+34; and of 11 June 2020, Transportes Aéros Portugueses, C‑74/19, EU:C:2020:460, paragraph 37).
+That said, in view of, first, the objective of Regulation No 261/2004, set out in recital 1, of ensuring a high level of
+protection for passengers and, second, the fact that Article 5(3) of the regulation derogates from the principle that
+passengers have the right to compensation if their flight is cancelled, the concept of ‘extraordinary circumstances’
+within the meaning of that provision must be interpreted strictly (judgment of 17 April 2018, Krüsemann,
+paragraph 36 and the case-law cited).
+It is in that context that it should be determined whether strike action which is entered into upon a call by a trade
+union of the staff of an operating air carrier, in compliance with the conditions laid down by national legislation, in
+particular the notice period imposed by it, which is intended to assert the demands of that carrier’s workers and
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239181&pageIndex=0&doclang=EN&mode=req&dir=&occ=first&part=1&cid=28…
+
+3/6
+
+4/1/2021
+
+CURIA - Documents
+
+which is followed by one or more categories of staff whose presence is necessary to operate a flight is capable of
+constituting an ‘extraordinary circumstance’ within the meaning of Article 5(3) of Regulation No 261/2004, as
+interpreted by the Court in its case-law recalled in paragraph 23 of the present judgment.
+In the first place, it must be determined whether a strike displaying the characteristics referred to in the preceding
+paragraph is capable of constituting, by its nature or origin, an event which is not inherent in the normal exercise
+of the activity of the air carrier concerned.
+The right to take collective action, including strike action, is a fundamental right laid down in Article 28 of the
+Charter of Fundamental Rights of the European Union (‘the Charter’), and that right is protected in accordance with
+EU law and national laws and practices (see, to that effect, judgment of 11 December 2007, International
+Transport Workers’ Federation and Finnish Seamen’s Union, C‑438/05, EU:C:2007:772, paragraph 44).
+Despite embodying a moment of conflict in relations between the workers and the employer, whose activity it is
+intended to paralyse, a strike nevertheless remains one of the ways in which collective bargaining may manifest
+itself and, therefore, must be regarded as an event inherent in the normal exercise of the activity of the employer
+concerned, irrespective of the particular features of the labour market concerned or of the national legislation
+applicable as regards implementation of that fundamental right.
+That interpretation must also apply where, as here, the employer is an operating air carrier. The Court indeed
+held, in paragraphs 40 to 42 of the judgment of 17 April 2018, Krüsemann, that operating air carriers may, as a
+matter of course, when carrying out their activity, be faced with disagreements or conflicts with all or part of their
+staff. Like the restructuring measures and measures of reorganisation at issue in the case which gave rise to that
+judgment and the labour disputes to which they were liable to lead, measures relating to the working and
+remuneration conditions of an operating air carrier’s staff fall within the normal management of that carrier’s
+activities.
+Thus, a strike whose objective is limited to obtaining from an air transport undertaking an increase in the pilots’
+salary, a change in their work schedules and greater predictability as regards working hours constitutes an event
+that is inherent in the normal exercise of that undertaking’s activity, in particular where such a strike is organised
+within a legal framework.
+In the second place, it must be determined whether a strike displaying the characteristics referred to in
+paragraph 25 of the present judgment is to be regarded as an event entirely beyond the actual control of the air
+carrier concerned.
+In that regard, it should be pointed out, first, that, since the right to strike is, for workers, a right guaranteed by
+Article 28 of the Charter, the fact that they invoke that right and consequently launch strike action must be
+regarded as foreseeable for any employer, in particular where notice of the strike is given.
+The Court has indeed already held that a strike which has been preceded by the notice required by the applicable
+national legislation and in respect of which it has been announced that it could spread to sectors affecting the
+activities of an undertaking initially not concerned by the strike does not constitute an abnormal and unforeseeable
+event (judgment of 7 May 1991, Organisationen Danske Slagterier, C‑338/89, EU:C:1991:192, paragraph 18).
+So far as concerns the main proceedings, it appears to be the case that the strike at issue was foreseeable since it
+is apparent from the order for reference that in the summer of 2018 the pilots’ trade unions had terminated the
+collective agreement that was supposed to cover the period 2017-2020, with the result that SAS could not be
+unaware that the pilots intended to put forward demands. Furthermore, the documents before the Court do not
+show that the strike at issue began without the notice prescribed by law being given.
+Second, since the occurrence of a strike constitutes an event that is foreseeable for the employer, the latter has,
+in principle, the means to prepare for it and, as the case may be, mitigate its consequences, with the result that
+the employer retains control over events to a certain extent.
+As follows from paragraph 24 of the present judgment, since the concept of ‘extraordinary circumstances’ within
+the meaning of Article 5(3) of Regulation No 261/2004 must be interpreted strictly, it must be held that the choice
+of the word ‘extraordinary’ attests to the EU legislature’s intention to include in the concept of ‘extraordinary
+circumstances’ only circumstances over which the operating air carrier does not have any control. Like any
+employer, an operating air carrier faced with a strike by its staff that is founded on demands relating to working
+and remuneration conditions cannot claim that it does not have any control over that action.
+Accordingly, in order to ensure the effectiveness of the obligation laid down in Article 7(1) of Regulation
+No 261/2004 to pay compensation, a strike by the staff of an operating air carrier cannot be categorised as an
+‘extraordinary circumstance’ within the meaning of Article 5(3) of the regulation where that strike is connected to
+demands relating to the employment relationship between the carrier and its staff that are capable of being dealt
+with through management-labour dialogue within the undertaking. That is precisely the situation in the case of pay
+negotiations.
+Nor can that finding be called into question by the fact that the strikers’ demands might be unreasonable or
+disproportionate or by the strikers’ rejection of a proposal for settlement since, in any event, the determination of
+pay levels falls within the scope of the employment relationship between the employer and its workers.
+Third, it is apparent from the Court’s case-law relating to the concept of ‘extraordinary circumstances’ within the
+meaning of Article 5(3) of Regulation No 261/2004 that events whose origin is ‘internal’ must be distinguished from
+those whose origin is ‘external’ to the operating air carrier.
+That concept thus encompasses, by way of the occurrence of such ‘external’ events, a collision between an aircraft
+and a bird (see, to that effect, judgment of 4 May 2017, Pešková and Peška, C‑315/15, EU:C:2017:342,
+paragraph 26), damage to an aircraft tyre caused by a foreign object, such as loose debris lying on an airport
+runway (see, to that effect, judgment of 4 April 2019, Germanwings, C‑501/17, EU:C:2019:288, paragraph 34),
+the presence of petrol on an airport runway which has led to the closure of the runway (see, to that effect,
+judgment of 26 June 2019, Moens, C‑159/18, EU:C:2019:535, paragraph 29) and a collision between the elevator
+of an aircraft in a parking position and the winglet of another airline’s aircraft, caused by the movement of the
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239181&pageIndex=0&doclang=EN&mode=req&dir=&occ=first&part=1&cid=28…
+
+4/6
+
+4/1/2021
+
+CURIA - Documents
+
+latter aircraft (see, to that effect, order of 14 January 2021, Airhelp, C‑264/20, not published, EU:C:2021:26,
+paragraph 26), but also a hidden manufacturing defect or acts of sabotage or terrorism (see, to that effect,
+judgments of 22 December 2008, Wallentin-Hermann, C‑549/07, EU:C:2008:771, paragraph 26, and of
+17 September 2015, van der Lans, C‑257/14, EU:C:2015:618, paragraph 38).
+The feature shared by all those events is that they result from the activity of the air carrier and from external
+circumstances which are more or less frequent in practice but which the air carrier does not control because they
+arise from a natural event or an act of a third party, such as another air carrier or a public or private operator
+interfering with flight or airport activity.
+Thus, in stating, in recital 14 of Regulation No 261/2004, that extraordinary circumstances may, in particular,
+occur in the case of strikes that affect the operation of an operating air carrier, the EU legislature intended to refer
+to strikes that are external to the activity of the air carrier concerned. It follows that strike action taken by air
+traffic controllers or airport staff may in particular constitute an ‘extraordinary circumstance’ within the meaning of
+Article 5(3) of that regulation (see, to that effect, judgment of 4 October 2012, Finnair, C‑22/11, EU:C:2012:604).
+Since such strike action does not moreover fall within the exercise of that carrier’s activity and is thus beyond its
+actual control, it constitutes an ‘extraordinary circumstance’ within the meaning of Article 5(3) of Regulation
+No 261/2004.
+On the other hand, a strike set in motion and observed by members of the relevant air transport undertaking’s
+own staff is an event ‘internal’ to that undertaking, including in the case of a strike set in motion upon a call by
+trade unions, since they are acting in the interest of that undertaking’s workers.
+If, however, such a strike originates from demands which only the public authorities can satisfy and which,
+accordingly, are beyond the actual control of the air carrier concerned, it is capable of constituting an
+‘extraordinary circumstance’ within the meaning of the case-law recalled in paragraph 23 of the present judgment.
+Fourth, to hold that a strike which is organised within a legal framework and as described in paragraph 25 of the
+present judgment does not fall within the concept of ‘extraordinary circumstances’ within the meaning of
+Article 5(3) of Regulation No 261/2004 cannot affect the fundamental rights of the air carrier concerned.
+The existence of strike action, and the risk of having to pay the compensation laid down in Article 5(1) and
+Article 7(1) of Regulation No 261/2004 to passengers whose flight has been cancelled, cannot be regarded as
+affecting the essence of the employer’s right of negotiation referred to in Article 28 of the Charter.
+In that regard, it need only be stated that the fact that an air carrier is faced with the risk of having to pay such
+compensation because of a strike by members of its staff that is organised within a legal framework does not
+compel it to accept, without discussion, the strikers’ demands in their entirety. The air carrier remains able to
+assert the undertaking’s interests, so as to reach a compromise that is satisfactory for all the social partners. The
+air carrier cannot therefore be regarded as being denied its freedom to negotiate protected by EU law and as being
+consigned from the outset to the role of losing party in the labour dispute.
+So far as concerns the infringement invoked by SAS of both its freedom to conduct a business and its right to
+property, which are guaranteed by Articles 16 and 17 of the Charter respectively, it should be pointed out that
+freedom to conduct a business and the right to property are not absolute rights and that they must, in a context
+such as that at issue in the main proceedings, be reconciled with Article 38 of the Charter which, like Article 169
+TFEU, seeks to ensure a high level of protection for consumers, including air passengers, in EU policies (see, to
+that effect, judgment of 31 January 2013, McDonagh, C‑12/11, EU:C:2013:43, paragraphs 60, 62 and 63).
+The importance of the objective of consumer protection, including the protection of air passengers, may justify
+even substantial negative economic consequences for certain economic operators (judgment of 31 January 2013,
+McDonagh, C‑12/11, EU:C:2013:43, paragraph 48 and the case-law cited).
+In the light of the foregoing considerations, the fundamental rights which the operating air carrier is guaranteed
+by Articles 16, 17 and 28 of the Charter cannot be impaired by not categorising a strike organised within a legal
+framework and displaying the characteristics referred to in paragraph 25 of the present judgment as an
+‘extraordinary circumstance’ within the meaning of Article 5(3) of Regulation No 261/2004.
+Accordingly, the answer to the questions referred is that Article 5(3) of Regulation No 261/2004 must be
+interpreted as meaning that strike action which is entered into upon a call by a trade union of the staff of an
+operating air carrier, in compliance with the conditions laid down by national legislation, in particular the notice
+period imposed by it, which is intended to assert the demands of that carrier’s workers and which is followed by a
+category of staff essential for operating a flight does not fall within the concept of an ‘extraordinary circumstance’
+within the meaning of that provision.
+Costs
+Since these proceedings are, for the parties to the main proceedings, a step in the action pending before the
+national court, the decision on costs is a matter for that court. Costs incurred in submitting observations to the
+Court, other than the costs of those parties, are not recoverable.
+On those grounds, the Court (Grand Chamber) hereby rules:
+Article 5(3) of Regulation (EC) No 261/2004 of the European Parliament and of the Council of
+11 February 2004 establishing common rules on compensation and assistance to passengers in the
+event of denied boarding and of cancellation or long delay of flights, and repealing Regulation (EEC)
+No 295/91, must be interpreted as meaning that strike action which is entered into upon a call by a
+trade union of the staff of an operating air carrier, in compliance with the conditions laid down by
+national legislation, in particular the notice period imposed by it, which is intended to assert the
+demands of that carrier’s workers and which is followed by a category of staff essential for operating a
+flight does not fall within the concept of an ‘extraordinary circumstance’ within the meaning of that
+provision.
+[Signatures]
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239181&pageIndex=0&doclang=EN&mode=req&dir=&occ=first&part=1&cid=28…
+
+5/6
+
+4/1/2021
+
+*
+
+CURIA - Documents
+
+Language of the case: Swedish.
+
+https://curia.europa.eu/juris/document/document.jsf?text=&docid=239181&pageIndex=0&doclang=EN&mode=req&dir=&occ=first&part=1&cid=28…
+
+6/6
+
+
