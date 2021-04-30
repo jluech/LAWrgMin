@@ -23,12 +23,14 @@
     "devextreme": "20.2.6",
     "devextreme-react": "20.2.6",
     "mdi-react": "^7.5.0",
+    "node-sass": "^5.0.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.2",
-    "web-vitals": "^1.1.1"
+    "web-vitals": "^1.1.1",
+    "xlsx": "^0.16.9"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
@@ -38,6 +40,7 @@
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-react": "^7.23.2",
+    "file-saver": "^2.0.5",
     "prettier": "^2.2.1"
   },
   "eslintConfig": {

@@ -27,7 +27,7 @@ export class Lawrgminer extends React.Component {
             exportData: [],
 
             // task/file/instance id from backend
-            fileId: 3
+            fileId: null
         };
 
         // bindings in order to pass functions to child "file-upload.jsx"
