@@ -30,7 +30,7 @@ export class Lawrgminer extends React.Component {
             exportData: [],
 
             // task/file/instance id from backend
-            id: null
+            fileId: 3
         };
 
         // bindings in order to pass functions to child "file-upload.jsx"
@@ -138,7 +138,7 @@ export class Lawrgminer extends React.Component {
                         </div>
                     </div>
                     <ExportToExcel
-                        fileId={this.id}
+                        fileId={this.state.fileId}
                         api_host = {api_host}/>
                 </div>
                 <br />
