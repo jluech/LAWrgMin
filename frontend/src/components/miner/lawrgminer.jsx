@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import FileDocumentMultipleOutlineIcon from "mdi-react/FileDocumentMultipleOutlineIcon";
@@ -8,6 +8,7 @@ import {FileUpload} from "./file-upload";
 // import {DragAndDrop} from "./drag-and-drop";
 import {Arguments} from "./arguments";
 import {Claims} from "./claims";
+import {ExportToExcel} from "./export-to-excel";
 
 
 const api_host = "http://localhost:5000"
@@ -16,9 +17,23 @@ export class Lawrgminer extends React.Component {
     constructor() {
         super();
         this.state = {
+            // copy-pasted text to analyze
             inputText: "",
-            inputFile: null
+
+            // uploaded file of user to analyze
+            inputFile: null,
+
+            // JSON from backend as input for premise and claim list
+            resultJSON: [],
+
+            // csv from backend to export
+            exportData: [],
+
+            // task/file/instance id from backend
+            id: null
         };
+
+        // bindings in order to pass functions to child "file-upload.jsx"
         this.adjustInputFile = this.adjustInputFile.bind(this);
         this.tagWithFile = this.tagWithFile.bind(this);
 
@@ -122,9 +137,9 @@ export class Lawrgminer extends React.Component {
                             <Arguments />
                         </div>
                     </div>
-                    <Button className={"miner-results-export-btn"} variant="outline-light">
-                        Export Data
-                    </Button>
+                    <ExportToExcel
+                        fileId={this.id}
+                        api_host = {api_host}/>
                 </div>
                 <br />
             </div>
