@@ -11,6 +11,7 @@ backend/data_static/**
 backend/targer_instance/data/in
 backend/targer_instance/data/out
 backend/targer_instance/lstm/data/NER/
+backend/backend.log
 
 ### ignore external repository
 backend/corpus_processing/standoff2conll
