@@ -58,8 +58,6 @@ def parse_corpus_data():
             for argument in case['arguments']:
                 premises = argument['premises']
 
-                claim_id = 0
-
                 if is_major_argument(argument, case):
                     clause = find_clause_from_id(clauses, argument['conclusion'])
                     start, end, trimmed_sentence = get_start_end_trimmed(trimmed, text[clause['start']:clause['end']])
@@ -112,12 +110,11 @@ def parse_corpus_data():
             print('Converting standoff format into .connl for case ' + case['name'] + '...')
 
             # Run command with disabled output
-            os.system('python standoff2conll.py {__file_out_dir}'.format(__file_out_dir=file_out_dir) + ' >/dev/null 2>&1')
+            os.system('python standoff2conll.py {__file_out_dir} >/dev/null 2>&1'.format(__file_out_dir=file_out_dir))
 
             print('Case ' + case['name'] + ' finished')
-
-
     print('Done!')
+
 
 if __name__ == "__main__":
     parse_corpus_data()
