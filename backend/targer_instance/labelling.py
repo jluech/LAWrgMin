@@ -46,6 +46,7 @@ def process(file):
     # ===== process and label input text =====
     raw_results = model.label(input_text)
     # raw_results = model.label_with_probs(input_text)
+    print()  # targer has annoying prints with carriage sticking on same line
 
     # ===== merge fragments with same label - losing probability =====
     merged_results = []
