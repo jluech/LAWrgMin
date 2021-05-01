@@ -83,9 +83,9 @@ def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
                 file_dict['text'] = file_dict['text'] + text
                 if tag == 'premise':
                     file_dict['premises'].append(clause_dict)
-                else:
+                elif tag == 'claim':
                     file_dict['claims'].append(clause_dict)
-            results.append(json.dumps(file_dict))
+            results.append(file_dict)
     return results
 
 
