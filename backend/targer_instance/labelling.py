@@ -3,6 +3,7 @@
 import glob
 import json
 import os
+import sys
 import time
 import warnings
 
@@ -127,5 +128,14 @@ def trigger_labelling_of_files():
 
 
 if __name__ == "__main__":
+	args = sys.argv[1:]  # ignore first arg as it's the script
+	if args.__len__() > 0:
+		if args.__contains__("-i"):
+			in_dir = os.path.abspath(args[args.index("-i") + 1])
+			print("Reading labelling input from", in_dir)
+		if args.__contains__("-o"):
+			out_dir = os.path.abspath(args[args.index("-o") + 1])
+			print("Saving labelling output to", out_dir)
+
 	trigger_labelling_of_files()
 	print("=== Done ===")
