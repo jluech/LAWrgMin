@@ -11,10 +11,14 @@ backend/data_static/**
 backend/targer_instance/data/in
 backend/targer_instance/data/out
 backend/targer_instance/lstm/data/NER/
-backend/backend.log
 
 ### ignore external repository
 backend/corpus_processing/standoff2conll
+
+### ignore log files
+backend/backend_root.log
+backend/corpus_processing/backend_corpus.log
+backend/targer_instance/backend_targer.log
 
 
 # IDEA project folder
