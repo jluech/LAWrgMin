@@ -53,7 +53,8 @@ export class Lawrgminer extends React.Component {
 
     tagWithText() {
         const {inputText} = this.state;
-        console.log("tagging input text", inputText); // TODO
+        console.log("tagging input text\n", inputText); // TODO
+
         const request_url = `${api_host}/api/tagWithText`
         axios.post(request_url, {"text": inputText})
             .then((response) => {
@@ -77,6 +78,8 @@ export class Lawrgminer extends React.Component {
         console.log("checking input file\n", inputFile); // TODO
 
         if (inputFile) {
+            console.log("tagging input file\n", inputFile); // TODO
+
             // Create an object of formData
             const formData = new FormData();
 
@@ -155,6 +158,7 @@ export class Lawrgminer extends React.Component {
                 </div>;
             }
         }
+
         return (
             <div className={"lawrgminer"}>
                 <h2 className="section-title">I am the LAWrgMiner</h2>
@@ -180,6 +184,7 @@ export class Lawrgminer extends React.Component {
                 {/*TODO: refactor to remove br tags and properly style hr*/}
                 <hr className="solid" style={{position: "relative", top: "1em"}} />
                 <br />
+
                 {renderResultSection()}
             </div>
         );
