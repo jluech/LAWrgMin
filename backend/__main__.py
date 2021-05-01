@@ -80,9 +80,11 @@ def tag_with_text():
 
 
 @backend.route("/api/tagWithFile", methods=["POST"])
-# @backend.route("/api/tagWithFile", methods=["GET"])
 def tag_with_file():
     logging.info("{__method} tagWithFile".format(__method=request.method))
+
+    request_data = request.get_json()
+    print(request_data)
 
     # Saves all the files that were uploaded with the request.
     file_handler = get_file_handler()
@@ -100,6 +102,9 @@ def tag_with_file():
     # Prepare return in json format.
     return jsonify({
         "id": file_handler.file_id,
+        "blocks": examples.example_blocks,
+        "claims": examples.example_claims,
+        "premises": examples.example_premises,
         "status": "created"
     })
 
