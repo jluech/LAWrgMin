@@ -100,9 +100,9 @@ def parse_corpus_data():
             casefile.write(trimmed)
             casefile.close()
 
-            copyfile('annotation.conf', out_dir+'/annotation.conf')
+            copyfile('annotation.conf', out_dir + '/annotation.conf')
 
-            path = './standoff2conll'
+            path = 'standoff2conll'
             if not os.path.exists(path):
                 os.system('git clone https://github.com/spyysalo/standoff2conll')
             os.chdir(path)
