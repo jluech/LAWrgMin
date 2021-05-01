@@ -6,6 +6,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
+from targer_output_processing import process_targer_output_data
 import utils
 
 logging.basicConfig(level=logging.INFO)
@@ -30,13 +31,12 @@ def status():
 def tag_with_text():
     logging.info("{__method} tagWithText".format(__method=request.method))
 
-    request_data = request.get_json()
-    text = request_data["text"]
-
     # Retrieve file data and prepare storage folder.
     file_handler = get_file_handler()
     file_id = file_handler.file_id
     files_dir = utils.get_uploaded_files_path(file_id)
+
+    logging.info("starting tagWithText for request {__id}".format(__id=file_id))
 
     if not os.path.exists(files_dir):
         utils.create_tagging_subdir(file_id)
@@ -47,8 +47,20 @@ def tag_with_text():
         os.remove(file_name)
 
     # Write provided text to .txt file for further processing
+    request_data = request.get_json()
+    text = request_data["text"]
+
     with open(file_name, "x") as file:
         file.write(text)
+
+    # Call targer for labelling the new .txt file
+    os.chdir("targer_instance")
+    os.system("python labelling.py -i {__in_dir} -o {__out_dir}".format(__in_dir=files_dir, __out_dir=files_dir))
+    os.chdir("..")
+
+    # Read results from targer .out file
+    labelled_results = process_targer_output_data(file_id, files_dir)
+    logging.info(labelled_results)  # TODO: switch to debug
 
     # Prepare return in json format.
     return jsonify({
