@@ -57,8 +57,8 @@ def tag_with_text():
     })
 
 
-# @backend.route("/api/tagWithFile", methods=["POST"])
-@backend.route("/api/tagWithFile", methods=["GET"])
+@backend.route("/api/tagWithFile", methods=["POST"])
+# @backend.route("/api/tagWithFile", methods=["GET"])
 def tag_with_file():
     logging.info("{__method} tagWithFile".format(__method=request.method))
 
