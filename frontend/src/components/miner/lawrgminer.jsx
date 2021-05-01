@@ -1,11 +1,8 @@
 import React from "react";
-// import Button from "react-bootstrap/Button";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import FileDocumentMultipleOutlineIcon from "mdi-react/FileDocumentMultipleOutlineIcon";
 
 import {FileUpload} from "./file-upload";
-// import {DragAndDrop} from "./drag-and-drop";
 import {Arguments} from "./arguments";
 import {Claims} from "./claims";
 import {ExportToExcel} from "./export-to-excel";
@@ -44,10 +41,9 @@ export class Lawrgminer extends React.Component {
     }
 
     adjustInputFile(event) {
-        console.log(this.state.inputFile)
-        this.setState({inputFile: event.target.value}, () => console.log("setting new file:", this.state.inputFile.name)); // TODO
-        console.log(this.state.inputFile)
-
+        if (event.target.files.length > 0) {
+            this.setState({inputFile: event.target.files[0]}, () => console.log("setting new file:", this.state.inputFile.name)); // TODO
+        }
     }
 
     tagWithText() {
@@ -67,26 +63,23 @@ export class Lawrgminer extends React.Component {
     }
 
     tagWithFile() {
+        // for file upload tutorial, see https://www.nicesnippets.com/blog/react-js-file-upload-example-with-axios
         const {inputFile} = this.state;
-        console.log("tagging input file\n", inputFile); // TODO
-
+        console.log("checking input file\n", inputFile); // TODO
 
         if (inputFile) {
+            console.log("tagging input file\n", inputFile); // TODO
+
             // Create an object of formData
             const formData = new FormData();
 
             // Update the formData object
             formData.append("file", inputFile);
-
-            // Details of the uploaded file
-            console.log(this.state.inputFile);
+            console.log(formData); // TODO
 
             // Request made to the backend api to send formData object
-            console.log("tagging input file\n", inputFile); // TODO
-
             const request_url = `${api_host}/api/tagWithFile`
-
-            axios.post(request_url, {"file": formData})
+            axios.post(request_url, formData)
                 .then((reply) => {
                     console.log(reply.data); // TODO
                     console.log(reply.status); // TODO
@@ -97,7 +90,6 @@ export class Lawrgminer extends React.Component {
                 });
         }
     }
-
 
     render() {
         return (
@@ -120,6 +112,7 @@ export class Lawrgminer extends React.Component {
                                 inputFile={this.state.inputFile}
                     />
                 </div>
+
                 <br />
                 {/*TODO: refactor to remove br tags and properly style hr*/}
                 <hr className="solid" style={{position: "relative", top: "1em"}} />
