@@ -1,7 +1,12 @@
 import json
+import logging
 import os
 
 from utils import ClauseHandler
+
+logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(name)s - %(levelname)s: %(message)s",
+                    datefmt="%m/%d/%Y %H:%M:%S", filename="backend_root.log")
+
 
 targer_output_dir_path = "./targer_instance/data/out"
 
@@ -54,10 +59,8 @@ def process_single_block_with_prob(block):
 def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
     dir_contents = os.listdir(doc_path)
     dir_contents.sort()  # TODO: optional, may be performance relevant
-    # print(dir_contents)
     output_files = [file for file in dir_contents if file[-4:] == ".out"]
-    print(output_files)
-    print("====================")
+
     results = []
     # for file in output_files:
     for file in output_files:
@@ -72,7 +75,6 @@ def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
             # ========== load and parse data from json file to dictionary ==========
             raw_data = json.load(corpus_file)
             for block in raw_data['results']:
-                print('floating through space')
                 label_dict = block[0]
                 if 'prob' in label_dict.keys():
                     text, clause_dict, tag = process_single_block_with_prob(block)
@@ -88,4 +90,4 @@ def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
 
 
 if __name__ == "__main__":
-    print(process_targer_output_data(1))
+    logging.info(process_targer_output_data(1))

@@ -9,7 +9,8 @@ from werkzeug.utils import secure_filename
 from targer_output_processing import process_targer_output_data
 import utils
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s - %(levelname)s: %(message)s",
+                    datefmt="%m/%d/%Y %H:%M:%S", filename="backend_root.log")
 
 
 # App initialization.
@@ -35,9 +36,9 @@ def tag_with_text():
     file_handler = get_file_handler()
     file_id = file_handler.file_id
     files_dir = utils.get_uploaded_files_path(file_id)
+    logging.info("starting tagWithText for request %d", file_id)
 
-    logging.info("starting tagWithText for request {__id}".format(__id=file_id))
-
+    orig_wd = os.getcwd()
     if not os.path.exists(files_dir):
         utils.create_tagging_subdir(file_id)
     os.chdir(files_dir)
@@ -60,7 +61,7 @@ def tag_with_text():
 
     # Read results from targer .out file
     labelled_results = process_targer_output_data(file_id, files_dir)
-    logging.info(labelled_results)  # TODO: switch to debug
+    logging.debug(labelled_results)
 
     # Prepare return in json format.
     return jsonify({
@@ -112,6 +113,7 @@ def cleanup_instance_files():
 if __name__ == "__main__":
     args = sys.argv[1:]  # ignore first arg as it's the script
     if args.__len__() > 0 and args.__contains__("--cleanup-files"):
+        logging.info("Cleaning up files from previous runs")
         cleanup_instance_files()
 
     # Create a directory in a known location to save uploaded files to.
