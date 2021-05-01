@@ -28,6 +28,7 @@ def prepare_echr_files():
         with open("{__idx}.conll".format(__idx=idx_two_digit), "r") as echr_file:
             content = echr_file.read()
             choice = idx % 3
+            # TODO: should go for roughly 25% train, 60% dev, 15% test
             if choice == 0:
                 file_dir = "/".join([orig_dir, "lstm", "/".join(train_file.split("/")[:-1])])
                 file_name = "train.txt"

@@ -7,8 +7,8 @@ from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
 import examples
-from targer_output_processing import process_targer_output_data
 import utils
+from targer_output_processing import process_targer_output_data
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s - %(levelname)s: %(message)s",
                     datefmt="%m/%d/%Y %H:%M:%S", filename="backend_root.log")
@@ -82,22 +82,50 @@ def tag_with_text():
 @backend.route("/api/tagWithFile", methods=["POST"])
 def tag_with_file():
     logging.info("{__method} tagWithFile".format(__method=request.method))
+    # for reading files with flask, see https://blog.miguelgrinberg.com/post/handling-file-uploads-with-flask
+    orig_wd = os.getcwd()
 
-    request_data = request.get_json()
-    print(request_data)
-
-    # Saves all the files that were uploaded with the request.
+    # Save the file that was uploaded with the request.
     file_handler = get_file_handler()
     file_id = file_handler.file_id
     files_dir = utils.get_uploaded_files_path(file_id)
+    os.makedirs(files_dir, exist_ok=True)
+    os.chdir(files_dir)
 
     file_keys = [*request.files]
+    if file_keys.__len__() > 1:
+        raise RuntimeError("Requesting to tag multiple files is not supported. Limit to one file per request!")
+    if file_keys.__len__() < 1:
+        raise RuntimeError("Requesting to tag a file without providing one! Add a file in the 'files' part of the request body.")
     file_names = []
-    for file_key in file_keys:
-        file = request.files[file_key]
-        file_name = secure_filename(file.filename)
-        file_names.append(file_name)
-        file.save(os.path.join(files_dir, file_name))
+    file_key = file_keys[0]
+    file = request.files[file_key]
+    file_name = secure_filename(file.filename)
+    file_names.append(file_name)
+    file.save(os.path.join(files_dir, file_name))
+
+    # Extract text from uploaded file and save as .txt
+    filtered_file_names = [file for file in file_names if file[-4:] != ".txt"]  # filter already formatted files
+    if filtered_file_names.__len__() < 1:
+        raise RuntimeError("Found multiple to extract text from in file dir %d", file_id)
+    os.chdir(orig_wd)
+    file = filtered_file_names[0]
+    file_path = os.path.join(files_dir, file)
+    os.system("python extract_text.py -i {__in_file} -o {__out_dir}".format(__in_file=file_path, __out_dir=files_dir))
+
+    # Call targer for labelling the new .txt file
+    os.chdir(os.path.join(orig_wd, "targer_instance"))
+    os.system("python labelling.py -i {__in_dir} -o {__out_dir}".format(__in_dir=files_dir, __out_dir=files_dir))
+    os.chdir(orig_wd)
+
+    # Read results from targer .out file
+    labelled_results = process_targer_output_data(file_id, files_dir)
+    if labelled_results.__len__() > 1:
+        raise RuntimeError("Tagging multiple out files in request folder %d", file_id)
+    # keys: "doc_id", "blocks", "claims", "premises"
+    # TODO: currently "text" instead of "blocks"
+
+    print(labelled_results[0].keys())
 
     # Prepare return in json format.
     return jsonify({
