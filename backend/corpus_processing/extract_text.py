@@ -4,7 +4,7 @@ import os
 import textract
 
 default_in_directory = "../data_static"  # default input, adjustable by providing args
-out_directory = "../miners/targer_instance/data/in"
+out_directory = "../targer_instance/data/in"
 
 
 # function to read .pdf, .docx or .html files; requires absolute file path

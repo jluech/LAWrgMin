@@ -2,15 +2,15 @@
 ### ignore files due to size
 backend/corpus_processing/datasets
 backend/corpus_processing/out
-miners/targer_instance/models
-miners/targer_instance/lstm/embeddings
+backend/targer_instance/models
+backend/targer_instance/lstm/embeddings
 
 ### ignore input/output folders due to volatility
 backend/instance/**
 backend/data_static/**
-miners/targer_instance/data/in
-miners/targer_instance/data/out
-miners/targer_instance/lstm/data/NER/
+backend/targer_instance/data/in
+backend/targer_instance/data/out
+backend/targer_instance/lstm/data/NER/
 
 ### ignore external repository
 backend/corpus_processing/standoff2conll

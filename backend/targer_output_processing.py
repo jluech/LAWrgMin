@@ -1,9 +1,9 @@
-import itertools
 import json
 import os
+
 from utils import ClauseHandler
 
-targer_output_dir_path = "../miners/targer_instance/data/out"
+targer_output_dir_path = "./targer_instance/data/out"
 
 
 def determine_delimiter(token):
