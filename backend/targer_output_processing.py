@@ -8,52 +8,75 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(name)s - %(leveln
                     datefmt="%m/%d/%Y %H:%M:%S", filename="backend_root.log")
 
 
-targer_output_dir_path = "./targer_instance/data/out"
+targer_output_dir_path = "./backend/targer_instance/data/out/"
 
 
-def process_single_block(block):
-    # block : [{token, label}]
-    # clause : {'clause_id: , 'text': , 'tag': ''}
-    clause_handler = ClauseHandler()
+def process_single_block(block, word_index):
+    word_index_beginning = word_index
     text = ''
     tag = None
+    word_tag = None
+    block_list = []
     for tagged_word in block:
         if tagged_word['label'] == 'B-Premise':
             tag = 'premise'
+            word_tag = 'premise'
         elif tagged_word['label'] == 'B-Claim':
             tag = 'claim'
+            word_tag = 'claim'
+        elif tagged_word['label'] == 'O':
+            word_tag = 'O'
         text = ' '.join([text, tagged_word['token']])
+        block_dict = {
+            'token': tagged_word['token'],
+            'label': word_tag,
+            'idx': word_index
+        }
+        block_list.append(block_dict)
+        word_index = word_index + 1
     clause_dict = {
-        'clause_id': clause_handler.clause_id,
         'text': text,
-        'tag': tag
+        'tag': tag,
+        'idx': word_index_beginning
     }
-    return text, clause_dict, tag
+    return text, clause_dict, tag, block_list, word_index
 
 
-def process_single_block_with_prob(block):
-    # block : [{prob, token, label}]
-    # clause : {'clause_id: , 'text': , 'tag': '', 'probability': }
-    clause_handler = ClauseHandler()
+def process_single_block_with_prob(block, word_index):
+    word_index_beginning = word_index
     total_prob = 0
     i = 0
     text = ''
     tag = None
+    word_tag = None
+    block_list = []
     for tagged_word in block:
         if tagged_word['label'] == 'B-Premise':
             tag = 'premise'
+            word_tag = 'premise'
         elif tagged_word['label'] == 'B-Claim':
             tag = 'claim'
+            word_tag = 'claim'
+        elif tagged_word['label'] == 'O':
+            word_tag = 'O'
         text = ' '.join([text, tagged_word['token']])
         total_prob = float(tagged_word['prob']) + total_prob
+        block_dict = {
+            'token': tagged_word['token'],
+            'label': word_tag,
+            'prob': tagged_word['prob'],
+            'idx': word_index
+        }
+        block_list.append(block_dict)
+        word_index = word_index + 1
         i = i + 1
     clause_dict = {
-        'clause_id': clause_handler.clause_id,
         'text': text,
         'tag': tag,
-        'prob': total_prob/i
+        'prob': total_prob/i,
+        'idx': word_index_beginning
     }
-    return text, clause_dict, tag
+    return text, clause_dict, tag, block_list, word_index
 
 
 def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
@@ -68,24 +91,28 @@ def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
             'doc_id': doc_id,
             'text': '',
             'premises': [],
-            'claims': []
+            'claims': [],
+            'blocks': []
         }
 
         with open("/".join([doc_path, file])) as corpus_file:
             # ========== load and parse data from json file to dictionary ==========
+            word_index = 0
             raw_data = json.load(corpus_file)
             for block in raw_data['results']:
                 label_dict = block[0]
                 if 'prob' in label_dict.keys():
-                    text, clause_dict, tag = process_single_block_with_prob(block)
+                    text, clause_dict, tag, block_list, word_index = process_single_block_with_prob(block, word_index)
                 else:
-                    text, clause_dict, tag = process_single_block(block)
+                    text, clause_dict, tag, block_list, word_index = process_single_block(block, word_index)
                 file_dict['text'] = file_dict['text'] + text
                 if tag == 'premise':
                     file_dict['premises'].append(clause_dict)
                 elif tag == 'claim':
                     file_dict['claims'].append(clause_dict)
+                file_dict['blocks'].append(block_list)
             results.append(file_dict)
+    print(results[0]['blocks'][0])
     return results
 
 
