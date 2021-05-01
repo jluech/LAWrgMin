@@ -2,14 +2,13 @@
 ### ignore files due to size
 backend/corpus_processing/datasets
 backend/corpus_processing/out
-backend/targer_instance/models
-backend/targer_instance/lstm/embeddings
+backend/targer_instance/models/*.h5
+backend/targer_instance/models/*.hdf5
+backend/targer_instance/lstm/embeddings/glove.6B.100d.txt
 
 ### ignore input/output folders due to volatility
 backend/instance/**
 backend/data_static/**
-backend/targer_instance/data/in
-backend/targer_instance/data/out
 backend/targer_instance/lstm/data/NER/
 
 ### ignore external repository
