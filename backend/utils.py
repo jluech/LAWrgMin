@@ -66,7 +66,7 @@ def remove_dir_tree(dir_path):
         dir_contents = os.listdir(dir_path)
         if os.path.isdir(dir_path) and len(dir_contents) > 0:
             for entity in dir_contents:
-                entity_path = "/".join([dir_path, entity])
+                entity_path = os.path.join(dir_path, entity)
                 if os.path.isdir(entity_path):
                     remove_dir_tree(entity_path)
                     os.rmdir(entity_path)

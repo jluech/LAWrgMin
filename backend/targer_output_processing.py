@@ -95,7 +95,7 @@ def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
             'blocks': []
         }
 
-        with open("/".join([doc_path, file])) as corpus_file:
+        with open(os.path.join(doc_path, file)) as corpus_file:
             # ========== load and parse data from json file to dictionary ==========
             word_index = 0
             raw_data = json.load(corpus_file)

@@ -56,7 +56,7 @@ def tag_with_text():
         file.write(text)
 
     # Call targer for labelling the new .txt file
-    os.chdir("/".join([orig_wd, "targer_instance"]))
+    os.chdir(os.path.join(orig_wd, "targer_instance"))
     os.system("python labelling.py -i {__in_dir} -o {__out_dir}".format(__in_dir=files_dir, __out_dir=files_dir))
     os.chdir(orig_wd)
 

@@ -4,7 +4,7 @@ import os
 from shutil import copyfile
 
 
-echr_corpus_path = "/".join([os.getcwd(), "datasets/echr_corpus/ECHR_Corpus.json"])
+echr_corpus_path = os.path.join(os.getcwd(), "datasets/echr_corpus/ECHR_Corpus.json")
 
 
 def find_clause_from_id(clauses, id):
@@ -82,7 +82,7 @@ def parse_corpus_data():
             out_dir = "./out/" + case['name'].replace('.txt', '')
             if not os.path.exists(out_dir):
                 os.makedirs(out_dir)
-            ann_filename = "/".join([out_dir, case["name"].replace('.txt', '')]) + ".ann"
+            ann_filename = os.path.join(out_dir, case["name"].replace('.txt', '.ann'))
             if os.path.exists(ann_filename):
                 os.remove(ann_filename)
 
