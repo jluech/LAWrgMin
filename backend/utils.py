@@ -21,17 +21,6 @@ class FileHandler:
             self.file_id = file_id
 
 
-# --- Currently in charge of handling the clause ids for uploaded files of different tagging runs ---
-class ClauseHandler:
-    new_id = itertools.count().__next__
-
-    def __init__(self, clause_id=None):
-        if clause_id is None:
-            self.clause_id = ClauseHandler.new_id()
-        else:
-            self.clause_id = clause_id
-
-
 # --- File and path handling commands ---
 def get_uploaded_files_path(file_id):
     return os.path.join(files_dir, str(file_id))

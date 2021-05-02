@@ -2,8 +2,6 @@ import json
 import logging
 import os
 
-from utils import ClauseHandler
-
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(name)s - %(levelname)s: %(message)s",
                     datefmt="%m/%d/%Y %H:%M:%S", filename="backend_root.log")
 
@@ -112,7 +110,6 @@ def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
                     file_dict['claims'].append(clause_dict)
                 file_dict['blocks'].append(block_list)
             results.append(file_dict)
-    print(results[0]['blocks'][0])
     return results
 
 
