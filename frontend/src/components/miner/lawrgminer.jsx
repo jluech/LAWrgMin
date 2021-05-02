@@ -23,6 +23,9 @@ export class Lawrgminer extends React.Component {
             // JSON from backend as input for premise and claim list
             resultJSON: [],
 
+            claims: [],
+            premises: [],
+
             // csv from backend to export
             exportData: [],
 
@@ -68,8 +71,6 @@ export class Lawrgminer extends React.Component {
         console.log("checking input file\n", inputFile); // TODO
 
         if (inputFile) {
-            console.log("tagging input file\n", inputFile); // TODO
-
             // Create an object of formData
             const formData = new FormData();
 
@@ -80,9 +81,10 @@ export class Lawrgminer extends React.Component {
             // Request made to the backend api to send formData object
             const request_url = `${api_host}/api/tagWithFile`
             axios.post(request_url, formData)
-                .then((reply) => {
-                    console.log(reply.data); // TODO
-                    console.log(reply.status); // TODO
+                .then((response) => {
+                    console.log(response.data); // TODO
+                    console.log(response.status); // TODO
+                    this.setState({resultJSON: response.data})
                 })
                 .catch((err) => {
                     console.log("error during request:", request_url, "\n", err);

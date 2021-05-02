@@ -3,15 +3,15 @@ import List from "devextreme-react/list";
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
 
-import {products} from "./mock-data.js";
-
 function ItemTemplate(data) {
+    // specify values which should be taken for the listing
+    // data comes from dataSource={} in HTML part
     return <div>{data.Name}</div>;
 }
 
 export class Arguments extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             searchMode: "contains",
         };
@@ -30,7 +30,7 @@ export class Arguments extends React.Component {
                 <React.Fragment>
                     <div className="list-container">
                         <List
-                            dataSource={products}
+                            dataSource={this.props.lawrgminerTags}
                             height={600}
                             itemRender={ItemTemplate}
                             searchExpr="Name"
