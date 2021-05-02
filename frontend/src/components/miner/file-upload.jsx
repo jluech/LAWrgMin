@@ -30,7 +30,7 @@ export class FileUpload extends React.Component {
                 <h3 className={"section"}>Or browse a PDF on your computer</h3>
                 <div className={"upload-input"}>
                     <input type="file" onChange={this.props.adjustInputFile} />
-                    <button onClick={(event) => this.props.tagWithFile(event)}>Upload!</button>
+                    <button onClick={(event) => this.props.tagWithFile(event)}>Start Tagging</button>
                 </div>
                 {this.buildFileDataHtml()}
             </div>

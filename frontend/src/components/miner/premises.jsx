@@ -4,41 +4,48 @@ import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
 
 function ItemTemplate(data) {
-    return <div>{data.claim}</div>;
+    // specify values which should be taken for the listing
+    // data comes from dataSource={} in HTML part
+    return <div>{data.premise}</div>;
 }
 
-export class Claims extends React.Component {
+export class Premises extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             searchMode: "contains",
-
         };
         this.onSearchModeChange = this.onSearchModeChange.bind(this);
     }
 
+    onSearchModeChange(args) {
+        this.setState({
+            searchMode: args.value,
+        });
+    }
+
     componentDidUpdate(prevProps, prevState) {
         if (prevProps !== this.props) {
-            this.createClaimList();
+            this.createPremiseList();
         }
     }
 
-    createClaimList() {
-        const claim_list = [];
-        console.log(this.props.claims); // TODO
-        if (this.props.claims.length > 0) {
-            for (const claim of this.props.claims) {
-                let claim_words = "";
-                for (const token_obj of claim) {
+    createPremiseList() {
+        const premise_list = [];
+        console.log(this.props.premises); // TODO
+        if (this.props.premises.length > 0) {
+            for (const premise of this.props.premises) {
+                let premise_words = "";
+                for (const token_obj of premise) {
                     const token = token_obj["token"];
-                    claim_words += this.determine_delimiter(token) + token;
+                    premise_words += this.determine_delimiter(token) + token;
                 }
-                claim_words = claim_words.trim();
-                claim_list.push({"claim": claim_words});
+                premise_words = premise_words.trim();
+                premise_list.push({"premise": premise_words});
             }
-            console.log(claim_list); // TODO
+            console.log(premise_list); // TODO
         }
-        return claim_list;
+        return premise_list;
     }
 
     determine_delimiter(token) {
@@ -51,22 +58,16 @@ export class Claims extends React.Component {
         return "";
     }
 
-    onSearchModeChange(args) {
-        this.setState({
-            searchMode: args.value,
-        });
-    }
-
     render() {
         return (
             <div>
                 <React.Fragment>
                     <div className="list-container">
                         <List
-                            dataSource={this.createClaimList()}
+                            dataSource={this.createPremiseList()}
                             height={600}
                             itemRender={ItemTemplate}
-                            searchExpr="p"
+                            searchExpr="Name"
                             searchEnabled={true}
                             searchMode={this.state.searchMode}
                         />

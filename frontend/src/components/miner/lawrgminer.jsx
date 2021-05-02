@@ -3,7 +3,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import {FileUpload} from "./file-upload";
-import {Arguments} from "./arguments";
+import {Premises} from "./premises";
 import {Claims} from "./claims";
 import {ExportToExcel} from "./export-to-excel";
 
@@ -54,10 +54,15 @@ export class Lawrgminer extends React.Component {
         console.log("tagging input text\n", inputText); // TODO
 
         const request_url = `${api_host}/api/tagWithText`
-        axios.post(request_url, {"text": inputText})
-            .then((reply) => {
-                console.log(reply.data); // TODO
-                console.log(reply.status); // TODO
+        axios.post(request_url)
+            .then((response) => {
+                console.log(response.status); // TODO
+
+                this.setState({resultJSON: response.data})
+                this.setState({fileId: this.state.resultJSON.id})
+                this.setState({claims: this.state.resultJSON.claims})
+                this.setState({premises: this.state.resultJSON.premises})
+
             })
             .catch((err) => {
                 console.log("error during request:", request_url, "\n", err);
@@ -85,6 +90,9 @@ export class Lawrgminer extends React.Component {
                     console.log(response.data); // TODO
                     console.log(response.status); // TODO
                     this.setState({resultJSON: response.data})
+                    this.setState({fileId: this.state.resultJSON.id})
+                    this.setState({claims: this.state.resultJSON.claims})
+                    this.setState({premises: this.state.resultJSON.premises})
                 })
                 .catch((err) => {
                     console.log("error during request:", request_url, "\n", err);
