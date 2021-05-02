@@ -99,7 +99,7 @@ def process(file):
         json.dump(output, f)
 
 
-def trigger_labelling_of_files():
+def trigger_labelling_of_files(write_stats):
     # ===== collect input files =====
     files = glob.glob(os.path.abspath("/".join([in_dir, "*.txt"])))
     files = [f.split(("/" if "/" in f else "\\"))[-1].split('.')[0] for f in files]
@@ -117,23 +117,29 @@ def trigger_labelling_of_files():
         times.append(end_time - start_time)
 
     # ===== write stats to file =====
-    nr_files = len(files)
-    timed = sum(times)
+    if write_stats:
+        nr_files = len(files)
+        timed = sum(times)
 
-    logging.debug("> Writing overall stats to file...")
-    stats_path = "{0}/stats.txt".format(out_dir)
-    if os.path.exists(stats_path):
-        os.remove(stats_path)
+        logging.debug("> Writing overall stats to file...")
+        stats_path = "{0}/stats.txt".format(out_dir)
+        if os.path.exists(stats_path):
+            os.remove(stats_path)
 
-    with open(stats_path, "x") as f:
-        f.write("Nr. files:\t" + str(nr_files) + "\n")
-        f.write("Total time:\t" + str(round(timed, 2)) + "\n")
-        for idx, file in enumerate(files):
-            f.write(file + ":\t" + str(round(times[idx], 2)) + "\n")
+        with open(stats_path, "x") as f:
+            f.write("Nr. files:\t" + str(nr_files) + "\n")
+            f.write("Total time:\t" + str(round(timed, 2)) + "\n")
+            for idx, file in enumerate(files):
+                f.write(file + ":\t" + str(round(times[idx], 2)) + "\n")
+
+
+def convert_str_to_bool(string):
+    return string.lower() in ['true', 't', '1', 'yes', 'y']
 
 
 if __name__ == "__main__":
     args = sys.argv[1:]  # ignore first arg as it's the script
+    write_stats = True
     if args.__len__() > 0:
         if args.__contains__("-i"):
             in_dir = os.path.abspath(args[args.index("-i") + 1])
@@ -141,6 +147,9 @@ if __name__ == "__main__":
         if args.__contains__("-o"):
             out_dir = os.path.abspath(args[args.index("-o") + 1])
             logging.debug("Saving labelling output to %s", out_dir)
+        if args.__contains__("--stats"):
+            write_stats = convert_str_to_bool(args[args.index("--stats") + 1])
+            logging.debug("Writing labelling stats to file: %s", str(write_stats))
 
-    trigger_labelling_of_files()
+    trigger_labelling_of_files(write_stats)
     logging.info("=== Done ===")
