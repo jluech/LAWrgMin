@@ -51,10 +51,10 @@ export class Lawrgminer extends React.Component {
 
     tagWithText() {
         const {inputText} = this.state;
-        console.log("tagging input text\n", inputText); // TODO
-
+        console.log("tagging input text", inputText); // TODO
         const request_url = `${api_host}/api/tagWithText`
-        axios.post(request_url)
+        console.log(typeof inputText)
+        axios.post(request_url, {"text": inputText})
             .then((response) => {
                 console.log(response.status); // TODO
 
