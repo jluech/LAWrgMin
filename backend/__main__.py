@@ -51,6 +51,8 @@ def tag_with_text():
     # Write provided text to .txt file for further processing
     request_data = request.get_json()
     text = request_data["text"]
+    if not text:
+        raise RuntimeError("Requesting to tag text without providing any! Add some text in the 'data' part of the request body.")
 
     with open(file_name, "x") as file:
         file.write(text)
@@ -63,7 +65,8 @@ def tag_with_text():
     # Read results from targer .out file
     labelled_results = process_targer_output_data(file_id, files_dir)
     if labelled_results.__len__() > 1:
-        raise RuntimeError("Tagging multiple out files in request folder %d", file_id)
+        logging.error(os.listdir(files_dir))
+        raise RuntimeError("Tagging multiple out files in request folder {0}".format(file_id))
     # keys: "doc_id", "blocks", "claims", "premises"
     # TODO: currently "text" instead of "blocks"
 
@@ -107,7 +110,7 @@ def tag_with_file():
     # Extract text from uploaded file and save as .txt
     filtered_file_names = [file for file in file_names if file[-4:] != ".txt"]  # filter already formatted files
     if filtered_file_names.__len__() < 1:
-        raise RuntimeError("Found multiple to extract text from in file dir %d", file_id)
+        raise RuntimeError("Found multiple files to extract text from in file dir {0}".format(file_id))
     os.chdir(orig_wd)
     file = filtered_file_names[0]
     file_path = os.path.join(files_dir, file)
@@ -121,7 +124,8 @@ def tag_with_file():
     # Read results from targer .out file
     labelled_results = process_targer_output_data(file_id, files_dir)
     if labelled_results.__len__() > 1:
-        raise RuntimeError("Tagging multiple out files in request folder %d", file_id)
+        logging.error(os.listdir(files_dir))
+        raise RuntimeError("Tagging multiple out files in request folder {0}".format(file_id))
     # keys: "doc_id", "blocks", "claims", "premises"
     # TODO: currently "text" instead of "blocks"
 
