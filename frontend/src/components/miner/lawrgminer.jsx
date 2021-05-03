@@ -128,6 +128,33 @@ export class Lawrgminer extends React.Component {
     }
 
     render() {
+        const renderResultSection = () => {
+            if (isEmptyObject(this.state.blocks)) {
+                return <div> </div>;
+            } else {
+                return <div>
+                    <h4 className="section-title">2. Results</h4>
+                    <div className={"miner-results"}>
+                        <div className={"miner-results-list"}>
+                            <div className={"miner-results-claims"}>
+                                <h5>Claims</h5>
+                                <Claims claims={this.state.claims}/>
+                            </div>
+                            <div className={"miner-results-arguments"}>
+                                <h5>Premises</h5>
+                                <Premises
+                                    premises={this.state.premises}/>
+                            </div>
+                        </div>
+                        <div> {this.showTaggedFulltext()} </div>
+                        <ExportToExcel
+                            fileId={this.state.fileId}
+                            api_host = {api_host}/>
+                    </div>
+                    <br/>
+                </div>;
+            }
+        }
         return (
             <div className={"lawrgminer"}>
                 <h2 className="section-title">I am the LAWrgMiner</h2>
@@ -153,25 +180,7 @@ export class Lawrgminer extends React.Component {
                 {/*TODO: refactor to remove br tags and properly style hr*/}
                 <hr className="solid" style={{position: "relative", top: "1em"}} />
                 <br />
-
-                <h4 className="section-title">2. Results</h4>
-                <div className={"miner-results"}>
-                    <div className={"miner-results-list"}>
-                        <div className={"miner-results-claims"}>
-                            <h5>Claims</h5>
-                            <Claims />
-                        </div>
-                        <div className={"miner-results-arguments"}>
-                            <h5>Premises</h5>
-                            <Premises />
-                        </div>
-                    </div>
-                    <div> {this.showTaggedFulltext()} </div>
-                    <ExportToExcel
-                        fileId={this.state.fileId}
-                        api_host = {api_host}/>
-                </div>
-                <br />
+                {renderResultSection()}
             </div>
         );
     }
