@@ -5,6 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import uzh from "../images/uzh.svg";
 
 export class Header extends React.Component {
+
+
+
     render() {
         return (
             <header className="app-header text-left">
@@ -18,8 +21,8 @@ export class Header extends React.Component {
                             right: "10px",
                         }}
                     >
-                        <li style={{padding: "2em"}}>
-                            <Link activeClass="active" to="introduction" spy={true} smooth={true}>
+                        <li className={"app-header-menu"} style={{padding: "2em"}}>
+                            <Link activeClass="active" to="project" spy={true} smooth={true}>
                                 Project
                             </Link>
                         </li>

@@ -17,7 +17,7 @@ export class Claims extends React.Component {
     itemTemplate(data) {
         // specify values which should be taken for the listing
         // data comes from dataSource={} in HTML part
-        return <a href={`#${data.idx}`} className={"result-list-item"}>{data.claim}</a>;
+        return <a href={`#${data.idx}`} className={"result-list-claims"}>{data.claim}</a>;
     }
 
     componentDidUpdate(prevProps, prevState) {
