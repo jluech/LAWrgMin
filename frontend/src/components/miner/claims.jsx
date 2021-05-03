@@ -3,9 +3,6 @@ import List from "devextreme-react/list";
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
 
-function ItemTemplate(data) {
-    return <div>{data.claim}</div>;
-}
 
 export class Claims extends React.Component {
     constructor(props) {
@@ -17,6 +14,12 @@ export class Claims extends React.Component {
         this.onSearchModeChange = this.onSearchModeChange.bind(this);
     }
 
+    itemTemplate(data) {
+        // specify values which should be taken for the listing
+        // data comes from dataSource={} in HTML part
+        return <a href={`#${data.idx}`} className={"result-list-item"}>{data.claim}</a>;
+    }
+
     componentDidUpdate(prevProps, prevState) {
         if (prevProps !== this.props) {
             this.createClaimList();
@@ -25,18 +28,20 @@ export class Claims extends React.Component {
 
     createClaimList() {
         const claim_list = [];
-        console.log(this.props.claims); // TODO
+        //console.log(this.props.claims);
         if (this.props.claims.length > 0) {
             for (const claim of this.props.claims) {
                 let claim_words = "";
+                const start_idx = claim[0]["idx"];
+
                 for (const token_obj of claim) {
                     const token = token_obj["token"];
                     claim_words += this.determine_delimiter(token) + token;
                 }
                 claim_words = claim_words.trim();
-                claim_list.push({"claim": claim_words});
+                claim_list.push({"claim": claim_words, "idx": start_idx});
             }
-            console.log(claim_list); // TODO
+            // console.log(claim_list); // TODO
         }
         return claim_list;
     }
@@ -64,9 +69,9 @@ export class Claims extends React.Component {
                     <div className="list-container">
                         <List
                             dataSource={this.createClaimList()}
-                            height={600}
-                            itemRender={ItemTemplate}
-                            searchExpr="p"
+                            height={400}
+                            itemRender={this.itemTemplate}
+                            searchExpr="claim"
                             searchEnabled={true}
                             searchMode={this.state.searchMode}
                         />

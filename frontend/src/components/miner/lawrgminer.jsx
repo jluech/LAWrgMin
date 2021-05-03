@@ -6,6 +6,7 @@ import {FileUpload} from "./file-upload";
 import {Premises} from "./premises";
 import {Claims} from "./claims";
 import {ExportToExcel} from "./export-to-excel";
+import {isEmptyObject} from "devextreme/core/utils/type";
 
 
 const api_host = "http://localhost:5000"
@@ -25,6 +26,7 @@ export class Lawrgminer extends React.Component {
 
             claims: [],
             premises: [],
+            blocks: [],
 
             // csv from backend to export
             exportData: [],
@@ -53,7 +55,6 @@ export class Lawrgminer extends React.Component {
         const {inputText} = this.state;
         console.log("tagging input text", inputText); // TODO
         const request_url = `${api_host}/api/tagWithText`
-        console.log(typeof inputText)
         axios.post(request_url, {"text": inputText})
             .then((response) => {
                 console.log(response.status); // TODO
@@ -62,7 +63,7 @@ export class Lawrgminer extends React.Component {
                 this.setState({fileId: this.state.resultJSON.id})
                 this.setState({claims: this.state.resultJSON.claims})
                 this.setState({premises: this.state.resultJSON.premises})
-
+                this.setState({blocks: this.state.resultJSON.blocks})
             })
             .catch((err) => {
                 console.log("error during request:", request_url, "\n", err);
@@ -93,11 +94,36 @@ export class Lawrgminer extends React.Component {
                     this.setState({fileId: this.state.resultJSON.id})
                     this.setState({claims: this.state.resultJSON.claims})
                     this.setState({premises: this.state.resultJSON.premises})
+                    this.setState({blocks: this.state.resultJSON.blocks})
                 })
                 .catch((err) => {
                     console.log("error during request:", request_url, "\n", err);
                     alert(`Something went wrong!\nError during request: ${request_url}`);
                 });
+        }
+    }
+
+    showTaggedFulltext() {
+        // console.log("is resultJSON empty?:", isEmptyObject(this.state.resultJSON))
+        if (!(isEmptyObject(this.state.blocks))) {
+            const text_array = [];
+            // console.log("First element in resultJSON.blocks", this.state.resultJSON.blocks[0])
+            for (const block of this.state.blocks) {
+                for (const word_obj of block) {
+                    console.log("object", word_obj)
+                    const classes = `block-text ${word_obj.label === "C" ? "block-claim" : (word_obj.label === "P" ? "block-premise" : "")}`;
+                    // console.log("premise / text / claim: ", classes, word.token)
+                    // console.log("block keys: "+ Object.keys(word_obj))
+                    const idx = word_obj.idx;
+                    console.log("word index: " + idx)
+                    const html = (
+                        <span className={classes} id={idx}>{word_obj.token + " "}</span>
+
+                    );
+                    text_array.push(html);
+                }
+            }
+            return text_array;
         }
     }
 
@@ -136,10 +162,11 @@ export class Lawrgminer extends React.Component {
                             <Claims />
                         </div>
                         <div className={"miner-results-arguments"}>
-                            <h5>Arguments</h5>
-                            <Arguments />
+                            <h5>Premises</h5>
+                            <Premises />
                         </div>
                     </div>
+                    <div> {this.showTaggedFulltext()} </div>
                     <ExportToExcel
                         fileId={this.state.fileId}
                         api_host = {api_host}/>
