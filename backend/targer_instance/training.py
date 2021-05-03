@@ -1,6 +1,7 @@
 import os
 import subprocess
 import sys
+import random
 
 targer_main_file = "main.py"
 # targer_files_dir = "data/NER/CoNNL_2003_shared_task"
@@ -9,9 +10,9 @@ train_file = "/".join([targer_files_dir, "train.txt"])
 dev_file = "/".join([targer_files_dir, "dev.txt"])
 test_file = "/".join([targer_files_dir, "test.txt"])
 
-data_formatting = "connl-ner-2003"
+data_formatting = "connl-pe"
 evaluation_type = "f1-alpha-match-10"
-epochs = "50"
+epochs = "1"
 
 
 def prepare_echr_files():
@@ -25,14 +26,14 @@ def prepare_echr_files():
 
         idx_two_digit = idx if idx >= 10 else "0"+str(idx)
         os.chdir("../corpus_processing/out/{__idx}/".format(__idx=idx_two_digit))
-        with open("{__idx}.conll".format(__idx=idx_two_digit), "r") as echr_file:
+        with open("{__idx}_pe.conll".format(__idx=idx_two_digit), "r") as echr_file:
             content = echr_file.read()
-            choice = idx % 3
-            # TODO: should go for roughly 25% train, 60% dev, 15% test
-            if choice == 0:
+            choice = random.uniform(0, 1)
+            # should go for roughly 25% train, 60% dev, 15% test
+            if choice <= 0.25:
                 file_dir = "/".join([orig_dir, "lstm", "/".join(train_file.split("/")[:-1])])
                 file_name = "train.txt"
-            elif choice == 1:
+            elif 0.25 < choice <= 0.40:
                 file_dir = "/".join([orig_dir, "lstm", "/".join(dev_file.split("/")[:-1])])
                 file_name = "dev.txt"
             else:
