@@ -7,32 +7,13 @@ import uzh from "../images/uzh.svg";
 export class Header extends React.Component {
 
 
-
     render() {
         return (
             <header className="app-header text-left">
                 <div>
-                    <img src={uzh} alt={""} />
-                    <ul
-                        style={{
-                            listStyle: "none",
-                            display: "inline-flex",
-                            position: "fixed",
-                            right: "10px",
-                        }}
-                    >
-                        <li className={"app-header-menu"} style={{padding: "2em"}}>
-                            <Link activeClass="active" to="project" spy={true} smooth={true}>
-                                Project
-                            </Link>
-                        </li>
-                        <li style={{padding: "2em"}}>
-                            <Link activeClass="active" to="lawrgminer" spy={true} smooth={true}>
-                                LAWrgMiner
-                            </Link>
-                        </li>
-                    </ul>
-
+                    <a className={"app-header-uzh-logo"} href="https://www.oec.uzh.ch">
+                        <img src={uzh} alt={""} />
+                    </a>
                     <div style={{marginLeft: "30%", marginTop: "10%"}}>
                         <h1>LAWrgMiner Project</h1>
                         <hr className="solid" />
