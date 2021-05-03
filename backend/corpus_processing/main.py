@@ -29,6 +29,20 @@ def get_start_end_trimmed(trimmed, sentence):
     return start, end, trimmed_sentence
 
 
+def conll_to_pe(file):
+    pe_string = ''
+    words_in_sentence = 1
+    with open(file) as f:
+        content = f.readlines()
+        for line in content:
+            pe_string = pe_string + str(words_in_sentence) + '\t' + line.replace(' ', ' \t')
+            if line[0] == '.' or line[0] == '!' or line[0] == '?':
+                words_in_sentence = 1
+            else:
+                words_in_sentence = words_in_sentence + 1
+    return pe_string
+
+
 def parse_corpus_data():
     print('Transforming ECHR dataset to brat standoff format...')
     with open(echr_corpus_path) as corpus_file:
@@ -43,7 +57,6 @@ def parse_corpus_data():
         orig_wd = os.getcwd()
 
         for index, case in enumerate(data):
-            os.chdir(orig_wd)
 
             text = case['text']
             trimmed = text.replace("  ", "").replace("\r", "").replace("\n", " ").replace("\t", " ").strip()
@@ -111,6 +124,18 @@ def parse_corpus_data():
 
             # Run command with disabled output
             os.system('python standoff2conll.py {__file_out_dir} >/dev/null 2>&1'.format(__file_out_dir=file_out_dir))
+
+            os.chdir(orig_wd)
+            print('Converting .connl format into pe_conll for case ' + case['name'] + '...')
+            pe_text = conll_to_pe(ann_filename.replace('.ann', '.conll'))
+
+            pe_filename = ann_filename.replace('.ann', '_pe.conll')
+            if os.path.exists(pe_filename):
+                os.remove(pe_filename)
+
+            pe_casefile = open(pe_filename, 'x')
+            pe_casefile.write(pe_text)
+            pe_casefile.close()
 
             print('Case ' + case['name'] + ' finished')
     print('Done!')
