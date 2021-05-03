@@ -35,11 +35,12 @@ def conll_to_pe(file):
     with open(file) as f:
         content = f.readlines()
         for line in content:
-            pe_string = pe_string + str(words_in_sentence) + '\t' + line.replace(' ', ' \t')
-            if line[0] == '.' or line[0] == '!' or line[0] == '?':
-                words_in_sentence = 1
-            else:
-                words_in_sentence = words_in_sentence + 1
+            if line != '\n' and line != '' and line != ' ':
+                pe_string = pe_string + str(words_in_sentence) + '\t' + line.replace(' ', ' \t')
+                if line[0] == '.' or line[0] == '!' or line[0] == '?':
+                    words_in_sentence = 1
+                else:
+                    words_in_sentence = words_in_sentence + 1
     return pe_string
 
 
