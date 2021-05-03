@@ -1,6 +1,7 @@
 import React from "react";
 
 import footer from "../images/footerimage.jpg";
+import {report} from "../components/report/data";
 
 export class Footer extends React.Component {
     render() {
@@ -21,6 +22,7 @@ export class Footer extends React.Component {
                         The research project was executed by Tjasa Marincek, Janik Lüchinger, Damaris Schmid,
                         Cédric Zellweger, & Adrian Zermin
                     </div>
+                    <div className={"textbox"} style={{fontSize: "10px"}}>{report[4].text}</div>
                 </div>
             </footer>
         );

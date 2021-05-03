@@ -31,6 +31,13 @@ export class ReportSection extends React.Component {
                         <p className="text">{report[2].text}</p>
                     </div>
                 </div>
+                <div className="dark">
+                    <h2 className="section-title">{report[3].section}</h2>
+                    <div className="textbox">
+                        <img className="text-image" src={image2} alt={""} />
+                        <p className="text">{report[3].text}</p>
+                    </div>
+                </div>
             </div>
         );
     }
