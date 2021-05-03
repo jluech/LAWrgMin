@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-scroll";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import uzh from "../images/uzh.svg";
+import logo from "../images/logo.png";
 
 export class Header extends React.Component {
 
@@ -11,11 +11,9 @@ export class Header extends React.Component {
         return (
             <header className="app-header text-left">
                 <div>
-                    <a className={"app-header-uzh-logo"} href="https://www.oec.uzh.ch">
-                        <img src={uzh} alt={""} />
-                    </a>
-                    <div style={{marginLeft: "30%", marginTop: "10%"}}>
-                        <h1>LAWrgMiner Project</h1>
+                    <img style={{maxWidth: "400px"}} src={logo} alt={""} />
+                    <div className={"app-header-text"}>
+                        <h1>Argumentation Mining in Law</h1>
                         <hr className="solid" />
                         <h6>Artificial Intelligence: Technology and Law</h6>
                         <br />
