@@ -50,6 +50,7 @@ def conll_to_pe_sentence_level(file):
             if line != '\n' and line != '' and line != ' ':
                 pe_string = pe_string + str(words_in_sentence) + '\t' + line.replace(' ', '\t')
                 if line[0] == '.' or line[0] == '!' or line[0] == '?':
+                    pe_string = pe_string + '\n'
                     words_in_sentence = 1
                 else:
                     words_in_sentence = words_in_sentence + 1
@@ -141,8 +142,8 @@ def parse_corpus_data():
             os.chdir(orig_wd)
             print('Converting .connl format into pe_conll for case ' + case['name'] + '...')
             # for sentence level tagging
-            # pe_text = conll_to_pe_sentence_level(ann_filename.replace('.ann', '.conll'))
-            pe_text = conll_to_pe_file_level(ann_filename.replace('.ann', '.conll'))
+            pe_text = conll_to_pe_sentence_level(ann_filename.replace('.ann', '.conll'))
+            #pe_text = conll_to_pe_file_level(ann_filename.replace('.ann', '.conll'))
 
             pe_filename = ann_filename.replace('.ann', '_pe.conll')
             if os.path.exists(pe_filename):
