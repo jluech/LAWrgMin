@@ -29,7 +29,19 @@ def get_start_end_trimmed(trimmed, sentence):
     return start, end, trimmed_sentence
 
 
-def conll_to_pe(file):
+def conll_to_pe_file_level(file):
+    pe_string = ''
+    index = 1
+    with open(file) as f:
+        content = f.readlines()
+        for line in content:
+            if line != '\n' and line != '' and line != ' ':
+                pe_string = pe_string + str(index) + '\t' + line.replace(' ', ' \t')
+                index = index + 1
+    return pe_string
+
+
+def conll_to_pe_sentence_level(file):
     pe_string = ''
     words_in_sentence = 1
     with open(file) as f:
@@ -128,7 +140,9 @@ def parse_corpus_data():
 
             os.chdir(orig_wd)
             print('Converting .connl format into pe_conll for case ' + case['name'] + '...')
-            pe_text = conll_to_pe(ann_filename.replace('.ann', '.conll'))
+            # for sentence level tagging
+            # pe_text = conll_to_pe_sentence_level(ann_filename.replace('.ann', '.conll'))
+            pe_text = conll_to_pe_file_level(ann_filename.replace('.ann', '.conll'))
 
             pe_filename = ann_filename.replace('.ann', '_pe.conll')
             if os.path.exists(pe_filename):
