@@ -36,7 +36,7 @@ def conll_to_pe_file_level(file):
         content = f.readlines()
         for line in content:
             if line != '\n' and line != '' and line != ' ':
-                pe_string = pe_string + str(index) + '\t' + line.replace(' ', ' \t')
+                pe_string = pe_string + str(index) + '\t' + line.replace(' ', '\t')
                 index = index + 1
     return pe_string
 
@@ -48,7 +48,7 @@ def conll_to_pe_sentence_level(file):
         content = f.readlines()
         for line in content:
             if line != '\n' and line != '' and line != ' ':
-                pe_string = pe_string + str(words_in_sentence) + '\t' + line.replace(' ', ' \t')
+                pe_string = pe_string + str(words_in_sentence) + '\t' + line.replace(' ', '\t')
                 if line[0] == '.' or line[0] == '!' or line[0] == '?':
                     words_in_sentence = 1
                 else:
