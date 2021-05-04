@@ -30,17 +30,11 @@ export const report = [
         section: "References",
         text:
             "Cabrio, E. & Villata, S (2018). Five Years of Argument Mining: a Data-driven Analysis. Conference: Twenty-Seventh International Joint Conference on Artificial Intelligence {IJCAI-18}. doi:10.24963/ijcai.2018/766\n" +
-            "\n" +
             "Ein-Dor, L., Eyal Shnarch, Lena Dankin, Alon Halfon, B. Sznajder, Ariel Gera, Carlos Alzate, Martin Gleize, Leshem Choshen, Yufang Hou, Yonatan Bilu, R. Aharonov & N. Slonim (2020). Corpus Wide Argument Mining - a Working Solution. The Thirty-Fourth AAAI Conference on Artificial Intelligence, 7683-7691.\n" +
-            "\n" +
-            "Milward, D., Mochales, R., Moens, M. & Wyner, A. (2010). Approaches to text mining arguments from legal cases. In E. Francesconi, S. Montemagni, W. Peters, & D. Tiscornia (Eds.), Semantic processing \n" +
-            "\n" +
+            "Milward, D., Mochales, R., Moens, M. & Wyner, A. (2010). Approaches to text mining arguments from legal cases. In E. Francesconi, S. Montemagni, W. Peters, & D. Tiscornia (Eds.), Semantic processing\n" +
             "Lawrence, J. & Reed, C. (2019). Argument Mining: A Survey. Computational Linguistics, 45(4), 765–818. doi:10.1162/coli_a_00364.\n" +
-            "\n" +
             "Mochales, R. & Moens, M. (2011). Argumentation mining. Artificial Intelligence and Law 19(1), 1-22. doi:10.1007/s10506-010-9104-x\n" +
-            "\n" +
             "Moens, M. (2018). Argumentation mining: How can a machine acquire common sense and world knowledge? Argument & Computation 9, 1–14. doi:10.3233/AAC-170025\n" +
-            "\n" +
             "Poudyal, P., Savelka, J., Ieven, A., Moens, M., Gonçalves, T., & Quaresma, P. (2020). ECHR: Legal Corpus for Argument Mining. Proceedings of the 7th Workshop on Argument Mining, 67–75 Barcelona.\n"
     },
 ];

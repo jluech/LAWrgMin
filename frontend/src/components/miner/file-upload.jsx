@@ -18,7 +18,7 @@ export class FileUpload extends React.Component {
             return (
                 <div>
                     <br />
-                    <h4 className={"section"}>Choose before Pressing the Upload button</h4>
+                    <h4 className={"section"}>Choose a PDF before pressing the Tagging button</h4>
                 </div>
             );
         }
@@ -30,9 +30,9 @@ export class FileUpload extends React.Component {
                 <h3 className={"section"}>Or browse a PDF on your computer</h3>
                 <div className={"upload-input"}>
                     <input type="file" onChange={this.props.adjustInputFile} />
-                    <button onClick={(event) => this.props.tagWithFile(event)}>Start Tagging</button>
                 </div>
                 {this.buildFileDataHtml()}
+                <button onClick={(event) => this.props.tagWithFile(event)}>Start Tagging</button>
             </div>
         );
     }

@@ -22,7 +22,9 @@ export class Footer extends React.Component {
                         The research project was executed by Tjasa Marincek, Janik Lüchinger, Damaris Schmid,
                         Cédric Zellweger, & Adrian Zermin
                     </div>
-                    <div className={"textbox"} style={{fontSize: "10px"}}>{report[4].text}</div>
+                    <br/>
+                    <div style={{fontSize: "10px"}}>References</div>
+                    <div className={"textbox"} style={{fontSize: "10px", paddingRight: "20%"}}>{report[4].text}</div>
                 </div>
             </footer>
         );
