@@ -35,10 +35,10 @@ def prepare_echr_files():
                 file_name = "train.txt"
             elif 0.25 < choice <= 0.40:
                 file_dir = "/".join([orig_dir, "lstm", "/".join(dev_file.split("/")[:-1])])
-                file_name = "dev.txt"
+                file_name = "test.txt"
             else:
                 file_dir = "/".join([orig_dir, "lstm", "/".join(test_file.split("/")[:-1])])
-                file_name = "test.txt"
+                file_name = "dev.txt"
             os.makedirs(file_dir, exist_ok=True)
             os.chdir(file_dir)
             append_write = "a" if os.path.exists("./"+file_name) else "x"
