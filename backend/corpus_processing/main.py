@@ -150,7 +150,7 @@ def parse_corpus_data():
 
             pe_casefile = open(pe_filename, 'x')
             pe_casefile.write(pe_text)
-            pe_casefile.write(' ')
+            pe_casefile.write('')
             pe_casefile.close()
 
             print('Case ' + case['name'] + ' finished')

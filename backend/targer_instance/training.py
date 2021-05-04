@@ -44,6 +44,12 @@ def prepare_echr_files():
             append_write = "a" if os.path.exists("./"+file_name) else "x"
             with open(file_name, append_write) as file:
                 file.write(content)
+        with open(file_dir + '/dev.txt', 'a') as file:
+            file.write('Fuck you')
+        with open(file_dir + '/train.txt', 'a') as file:
+            file.write('Fuck you')
+        with open(file_dir + '/test.txt', 'a') as file:
+            file.write('Fuck you')
         os.chdir(orig_dir)
 
 
