@@ -12,7 +12,7 @@ test_file = "/".join([targer_files_dir, "test.txt"])
 
 data_formatting = "connl-pe"
 evaluation_type = "f1-alpha-match-10"
-epochs = "1"
+epochs = "50"
 
 
 def prepare_echr_files():
