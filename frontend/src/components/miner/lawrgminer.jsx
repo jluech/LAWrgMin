@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -162,7 +163,9 @@ export class Lawrgminer extends React.Component {
                                   cols="30" rows="10"
                                   onChange={this.adjustInputText.bind(this)}
                         />
-                        <button onClick={this.tagWithText.bind(this)}>Start Tagging</button>
+                        <Button variant="outline-light"
+                                onClick={this.tagWithText.bind(this)}
+                        >Start Tagging</Button>
                     </div>
                     <FileUpload className="section section-file-upload"
                                 tagWithFile={this.tagWithFile.bind(this)}
