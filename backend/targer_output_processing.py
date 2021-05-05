@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(name)s - %(leveln
                     datefmt="%m/%d/%Y %H:%M:%S", filename="backend_root.log")
 
 
-targer_output_dir_path = "./backend/targer_instance/data/out/"
+targer_output_dir_path = "./targer_instance/data/out/"
 
 
 def process_single_block(block, word_index):
@@ -76,6 +76,36 @@ def process_single_block_with_prob(block, word_index):
     }
     return text, clause_dict, tag, block_list, word_index
 
+def processing_helper(stack, counter):
+    block_list = []
+
+    if stack[0]['label'].split('-')[0] == 'O':
+        curr_tag = 'O'
+    else:
+        curr_tag = stack[0]['label'].split('-')[1]
+    clause = {
+        'text': '',
+        'tag': curr_tag,
+        'idx': counter
+    }
+    prev_tag = curr_tag
+    while curr_tag == prev_tag:
+        clause['text'] = clause['text'] + ' ' + stack[0]['token']
+        counter = counter + 1
+        block_dict = {
+            'token': stack[0]['token'],
+            'label': curr_tag,
+            'idx': counter
+        }
+        block_list.append(block_dict)
+        stack.pop(0)
+        if not len(stack):
+            break
+        if stack[0]['label'].split('-')[0] == 'O':
+            curr_tag = 'O'
+        else:
+            curr_tag = stack[0]['label'].split('-')[1]
+    return block_list, clause, stack, counter
 
 def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
     dir_contents = os.listdir(doc_path)
@@ -92,23 +122,21 @@ def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
             'claims': [],
             'blocks': []
         }
-
         with open(os.path.join(doc_path, file)) as corpus_file:
             # ========== load and parse data from json file to dictionary ==========
             word_index = 0
             raw_data = json.load(corpus_file)
-            for block in raw_data['results']:
-                label_dict = block[0]
-                if 'prob' in label_dict.keys():
-                    text, clause_dict, tag, block_list, word_index = process_single_block_with_prob(block, word_index)
-                else:
-                    text, clause_dict, tag, block_list, word_index = process_single_block(block, word_index)
-                file_dict['text'] = file_dict['text'] + text
-                if tag == 'premise':
-                    file_dict['premises'].append(clause_dict)
-                elif tag == 'claim':
-                    file_dict['claims'].append(clause_dict)
+            stack = raw_data['results'][0]
+            word_counter = 0
+            while len(stack):
+                block_list, clause, stack, word_counter = processing_helper(stack, word_counter)
+                file_dict['text'] = file_dict['text'] + clause['text']
+                if clause['tag'] == 'Premise':
+                    file_dict['premises'].append(clause)
+                elif clause['tag'] == 'Claim':
+                    file_dict['claims'].append(clause)
                 file_dict['blocks'].append(block_list)
+            print(file_dict['claims'][0].keys())
             results.append(file_dict)
     return results
 
