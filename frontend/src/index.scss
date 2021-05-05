@@ -8,10 +8,13 @@
 @import "scss/footer";
 
 // component styles
-@import "scss/file-upload.scss.css";
+@import "scss/file-upload";
 @import "scss/lawrgminer";
 @import "scss/report-section";
 
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url(./fonts/Poppins/Poppins-Regular.ttf) format('truetype');}
 
 // globally applicable styles
 body {

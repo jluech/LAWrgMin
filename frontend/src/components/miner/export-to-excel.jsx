@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from "react";
-import * as FileSaver from "file-saver";
-import * as XLSX from "xlsx";
+import FileSaver from "file-saver";
+import XLSX from "xlsx";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 
 export const ExportToExcel = (props) => {
-    const fileType =
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8";
+    const fileType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8";
     const fileExtension = ".xlsx";
     const [exportData, setExportData] = useState(null)
 
@@ -15,8 +14,6 @@ export const ExportToExcel = (props) => {
     useEffect(() => {
         const request_url = `${props.api_host}/api/exportToCsv/${props.fileId}`
         const fetchData = () => {
-            // Axios GET request
-            console.log(props.fileId)
             axios.get(request_url)
                 // set returned csv data as state {exportData: data}
                 .then((response) => {
@@ -40,10 +37,10 @@ export const ExportToExcel = (props) => {
         FileSaver.saveAs(data, "lawrgminer_export" + fileExtension);
     };
 
-
     return (
         <Button className={"miner-results-export-btn"}
                 variant="outline-light"
-                onClick={() => exportToCSV(exportData, props.fileId)}>Export to CSV</Button>
+                onClick={() => exportToCSV(exportData, props.fileId)}
+        >Export to CSV</Button>
     );
 };

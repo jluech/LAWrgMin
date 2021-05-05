@@ -75,7 +75,6 @@ def parse_corpus_data():
         orig_wd = os.getcwd()
 
         for index, case in enumerate(data):
-
             text = case['text']
             trimmed = text.replace("  ", "").replace("\r", "").replace("\n", " ").replace("\t", " ").strip()
 

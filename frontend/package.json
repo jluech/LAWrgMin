@@ -19,7 +19,6 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
-    "devextreme-react": "^20.2.6",
     "bootstrap": "^4.6.0",
     "devextreme": "20.2.6",
     "devextreme-react": "20.2.6",

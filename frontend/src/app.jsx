@@ -11,12 +11,10 @@ export class App extends React.Component {
         return (
             <>
                 <Header />
-
                 <div className={"content-wrapper"}>
                     <ReportSection />
                     <Lawrgminer />
                 </div>
-
                 <Footer />
             </>
         );
