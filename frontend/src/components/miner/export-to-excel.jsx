@@ -14,8 +14,6 @@ export const ExportToExcel = (props) => {
     useEffect(() => {
         const request_url = `${props.api_host}/api/exportToCsv/${props.fileId}`
         const fetchData = () => {
-            // Axios GET request
-            console.log(props.fileId)
             axios.get(request_url)
                 // set returned csv data as state {exportData: data}
                 .then((response) => {

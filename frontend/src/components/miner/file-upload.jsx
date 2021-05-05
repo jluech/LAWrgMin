@@ -1,9 +1,6 @@
 import React from "react";
 
 export class FileUpload extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     // File content to be displayed after file upload is complete
     buildFileDataHtml = () => {

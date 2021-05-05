@@ -34,13 +34,8 @@ export class Lawrgminer extends React.Component {
             exportData: [],
 
             // task/file/instance id from backend
-            fileId: 3
+            fileId: null
         };
-
-        // bindings in order to pass functions to child "file-upload.jsx"
-        this.adjustInputFile = this.adjustInputFile.bind(this);
-        this.tagWithFile = this.tagWithFile.bind(this);
-
     }
 
     adjustInputText(event) {
@@ -90,8 +85,6 @@ export class Lawrgminer extends React.Component {
             const request_url = `${api_host}/api/tagWithFile`
             axios.post(request_url, formData)
                 .then((response) => {
-                    console.log(response.data); // TODO
-                    console.log(response.status); // TODO
                     this.setState({
                         resultJSON: response.data,
                         fileId: this.state.resultJSON.id,
@@ -108,21 +101,13 @@ export class Lawrgminer extends React.Component {
     }
 
     showTaggedFulltext() {
-        // console.log("is resultJSON empty?:", isEmptyObject(this.state.resultJSON))
         if (!(isEmptyObject(this.state.blocks))) {
             const text_array = [];
-            // console.log("First element in resultJSON.blocks", this.state.resultJSON.blocks[0])
             for (const block of this.state.blocks) {
                 for (const word_obj of block) {
-                    console.log("object", word_obj)
                     const classes = `block-text ${word_obj.label === "C" ? "block-claim" : (word_obj.label === "P" ? "block-premise" : "")}`;
-                    // console.log("premise / text / claim: ", classes, word.token)
-                    // console.log("block keys: "+ Object.keys(word_obj))
-                    const idx = word_obj.idx;
-                    console.log("word index: " + idx)
                     const html = (
-                        <span className={classes} id={idx}>{word_obj.token + " "}</span>
-
+                        <span className={classes} id={word_obj.idx}>{word_obj.token + " "}</span>
                     );
                     text_array.push(html);
                 }
@@ -178,8 +163,8 @@ export class Lawrgminer extends React.Component {
                         <button onClick={this.tagWithText.bind(this)}>Start Tagging</button>
                     </div>
                     <FileUpload className="section section-file-upload"
-                                tagWithFile={this.tagWithFile}
-                                adjustInputFile={this.adjustInputFile}
+                                tagWithFile={this.tagWithFile.bind(this)}
+                                adjustInputFile={this.adjustInputFile.bind(this)}
                                 inputFile={this.state.inputFile}
                     />
                 </div>
