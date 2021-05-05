@@ -1,23 +1,14 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 
 export class FileUpload extends React.Component {
 
     // File content to be displayed after file upload is complete
     buildFileDataHtml = () => {
         if (this.props.inputFile) {
-            return (
-                <div>
-                    <br/>
-                    <p className={"section"}>File name: {this.props.inputFile.name}</p>
-                </div>
-            );
+            return <div>File name: {this.props.inputFile.name}</div>;
         } else {
-            return (
-                <div>
-                    <br />
-                    <h4 className={"section"}>Choose a PDF before pressing the Tagging button</h4>
-                </div>
-            );
+            return <div className={"upload-warning"}>Choose a PDF first!</div>;
         }
     };
 
@@ -28,8 +19,12 @@ export class FileUpload extends React.Component {
                 <div className={"upload-input"}>
                     <input type="file" onChange={this.props.adjustInputFile} />
                 </div>
-                {this.buildFileDataHtml()}
-                <button onClick={(event) => this.props.tagWithFile(event)}>Start Tagging</button>
+                <div className={"section upload-section"}>
+                    {this.buildFileDataHtml()}
+                    <Button variant="outline-light"
+                            onClick={(event) => this.props.tagWithFile(event)}
+                    >Start Tagging</Button>
+                </div>
             </div>
         );
     }
