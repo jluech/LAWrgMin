@@ -4,6 +4,16 @@ import footer from "../images/footerimage.jpg";
 import {report} from "../components/report/data";
 
 export class Footer extends React.Component {
+    createReferenceHtml() {
+        const refList = [];
+        for (const reference of report[4].text) {
+            refList.push(
+                <span className={"footer-reference-entry"}>{reference}</span>
+            );
+        }
+        return refList;
+    }
+
     render() {
         return (
             <footer
@@ -23,8 +33,10 @@ export class Footer extends React.Component {
                         Cédric Zellweger, & Adrian Zermin
                     </div>
                     <br/>
-                    <div style={{fontSize: "10px"}}>References</div>
-                    <div className={"textbox"} style={{fontSize: "10px", paddingRight: "20%"}}>{report[4].text}</div>
+                    <div className={"footer-references"}>
+                        <div>References</div>
+                        <div className={"footer-reference-entries"}>{this.createReferenceHtml()}</div>
+                    </div>
                 </div>
             </footer>
         );

@@ -18,3 +18,15 @@ div.footer-content-box {
   padding-bottom: 2em;
   padding-top: 6em;
 }
+
+.footer-references {
+  font-size: 10px;
+
+  .footer-reference-entries {
+    padding-right: 20%;
+
+    .footer-reference-entry {
+      display: block;
+    }
+  }
+}
