@@ -9,7 +9,6 @@ export class Claims extends React.Component {
         super(props);
         this.state = {
             searchMode: "contains",
-
         };
         this.onSearchModeChange = this.onSearchModeChange.bind(this);
     }
@@ -28,7 +27,6 @@ export class Claims extends React.Component {
 
     createClaimList() {
         const claim_list = [];
-        //console.log(this.props.claims);
         if (this.props.claims.length > 0) {
             for (const claim of this.props.claims) {
                 let claim_words = "";
@@ -41,7 +39,6 @@ export class Claims extends React.Component {
                 claim_words = claim_words.trim();
                 claim_list.push({"claim": claim_words, "idx": start_idx});
             }
-            // console.log(claim_list); // TODO
         }
         return claim_list;
     }

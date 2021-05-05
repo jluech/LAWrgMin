@@ -32,7 +32,6 @@ export class Premises extends React.Component {
 
     createPremiseList() {
         const premise_list = [];
-        // console.log(this.props.premises); // TODO
         if (this.props.premises.length > 0) {
             for (const premise of this.props.premises) {
                 let premise_words = "";
@@ -44,7 +43,6 @@ export class Premises extends React.Component {
                 premise_words = premise_words.trim();
                 premise_list.push({"premise": premise_words, "idx": start_idx});
             }
-            // console.log(premise_list); // TODO
         }
         return premise_list;
     }

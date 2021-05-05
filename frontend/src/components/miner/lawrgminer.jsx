@@ -11,6 +11,8 @@ import {isEmptyObject} from "devextreme/core/utils/type";
 
 const api_host = "http://localhost:5000"
 
+// for file upload tutorial, see https://www.nicesnippets.com/blog/react-js-file-upload-example-with-axios
+
 export class Lawrgminer extends React.Component {
     constructor() {
         super();
@@ -42,29 +44,31 @@ export class Lawrgminer extends React.Component {
     }
 
     adjustInputText(event) {
-        this.setState({inputText: event.target.value}, () => console.log("setting new text:", this.state.inputText)); // TODO
+        this.setState({
+            inputText: event.target.value
+        });
     }
 
     adjustInputFile(event) {
         if (event.target.files.length > 0) {
-            this.setState({inputFile: event.target.files[0]}, () => console.log("setting new file:", this.state.inputFile.name)); // TODO
+            this.setState({
+                inputFile: event.target.files[0]
+            });
         }
     }
 
     tagWithText() {
         const {inputText} = this.state;
-        console.log("tagging input text\n", inputText); // TODO
-
         const request_url = `${api_host}/api/tagWithText`
         axios.post(request_url, {"text": inputText})
             .then((response) => {
-                console.log(response.status); // TODO
-
-                this.setState({resultJSON: response.data})
-                this.setState({fileId: this.state.resultJSON.id})
-                this.setState({claims: this.state.resultJSON.claims})
-                this.setState({premises: this.state.resultJSON.premises})
-                this.setState({blocks: this.state.resultJSON.blocks})
+                this.setState({
+                    resultJSON: response.data,
+                    fileId: this.state.resultJSON.id,
+                    claims: this.state.resultJSON.claims,
+                    premises: this.state.resultJSON.premises,
+                    blocks: this.state.resultJSON.blocks
+                });
             })
             .catch((err) => {
                 console.log("error during request:", request_url, "\n", err);
@@ -75,17 +79,12 @@ export class Lawrgminer extends React.Component {
     tagWithFile() {
         // for file upload tutorial, see https://www.nicesnippets.com/blog/react-js-file-upload-example-with-axios
         const {inputFile} = this.state;
-        console.log("checking input file\n", inputFile); // TODO
-
         if (inputFile) {
-            console.log("tagging input file\n", inputFile); // TODO
-
             // Create an object of formData
             const formData = new FormData();
 
             // Update the formData object
             formData.append("file", inputFile);
-            console.log(formData); // TODO
 
             // Request made to the backend api to send formData object
             const request_url = `${api_host}/api/tagWithFile`
@@ -93,11 +92,13 @@ export class Lawrgminer extends React.Component {
                 .then((response) => {
                     console.log(response.data); // TODO
                     console.log(response.status); // TODO
-                    this.setState({resultJSON: response.data})
-                    this.setState({fileId: this.state.resultJSON.id})
-                    this.setState({claims: this.state.resultJSON.claims})
-                    this.setState({premises: this.state.resultJSON.premises})
-                    this.setState({blocks: this.state.resultJSON.blocks})
+                    this.setState({
+                        resultJSON: response.data,
+                        fileId: this.state.resultJSON.id,
+                        claims: this.state.resultJSON.claims,
+                        premises: this.state.resultJSON.premises,
+                        blocks: this.state.resultJSON.blocks
+                    });
                 })
                 .catch((err) => {
                     console.log("error during request:", request_url, "\n", err);
@@ -133,29 +134,32 @@ export class Lawrgminer extends React.Component {
     render() {
         const renderResultSection = () => {
             if (isEmptyObject(this.state.blocks)) {
-                return <div> </div>;
+                return null;
             } else {
-                return <div>
-                    <h4 className="section-title">2. Results</h4>
-                    <div className={"miner-results"}>
-                        <div className={"miner-results-list"}>
-                            <div className={"miner-results-claims"}>
-                                <h5>Claims</h5>
-                                <Claims claims={this.state.claims}/>
+                return (
+                    <div>
+                        <h4 className="section-title">2. Results</h4>
+                        <div className={"miner-results"}>
+                            <div className={"miner-results-list"}>
+                                <div className={"miner-results-claims"}>
+                                    <h5>Claims</h5>
+                                    <Claims claims={this.state.claims}/>
+                                </div>
+                                <div className={"miner-results-arguments"}>
+                                    <h5>Premises</h5>
+                                    <Premises
+                                        premises={this.state.premises}/>
+                                </div>
                             </div>
-                            <div className={"miner-results-arguments"}>
-                                <h5>Premises</h5>
-                                <Premises
-                                    premises={this.state.premises}/>
-                            </div>
+                            <div>{this.showTaggedFulltext()}</div>
+                            <ExportToExcel
+                                fileId={this.state.fileId}
+                                api_host = {api_host}
+                            />
                         </div>
-                        <div> {this.showTaggedFulltext()} </div>
-                        <ExportToExcel
-                            fileId={this.state.fileId}
-                            api_host = {api_host}/>
+                        <br/>
                     </div>
-                    <br/>
-                </div>;
+                );
             }
         }
 
