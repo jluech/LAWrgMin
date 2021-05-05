@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(name)s - %(leveln
                     datefmt="%m/%d/%Y %H:%M:%S", filename="backend_root.log")
 
 
-targer_output_dir_path = "./backend/targer_instance/data/out/"
+targer_output_dir_path = "./targer_instance/data/out/"
 
 
 def process_single_block(block, word_index):
@@ -83,7 +83,6 @@ def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
     output_files = [file for file in dir_contents if file[-4:] == ".out"]
 
     results = []
-    # for file in output_files:
     for file in output_files:
         file_dict = {
             'doc_id': doc_id,
@@ -92,23 +91,21 @@ def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
             'claims': [],
             'blocks': []
         }
-
         with open(os.path.join(doc_path, file)) as corpus_file:
             # ========== load and parse data from json file to dictionary ==========
             word_index = 0
             raw_data = json.load(corpus_file)
-            for block in raw_data['results']:
-                label_dict = block[0]
-                if 'prob' in label_dict.keys():
-                    text, clause_dict, tag, block_list, word_index = process_single_block_with_prob(block, word_index)
-                else:
-                    text, clause_dict, tag, block_list, word_index = process_single_block(block, word_index)
-                file_dict['text'] = file_dict['text'] + text
-                if tag == 'premise':
-                    file_dict['premises'].append(clause_dict)
-                elif tag == 'claim':
-                    file_dict['claims'].append(clause_dict)
+            stack = raw_data['results'][0]
+            word_counter = 0
+            while len(stack):
+                block_list, clause, stack, word_counter = processing_helper(stack, word_counter)
+                file_dict['text'] = file_dict['text'] + clause['text']
+                if clause['tag'] == 'Premise':
+                    file_dict['premises'].append(clause)
+                elif clause['tag'] == 'Claim':
+                    file_dict['claims'].append(clause)
                 file_dict['blocks'].append(block_list)
+            logging.debug(file_dict['claims'][0].keys())
             results.append(file_dict)
     return results
 
