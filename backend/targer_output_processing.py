@@ -2,11 +2,36 @@ import json
 import logging
 import os
 
+from utils import determine_delimiter
+
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(name)s - %(levelname)s: %(message)s",
                     datefmt="%m/%d/%Y %H:%M:%S", filename="backend_root.log")
 
 
 targer_output_dir_path = "./targer_instance/data/out/"
+
+
+def transform_output_into_csv(file_id, file_dir):
+    out_results = process_targer_output_data(file_id, file_dir)
+    if out_results.__len__() > 1:
+        raise RuntimeError("Found multiple out files in request folder {0}!".format(file_id))
+    if out_results.__len__() < 1:
+        raise RuntimeError("Found no out files in request folder {0}! Perform a tagging request first.".format(file_id))
+
+    csv_list = ["clause_index,text,label"]
+    blocks = out_results[0]["blocks"]
+    for idx, block in enumerate(blocks):
+        label = ""
+        text = ""
+        for word_obj in block:
+            word_label = word_obj["label"]
+            if word_label in ["Claim", "Premise"]:
+                label = word_label
+                word = word_obj["token"]
+                text += "%s%s" % (determine_delimiter(word), word)
+        if label in ["Claim", "Premise"]:
+            csv_list.append('%d,"%s",%s' % (idx, text.strip(), label))
+    return csv_list
 
 
 def process_single_block(block, word_index):

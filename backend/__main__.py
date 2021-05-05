@@ -8,7 +8,7 @@ from werkzeug.utils import secure_filename
 
 import examples
 import utils
-from targer_output_processing import process_targer_output_data
+from targer_output_processing import process_targer_output_data, transform_output_into_csv
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s - %(levelname)s: %(message)s",
                     datefmt="%m/%d/%Y %H:%M:%S", filename="backend_root.log")
@@ -144,7 +144,11 @@ def tag_with_file():
 @backend.route("/api/exportToCsv/<int:file_id>", methods=["GET"])
 def export_to_csv(file_id):
     logging.info("{__method} exportToCsv {__id}".format(__method=request.method, __id=file_id))
-    return "Hi " + str(file_id)
+
+    files_dir = utils.get_uploaded_files_path(file_id)
+    csv_list = transform_output_into_csv(file_id, files_dir)
+
+    return jsonify(csv_list)
 
 
 def get_file_handler(file_id=None):

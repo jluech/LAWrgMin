@@ -9,6 +9,14 @@ def __retrieve_frontend_host():
     return frontend_host
 
 
+def determine_delimiter(token):
+    if token.__len__() > 1:
+        return " "
+    if token.isalnum() or token in "({":
+        return " "
+    return ""
+
+
 # --- Currently in charge of handling the file ids for uploaded files of different tagging runs ---
 class FileHandler:
     new_id = itertools.count().__next__

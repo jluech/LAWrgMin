@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import FileSaver from "file-saver";
@@ -7,7 +7,6 @@ import XLSX from "xlsx";
 export const ExportToExcel = (props) => {
     const fileType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8";
     const fileExtension = ".xlsx";
-    const [exportData, setExportData] = useState(null)
 
     // create download with CSV file from exportData
     const exportToCSV = () => {
@@ -16,14 +15,14 @@ export const ExportToExcel = (props) => {
         axios.get(request_url)
             // set returned csv data as state {exportData: data}
             .then((response) => {
-                console.log(response); // TODO
-                setExportData(response)
-
-                console.log("export csv func", exportData); // TODO
-                const ws = XLSX.utils.json_to_sheet(exportData);
-                const wb = { Sheets: { data: ws }, SheetNames: ["data"] };
-                const excelBuffer = XLSX.write(wb, { bookType: "xlsx", type: "array" });
-                const data = new Blob([excelBuffer], { type: fileType });
+                const headers = response.data[0];
+                const csv = response.data.slice(1);
+                console.log("export csv", csv); // TODO
+                console.log("export headers", headers); // TODO
+                const ws = XLSX.utils.json_to_sheet(csv, {header: headers});
+                const wb = {Sheets: {data: ws}, SheetNames: ["data"]};
+                const excelBuffer = XLSX.write(wb, {bookType: "xlsx", type: "array"});
+                const data = new Blob([excelBuffer], {type: fileType});
 
                 // file is saved as e.g. "lawrgminer_export.xlsx"
                 FileSaver.saveAs(data, "lawrgminer_export" + fileExtension);
