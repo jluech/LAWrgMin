@@ -21,17 +21,6 @@ class FileHandler:
             self.file_id = file_id
 
 
-# --- Currently in charge of handling the clause ids for uploaded files of different tagging runs ---
-class ClauseHandler:
-    new_id = itertools.count().__next__
-
-    def __init__(self, clause_id=None):
-        if clause_id is None:
-            self.clause_id = ClauseHandler.new_id()
-        else:
-            self.clause_id = clause_id
-
-
 # --- File and path handling commands ---
 def get_uploaded_files_path(file_id):
     return os.path.join(files_dir, str(file_id))
@@ -66,7 +55,7 @@ def remove_dir_tree(dir_path):
         dir_contents = os.listdir(dir_path)
         if os.path.isdir(dir_path) and len(dir_contents) > 0:
             for entity in dir_contents:
-                entity_path = "/".join([dir_path, entity])
+                entity_path = os.path.join(dir_path, entity)
                 if os.path.isdir(entity_path):
                     remove_dir_tree(entity_path)
                     os.rmdir(entity_path)

@@ -1,19 +1,23 @@
 # TARGER
 ### ignore files due to size
-corpus_processing/datasets
-corpus_processing/out
-miners/targer_instance/models
-miners/targer_instance/lstm/embeddings
+backend/corpus_processing/datasets
+backend/corpus_processing/out
+backend/targer_instance/models/*.h5
+backend/targer_instance/models/*.hdf5
+backend/targer_instance/lstm/embeddings/glove.6B.100d.txt
 
 ### ignore input/output folders due to volatility
 backend/instance/**
-data_static/**
-miners/targer_instance/data/in
-miners/targer_instance/data/out
-miners/targer_instance/lstm/data/NER/
+backend/data_static/**
+backend/targer_instance/lstm/data/NER/
 
 ### ignore external repository
-corpus_processing/standoff2conll
+backend/corpus_processing/standoff2conll
+
+### ignore log files
+backend/backend_root.log
+backend/corpus_processing/backend_corpus.log
+backend/targer_instance/backend_targer.log
 
 
 # IDEA project folder
