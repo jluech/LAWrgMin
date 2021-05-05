@@ -57,13 +57,14 @@ export class Lawrgminer extends React.Component {
         const request_url = `${api_host}/api/tagWithText`
         axios.post(request_url, {"text": inputText})
             .then((response) => {
+                const data = response.data;
                 this.setState({
                     resultJSON: response.data,
-                    fileId: this.state.resultJSON.id,
-                    claims: this.state.resultJSON.claims,
-                    premises: this.state.resultJSON.premises,
-                    blocks: this.state.resultJSON.blocks
-                });
+                    fileId: data.id,
+                    claims: data.claims,
+                    premises: data.premises,
+                    blocks: data.blocks,
+                }, () => console.log("text to", this.state));
             })
             .catch((err) => {
                 console.log("error during request:", request_url, "\n", err);
@@ -85,13 +86,14 @@ export class Lawrgminer extends React.Component {
             const request_url = `${api_host}/api/tagWithFile`
             axios.post(request_url, formData)
                 .then((response) => {
+                    const data = response.data;
                     this.setState({
-                        resultJSON: response.data,
-                        fileId: this.state.resultJSON.id,
-                        claims: this.state.resultJSON.claims,
-                        premises: this.state.resultJSON.premises,
-                        blocks: this.state.resultJSON.blocks
-                    });
+                        resultJSON: data,
+                        fileId: data.id,
+                        claims: data.claims,
+                        premises: data.premises,
+                        blocks: data.blocks
+                    }, () => console.log("file to", this.state));
                 })
                 .catch((err) => {
                     console.log("error during request:", request_url, "\n", err);
@@ -101,7 +103,7 @@ export class Lawrgminer extends React.Component {
     }
 
     showTaggedFulltext() {
-        if (!(isEmptyObject(this.state.blocks))) {
+        if (this.state.blocks.length > 0) {
             const text_array = [];
             for (const block of this.state.blocks) {
                 for (const word_obj of block) {
@@ -122,7 +124,7 @@ export class Lawrgminer extends React.Component {
                 return null;
             } else {
                 return (
-                    <div>
+                    <>
                         <h4 className="section-title">2. Results</h4>
                         <div className={"miner-results"}>
                             <div className={"miner-results-list"}>
@@ -143,7 +145,7 @@ export class Lawrgminer extends React.Component {
                             />
                         </div>
                         <br/>
-                    </div>
+                    </>
                 );
             }
         }
