@@ -1,7 +1,11 @@
 import json
+import logging
 import os
 
 from shutil import copyfile
+
+logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(name)s - %(levelname)s: %(message)s",
+                    datefmt="%m/%d/%Y %H:%M:%S", filename="backend_corpus.log")
 
 
 echr_corpus_path = os.path.join(os.getcwd(), "datasets/echr_corpus/ECHR_Corpus.json")
@@ -17,7 +21,7 @@ def is_major_argument(argument, case):
     for premise_id in argument['premises']:
         for other_arguments in case['arguments']:
             if other_arguments['conclusion'] == premise_id:
-                print('MAJOR_CLAIM_FOUND')
+                logging.debug('MAJOR_CLAIM_FOUND')
                 return True
     return False
 
@@ -58,7 +62,7 @@ def conll_to_pe_sentence_level(file):
 
 
 def parse_corpus_data():
-    print('Transforming ECHR dataset to brat standoff format...')
+    logging.info('Transforming ECHR dataset to brat standoff format...')
     with open(echr_corpus_path) as corpus_file:
         # ========== load and parse data from json file to dictionary ==========
         data = json.load(corpus_file)  # corpus yields list of 42 decision entries as json-dicts
@@ -71,7 +75,6 @@ def parse_corpus_data():
         orig_wd = os.getcwd()
 
         for index, case in enumerate(data):
-
             text = case['text']
             trimmed = text.replace("  ", "").replace("\r", "").replace("\n", " ").replace("\t", " ").strip()
 
@@ -134,13 +137,13 @@ def parse_corpus_data():
             new_path = os.getcwd().replace(path.replace('.', '', 1), '')
             file_out_dir = new_path + out_dir.replace('.', '', 1)
 
-            print('Converting standoff format into .connl for case ' + case['name'] + '...')
+            logging.info('Converting standoff format into .connl for case ' + case['name'] + '...')
 
             # Run command with disabled output
             os.system('python standoff2conll.py {__file_out_dir} >/dev/null 2>&1'.format(__file_out_dir=file_out_dir))
 
             os.chdir(orig_wd)
-            print('Converting .connl format into pe_conll for case ' + case['name'] + '...')
+            logging.info('Converting .connl format into pe_conll for case ' + case['name'] + '...')
             # for sentence level tagging
             pe_text = conll_to_pe_sentence_level(ann_filename.replace('.ann', '.conll'))
             #pe_text = conll_to_pe_file_level(ann_filename.replace('.ann', '.conll'))
@@ -154,8 +157,8 @@ def parse_corpus_data():
             pe_casefile.write('')
             pe_casefile.close()
 
-            print('Case ' + case['name'] + ' finished')
-    print('Done!')
+            logging.info('Case ' + case['name'] + ' finished')
+    logging.info('== Done Converting ==')
 
 
 if __name__ == "__main__":
