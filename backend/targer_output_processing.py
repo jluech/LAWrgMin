@@ -77,6 +77,38 @@ def process_single_block_with_prob(block, word_index):
     return text, clause_dict, tag, block_list, word_index
 
 
+def processing_helper(stack, counter):
+    block_list = []
+
+    if stack[0]['label'].split('-')[0] == 'O':
+        curr_tag = 'O'
+    else:
+        curr_tag = stack[0]['label'].split('-')[1]
+    clause = {
+        'text': '',
+        'tag': curr_tag,
+        'idx': counter
+    }
+    prev_tag = curr_tag
+    while curr_tag == prev_tag:
+        clause['text'] = clause['text'] + ' ' + stack[0]['token']
+        counter = counter + 1
+        block_dict = {
+            'token': stack[0]['token'],
+            'label': curr_tag,
+            'idx': counter
+        }
+        block_list.append(block_dict)
+        stack.pop(0)
+        if not len(stack):
+            break
+        if stack[0]['label'].split('-')[0] == 'O':
+            curr_tag = 'O'
+        else:
+            curr_tag = stack[0]['label'].split('-')[1]
+    return block_list, clause, stack, counter
+
+
 def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
     dir_contents = os.listdir(doc_path)
     dir_contents.sort()  # TODO: optional, may be performance relevant
