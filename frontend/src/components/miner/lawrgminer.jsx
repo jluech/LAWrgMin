@@ -94,7 +94,7 @@ export class Lawrgminer extends React.Component {
                         claims: data.claims,
                         premises: data.premises,
                         blocks: data.blocks
-                    }, () => console.log("file to", this.state));
+                    });
                 })
                 .catch((err) => {
                     console.log("error during request:", request_url, "\n", err);
