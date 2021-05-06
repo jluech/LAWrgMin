@@ -161,7 +161,6 @@ def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
                 elif clause['tag'] == 'Claim':
                     file_dict['claims'].append(clause)
                 file_dict['blocks'].append(block_list)
-            logging.debug(file_dict['claims'][0].keys())
             results.append(file_dict)
     return results
 
