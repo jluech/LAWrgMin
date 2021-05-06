@@ -17,7 +17,7 @@ export class Header extends React.Component {
                         <h6>Artificial Intelligence: Technology and Law</h6>
                         <br />
                         <Link
-                            className={"app-header-link-lawrgminer"}
+                            className={"app-header-link-lawrgminer btn-outline-light"}
                             activeClass="active"
                             to="lawrgminer"
                             spy={true}
