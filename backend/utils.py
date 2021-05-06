@@ -12,7 +12,7 @@ def __retrieve_frontend_host():
 def determine_delimiter(token):
     if token.__len__() > 1:
         return " "
-    if token.isalnum() or token in "({":
+    if token.isalnum() or token in "({[":
         return " "
     return ""
 
