@@ -65,7 +65,7 @@ export class Lawrgminer extends React.Component {
                     claims: data.claims,
                     premises: data.premises,
                     blocks: data.blocks,
-                }, () => console.log("text to", this.state));
+                });
             })
             .catch((err) => {
                 console.log("error during request:", request_url, "\n", err);
@@ -104,18 +104,17 @@ export class Lawrgminer extends React.Component {
     }
 
     showTaggedFulltext() {
-        if (this.state.blocks.length > 0) {
-            const text_array = [];
-            for (const block of this.state.blocks) {
-                for (const word_obj of block) {
-                    const classes = `block-text ${word_obj.label === "C" ? "block-claim" : (word_obj.label === "P" ? "block-premise" : "")}`;
-                    const html = (
-                        <span className={classes} id={word_obj.idx}>{word_obj.token + " "}</span>
-                    );
-                    text_array.push(html);
-                }
-            }
-            return text_array;
+        const {blocks} = this.state;
+        if (blocks.length > 0) {
+            return blocks.map((block) => {
+                const label = block.label.toLowerCase();
+                const classes = `block-text ${label === "claim" ? "block-claim" : (label === "premise" ? "block-premise" : "")}`;
+                return (
+                    <span className={classes} id={`${label}-${block.idx}`} key={`clause-${block.idx}`}>{block.text}</span>
+                );
+            })
+        } else {
+            return null;
         }
     }
 
@@ -133,7 +132,7 @@ export class Lawrgminer extends React.Component {
                                     <h5>Claims</h5>
                                     <Claims claims={this.state.claims}/>
                                 </div>
-                                <div className={"miner-results-arguments"}>
+                                <div className={"miner-results-premises"}>
                                     <h5>Premises</h5>
                                     <Premises
                                         premises={this.state.premises}/>

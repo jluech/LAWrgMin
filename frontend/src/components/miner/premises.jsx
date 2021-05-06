@@ -21,57 +21,31 @@ export class Premises extends React.Component {
     itemTemplate(data) {
         // specify values which should be taken for the listing
         // data comes from dataSource={} in HTML part
-        return <a href={`#${data.idx}`} className={"result-list-premises"}>{data.premise}</a>;
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-        if (prevProps !== this.props) {
-            this.createPremiseList();
-        }
+        return <a href={`#premise-${data.idx}`} className={"result-list-premise"}>{data.premise}</a>;
     }
 
     createPremiseList() {
+        const {premises} = this.props;
         const premise_list = [];
-        if (this.props.premises.length > 0) {
-            for (const premise of this.props.premises) {
-                let premise_words = "";
-                const start_idx = premise[0]["idx"];
-                for (const token_obj of premise) {
-                    const token = token_obj["token"];
-                    premise_words += this.determine_delimiter(token) + token;
-                }
-                premise_words = premise_words.trim();
-                premise_list.push({"premise": premise_words, "idx": start_idx});
+        if (premises.length > 0) {
+            for (const premise of premises) {
+                premise_list.push({"premise": premise["text"].trim(), "idx": premise["idx"]});
             }
         }
         return premise_list;
     }
 
-    determine_delimiter(token) {
-        if (token.length > 1) {
-            return " ";
-        }
-        if (token.toLowerCase().match(/^([0-9]|[a-z])+([0-9a-z]+)$/i) || ["(", "{"].includes(token)) {
-            return " ";
-        }
-        return "";
-    }
-
     render() {
         return (
-            <div>
-                <React.Fragment>
-                    <div className="list-container">
-                        <List
-                            dataSource={this.createPremiseList()}
-                            height={400}
-                            itemRender={this.itemTemplate}
-                            searchExpr="premise"
-                            searchEnabled={true}
-                            searchMode={this.state.searchMode}
-                        />
-                    </div>
-                </React.Fragment>
+            <div className="list-container">
+                <List
+                    dataSource={this.createPremiseList()}
+                    height={400}
+                    itemRender={this.itemTemplate}
+                    searchExpr="premise"
+                    searchEnabled={true}
+                    searchMode={this.state.searchMode}
+                />
             </div>
         );
     }
