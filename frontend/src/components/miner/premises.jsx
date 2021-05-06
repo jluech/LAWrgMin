@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-scroll";
 import List from "devextreme-react/list";
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
@@ -21,7 +22,14 @@ export class Premises extends React.Component {
     itemTemplate(data) {
         // specify values which should be taken for the listing
         // data comes from dataSource={} in HTML part
-        return <a href={`#premise-${data.idx}`} className={"result-list-premise"}>{data.premise}</a>;
+        return (
+            <Link className={"result-list-premise"}
+                to={`premise-${data.idx}`}
+                activeClass="active"
+                spy={true}
+                smooth={true}
+            >{data.premise}</Link>
+        );
     }
 
     createPremiseList() {

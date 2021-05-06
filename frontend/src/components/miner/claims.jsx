@@ -1,8 +1,8 @@
 import React from "react";
+import {Link} from "react-scroll";
 import List from "devextreme-react/list";
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
-
 
 export class Claims extends React.Component {
     constructor(props) {
@@ -13,10 +13,23 @@ export class Claims extends React.Component {
         this.onSearchModeChange = this.onSearchModeChange.bind(this);
     }
 
+    onSearchModeChange(args) {
+        this.setState({
+            searchMode: args.value,
+        });
+    }
+
     itemTemplate(data) {
         // specify values which should be taken for the listing
         // data comes from dataSource={} in HTML part
-        return <a href={`#claim-${data.idx}`} className={"result-list-claim"}>{data.claim}</a>;
+        return (
+            <Link className={"result-list-claim"}
+                to={`claim-${data.idx}`}
+                activeClass="active"
+                spy={true}
+                smooth={true}
+            >{data.claim}</Link>
+        );
     }
 
     createClaimList() {
@@ -28,12 +41,6 @@ export class Claims extends React.Component {
             }
         }
         return claim_list;
-    }
-
-    onSearchModeChange(args) {
-        this.setState({
-            searchMode: args.value,
-        });
     }
 
     render() {

@@ -64,11 +64,17 @@
 
     padding: 5px;
     line-height: 2;
+    border: 1px solid transparent;
     border-radius: 5px;
 
     color: white;
     background-color: darkgoldenrod;
     white-space: pre-line;
+
+    &:focus,
+    &:hover {
+      border: 1px solid white;
+    }
   }
 
   .result-list-premise {
@@ -78,11 +84,17 @@
 
     padding: 5px;
     line-height: 2;
+    border: 1px solid transparent;
     border-radius: 5px;
 
     color: white;
     background-color: rebeccapurple;
     white-space: pre-line;
+
+    &:focus,
+    &:hover {
+      border: 1px solid white;
+    }
   }
 
   .miner-results-claims {
