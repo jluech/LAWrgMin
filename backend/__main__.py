@@ -6,7 +6,6 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
-import examples
 import utils
 from targer_output_processing import process_targer_output_data, transform_output_into_csv
 
@@ -67,17 +66,15 @@ def tag_with_text():
     if labelled_results.__len__() > 1:
         logging.error(os.listdir(files_dir))
         raise RuntimeError("Tagging multiple out files in request folder {0}".format(file_id))
+    labelled_results = labelled_results[0]
     # keys: "doc_id", "blocks", "claims", "premises"
-    # TODO: currently "text" instead of "blocks"
-
-    print(labelled_results[0].keys())
 
     # Prepare return in json format.
     return jsonify({
         "id": file_handler.file_id,
-        "blocks": examples.example_blocks,
-        "claims": examples.example_claims,
-        "premises": examples.example_premises,
+        "blocks": labelled_results["blocks"],
+        "claims": labelled_results["claims"],
+        "premises": labelled_results["premises"],
         "status": "created"
     })
 
@@ -126,17 +123,15 @@ def tag_with_file():
     if labelled_results.__len__() > 1:
         logging.error(os.listdir(files_dir))
         raise RuntimeError("Tagging multiple out files in request folder {0}".format(file_id))
+    labelled_results = labelled_results[0]
     # keys: "doc_id", "blocks", "claims", "premises"
-    # TODO: currently "text" instead of "blocks"
-
-    print(labelled_results[0].keys())
 
     # Prepare return in json format.
     return jsonify({
         "id": file_handler.file_id,
-        "blocks": examples.example_blocks,
-        "claims": examples.example_claims,
-        "premises": examples.example_premises,
+        "blocks": labelled_results["blocks"],
+        "claims": labelled_results["claims"],
+        "premises": labelled_results["premises"],
         "status": "created"
     })
 
