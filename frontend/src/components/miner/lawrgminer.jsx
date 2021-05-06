@@ -158,8 +158,7 @@ export class Lawrgminer extends React.Component {
                                 </div>
                                 <div className={"miner-results-premises"}>
                                     <h5>Premises</h5>
-                                    <Premises
-                                        premises={this.state.premises}/>
+                                    <Premises premises={this.state.premises}/>
                                 </div>
                             </div>
                             <div className={"miner-results-text"}>{this.showTaggedFulltext()}</div>
