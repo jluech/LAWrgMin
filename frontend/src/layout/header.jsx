@@ -10,19 +10,14 @@ export class Header extends React.Component {
         return (
             <header className="app-header text-left">
                 <div>
-                    <img style={{maxWidth: "400px"}} src={logo} alt={""} />
+                    <img className={"app-header-logo"} src={logo} alt={""} />
                     <div className={"app-header-text"}>
                         <h1>Argumentation Mining in Law</h1>
                         <hr className="solid" />
                         <h6>Artificial Intelligence: Technology and Law</h6>
                         <br />
                         <Link
-                            style={{
-                                border: "1px solid white",
-                                borderRadius: "10px",
-                                padding: "1em 2em",
-                                fontSize: "20px",
-                            }}
+                            className={"app-header-link-lawrgminer"}
                             activeClass="active"
                             to="lawrgminer"
                             spy={true}
