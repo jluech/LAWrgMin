@@ -119,37 +119,6 @@ export class Lawrgminer extends React.Component {
     }
 
     render() {
-        const renderResultSection = () => {
-            if (isEmptyObject(this.state.blocks)) {
-                return null;
-            } else {
-                return (
-                    <>
-                        <h4 className="section-title">2. Results</h4>
-                        <div className={"miner-results"}>
-                            <div className={"miner-results-list"}>
-                                <div className={"miner-results-claims"}>
-                                    <h5>Claims</h5>
-                                    <Claims claims={this.state.claims}/>
-                                </div>
-                                <div className={"miner-results-premises"}>
-                                    <h5>Premises</h5>
-                                    <Premises
-                                        premises={this.state.premises}/>
-                                </div>
-                            </div>
-                            <div className={"miner-results-text"}>{this.showTaggedFulltext()}</div>
-                            <ExportToExcel
-                                fileId={this.state.fileId}
-                                api_host = {api_host}
-                            />
-                        </div>
-                        <br/>
-                    </>
-                );
-            }
-        }
-
         return (
             <div className={"lawrgminer"}>
                 <h2 className="section-title">I am the LAWrgMiner</h2>
@@ -178,7 +147,30 @@ export class Lawrgminer extends React.Component {
                 <hr className="solid" style={{position: "relative", top: "1em"}} />
                 <br />
 
-                {renderResultSection()}
+                {!isEmptyObject(this.state.blocks) &&
+                    <>
+                        <h4 className="section-title">2. Results</h4>
+                        <div className={"miner-results"}>
+                            <div className={"miner-results-list"}>
+                                <div className={"miner-results-claims"}>
+                                    <h5>Claims</h5>
+                                    <Claims claims={this.state.claims}/>
+                                </div>
+                                <div className={"miner-results-premises"}>
+                                    <h5>Premises</h5>
+                                    <Premises
+                                        premises={this.state.premises}/>
+                                </div>
+                            </div>
+                            <div className={"miner-results-text"}>{this.showTaggedFulltext()}</div>
+                            <ExportToExcel
+                                fileId={this.state.fileId}
+                                api_host = {api_host}
+                            />
+                        </div>
+                        <br/>
+                    </>
+                }
             </div>
         );
     }
