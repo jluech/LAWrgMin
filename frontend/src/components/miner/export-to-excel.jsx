@@ -11,15 +11,9 @@ export const ExportToExcel = (props) => {
     // create download with CSV file from exportData
     const exportToCSV = () => {
         const request_url = `${props.api_host}/api/exportToCsv/${props.fileId}`
-        console.log(request_url); // TODO
         axios.get(request_url)
-            // set returned csv data as state {exportData: data}
             .then((response) => {
-                const headers = response.data[0];
-                const csv = response.data.slice(1);
-                console.log("export csv", csv); // TODO
-                console.log("export headers", headers); // TODO
-                const ws = XLSX.utils.json_to_sheet(csv, {header: headers});
+                const ws = XLSX.utils.aoa_to_sheet(response.data);
                 const wb = {Sheets: {data: ws}, SheetNames: ["data"]};
                 const excelBuffer = XLSX.write(wb, {bookType: "xlsx", type: "array"});
                 const data = new Blob([excelBuffer], {type: fileType});

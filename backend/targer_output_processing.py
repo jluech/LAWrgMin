@@ -18,7 +18,7 @@ def transform_output_into_csv(file_id, file_dir):
     if out_results.__len__() < 1:
         raise RuntimeError("Found no out files in request folder {0}! Perform a tagging request first.".format(file_id))
 
-    csv_list = ["clause_index,text,label"]
+    csv_list = [["clause_index", "text", "label"]]
     blocks = out_results[0]["blocks"]
     for idx, block in enumerate(blocks):
         label = ""
@@ -30,7 +30,7 @@ def transform_output_into_csv(file_id, file_dir):
                 word = word_obj["token"]
                 text += "%s%s" % (determine_delimiter(word), word)
         if label in ["Claim", "Premise"]:
-            csv_list.append('%d,"%s",%s' % (idx, text.strip(), label))
+            csv_list.append([idx, text.strip(), label])
     return csv_list
 
 
