@@ -1,25 +1,15 @@
 import React from "react";
 
-import footer from "../images/footerimage.jpg";
+import footerImg from "../images/footerimage.jpg";
 import {report} from "../components/report/data";
 
 export class Footer extends React.Component {
-    createReferenceHtml() {
-        const refList = [];
-        for (const reference of report[4].text) {
-            refList.push(
-                <span className={"footer-reference-entry"}>{reference}</span>
-            );
-        }
-        return refList;
-    }
-
     render() {
         return (
             <footer
                 className="app-footer text-left"
                 style={{
-                    backgroundImage: `url(${footer})`,
+                    backgroundImage: `url(${footerImg})`,
                 }}
             >
                 <div className="footer-content-box" style={{position: "relative", left: "10%"}}>
@@ -35,7 +25,9 @@ export class Footer extends React.Component {
                     <br/>
                     <div className={"footer-references"}>
                         <div>References</div>
-                        <div className={"footer-reference-entries"}>{this.createReferenceHtml()}</div>
+                        <div className={"footer-reference-entries"}>
+                            {report[4].text.map((entry, index) => <span className={"footer-reference-entry"} key={`footer-ref-${index}`}>{entry}</span>)}
+                        </div>
                     </div>
                 </div>
             </footer>
