@@ -8,14 +8,14 @@ export class FileUpload extends React.Component {
         if (this.props.inputFile) {
             return <div>File name: {this.props.inputFile.name}</div>;
         } else {
-            return <div className={"upload-warning"}>Choose a PDF first!</div>;
+            return <div className={"upload-warning"}>Choose a PDF or Word document first!</div>;
         }
     };
 
     render() {
         return (
             <div className={"upload-wrapper"}>
-                <h3 className={"section"}>Or browse a PDF on your computer</h3>
+                <h3 className={"section"}>Or browse a file on your computer</h3>
                 <div className={"upload-input"}>
                     <input type="file" onChange={this.props.adjustInputFile} />
                 </div>
