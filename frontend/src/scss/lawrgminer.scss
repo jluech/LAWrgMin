@@ -3,7 +3,7 @@
 .lawrgminer {
   padding: 0 10%;
   background-color: $backgroundColorMiner;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
 }
 
 .miner-input {
@@ -57,6 +57,34 @@
     align-items: center;
   }
 
+  .result-list-claim {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    padding: 5px;
+    line-height: 2;
+    border-radius: 5px;
+
+    color: white;
+    background-color: darkgoldenrod;
+    white-space: pre-line;
+  }
+
+  .result-list-premise {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    padding: 5px;
+    line-height: 2;
+    border-radius: 5px;
+
+    color: white;
+    background-color: rebeccapurple;
+    white-space: pre-line;
+  }
+
   .miner-results-claims {
     margin-left: 10%;
     margin-right: 5%;
@@ -69,34 +97,8 @@
       text-align: center;
     }
   }
-  .result-list-claims{
-    color: white;
-    background-color: darkgoldenrod;
-    line-height: 2;
-    padding: 5px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    white-space: pre-line;
-    display: inline-block;
-  }
 
-  .result-list-premises{
-    color: white;
-    background-color: rebeccapurple;
-    line-height: 2;
-    padding: 5px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    white-space: pre-line;
-    display: inline-block;
-  }
-
-
-  .miner-results-arguments {
+  .miner-results-premises {
     margin-right: 10%;
 
     & > h5 {
@@ -108,6 +110,10 @@
     }
   }
 
+  .miner-results-text{
+    margin-top: 32px;
+  }
+
   .miner-results-export-btn {
     margin-left: 10%;
     margin-top: 5%;
@@ -115,25 +121,18 @@
 }
 
 .block-text {
-  color: white;
+  padding: 3px 2px;
+  margin-right: 4px;
+  border-radius: 8px;
+
   line-height: 2;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  color: white;
 }
 
 .block-claim {
-  color: white;
   background-color: darkgoldenrod;
-  line-height: 2;
-  padding-top: 3px;
-  padding-bottom: 3px;
 }
 
 .block-premise {
-  color: white;
   background-color: rebeccapurple;
-  line-height: 2;
-  padding-top: 3px;
-  padding-bottom: 3px;
 }
-

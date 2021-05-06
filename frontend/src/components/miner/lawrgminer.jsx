@@ -138,7 +138,7 @@ export class Lawrgminer extends React.Component {
                                         premises={this.state.premises}/>
                                 </div>
                             </div>
-                            <div>{this.showTaggedFulltext()}</div>
+                            <div className={"miner-results-text"}>{this.showTaggedFulltext()}</div>
                             <ExportToExcel
                                 fileId={this.state.fileId}
                                 api_host = {api_host}
