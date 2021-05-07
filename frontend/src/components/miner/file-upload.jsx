@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import {Button, Spinner} from "react-bootstrap";
 
 export class FileUpload extends React.Component {
 
@@ -21,7 +21,16 @@ export class FileUpload extends React.Component {
                     {this.buildFileDataHtml()}
                     <Button variant="outline-light"
                             onClick={(event) => this.props.tagWithFile(event)}
-                    >Start Tagging</Button>
+                    >
+                        {this.props.isAwaitingFile ?
+                            (<span className={"input-btn-text"}>
+                                    <Spinner animation={"border"} size={"sm"} role={"status"}
+                                             as={"span"}
+                                    /><span>...Tagging</span>
+                                </span>)
+                            : (<span className={"input-btn-text"}>Start Tagging</span>)
+                        }
+                    </Button>
                 </div>
             </div>
         );

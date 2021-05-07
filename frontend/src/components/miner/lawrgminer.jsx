@@ -1,13 +1,14 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import {Button, Spinner} from "react-bootstrap";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {isEmptyObject} from "devextreme/core/utils/type";
+import {alert} from "devextreme/ui/dialog";
 
 import {FileUpload} from "./file-upload";
 import {Premises} from "./premises";
 import {Claims} from "./claims";
 import {ExportToExcel} from "./export-to-excel";
-import {isEmptyObject} from "devextreme/core/utils/type";
 
 
 const api_host = "http://localhost:5000"
@@ -18,21 +19,16 @@ export class Lawrgminer extends React.Component {
     constructor() {
         super();
         this.state = {
-            // copy-pasted text to analyze
+            // copy-pasted text or uploaded file to analyze
             inputText: "",
-
-            // uploaded file of user to analyze
             inputFile: null,
+            isAwaitingText: false,
+            isAwaitingFile: false,
 
-            // JSON from backend as input for premise and claim list
-            resultJSON: [],
-
+            // results from backend as input for premise/claim list and tagged fulltext
             claims: [],
             premises: [],
             blocks: [],
-
-            // csv from backend to export
-            exportData: [],
 
             // task/file/instance id from backend
             fileId: null
@@ -55,6 +51,15 @@ export class Lawrgminer extends React.Component {
 
     tagWithText() {
         const {inputText} = this.state;
+        if (!inputText || inputText.length === 0) {
+            alert("Please paste some text for tagging first.", "Input Error");
+            return;
+        }
+
+        this.setState({
+            isAwaitingText: true,
+        })
+
         const request_url = `${api_host}/api/tagWithText`
         axios.post(request_url, {"text": inputText})
             .then((response) => {
@@ -69,14 +74,22 @@ export class Lawrgminer extends React.Component {
             })
             .catch((err) => {
                 console.log("error during request:", request_url, "\n", err);
-                alert(`Something went wrong!\nError during request: ${request_url}`);
-            });
+                alert(`Something went wrong!\nError during request: ${request_url}`, "Tagging Error");
+            })
+            .finally(() => this.setState({
+                isAwaitingText: false,
+            }));
     }
 
     tagWithFile() {
         // for file upload tutorial, see https://www.nicesnippets.com/blog/react-js-file-upload-example-with-axios
         const {inputFile} = this.state;
+
         if (inputFile) {
+            this.setState({
+                isAwaitingFile: true,
+            })
+
             // Create an object of formData
             const formData = new FormData();
 
@@ -98,8 +111,11 @@ export class Lawrgminer extends React.Component {
                 })
                 .catch((err) => {
                     console.log("error during request:", request_url, "\n", err);
-                    alert(`Something went wrong!\nError during request: ${request_url}`);
-                });
+                    alert(`Something went wrong!\nError during request: ${request_url}`, "Tagging Error");
+                })
+                .finally(() => this.setState({
+                    isAwaitingFile: false,
+                }));
         }
     }
 
@@ -133,12 +149,22 @@ export class Lawrgminer extends React.Component {
                         />
                         <Button variant="outline-light"
                                 onClick={this.tagWithText.bind(this)}
-                        >Start Tagging</Button>
+                        >
+                            {this.state.isAwaitingText ?
+                                (<span className={"input-btn-text"}>
+                                    <Spinner animation={"border"} size={"sm"} role={"status"}
+                                             as={"span"}
+                                    /><span>...Tagging</span>
+                                </span>)
+                                : (<span className={"input-btn-text"}>Start Tagging</span>)
+                            }
+                        </Button>
                     </div>
                     <FileUpload className="section section-file-upload"
                                 tagWithFile={this.tagWithFile.bind(this)}
                                 adjustInputFile={this.adjustInputFile.bind(this)}
                                 inputFile={this.state.inputFile}
+                                isAwaitingFile={this.state.isAwaitingFile}
                     />
                 </div>
 

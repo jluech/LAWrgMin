@@ -26,26 +26,12 @@
     }
   }
 
-  .input-drag-drop {
+  button .input-btn-text {
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    margin-right: 10%;
-
-    width: 100%;
-
-    .section-drag-drop {
-      display: flex;
-      height: 300px;
-      width: 300px;
-      border: dashed grey 4px;
-      justify-content: center;
-      align-items: center;
-
-      h3 {
-        margin: 0;
-      }
+    & > span:first-child {
+      margin-right: 8px;
     }
   }
 }
