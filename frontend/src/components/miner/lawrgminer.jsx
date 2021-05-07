@@ -142,10 +142,7 @@ export class Lawrgminer extends React.Component {
                     />
                 </div>
 
-                <br />
-                {/*TODO: refactor to remove br tags and properly style hr*/}
-                <hr className="solid" style={{position: "relative", top: "1em"}} />
-                <br />
+                <hr className="solid results-separator" />
 
                 {!isEmptyObject(this.state.blocks) &&
                     <>
