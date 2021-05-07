@@ -124,7 +124,7 @@ export class Lawrgminer extends React.Component {
                 <h2 className="section-title">I am the LAWrgMiner</h2>
                 <h3 className="section-title">Argumentation Mining in Law</h3>
 
-                <h4 className="section-title">1. Text Input</h4>
+                <h4 className="section-title">1. Input: Paste some text...</h4>
                 <div className={"miner-input"}>
                     <div className={"input-textarea"}>
                         <textarea name="miner-input-textarea" id="miner-input-textarea"
