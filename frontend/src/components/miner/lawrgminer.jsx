@@ -33,6 +33,9 @@ export class Lawrgminer extends React.Component {
             // task/file/instance id from backend
             fileId: null
         };
+
+        // this.inputTextarea ref set in render()
+        this.inputFileUpload = React.createRef();
     }
 
     adjustInputText(event) {
@@ -57,15 +60,19 @@ export class Lawrgminer extends React.Component {
         }
 
         this.setState({
+            inputFile: null,
             isAwaitingText: true,
-        })
+            claims: [],
+            premises: [],
+            blocks: [],
+        });
+        this.inputFileUpload.current.value = null; // indirect ref in child component so via current
 
         const request_url = `${api_host}/api/tagWithText`
         axios.post(request_url, {"text": inputText})
             .then((response) => {
                 const data = response.data;
                 this.setState({
-                    resultJSON: response.data,
                     fileId: data.id,
                     claims: data.claims,
                     premises: data.premises,
@@ -87,8 +94,13 @@ export class Lawrgminer extends React.Component {
 
         if (inputFile) {
             this.setState({
+                inputText: "",
                 isAwaitingFile: true,
-            })
+                claims: [],
+                premises: [],
+                blocks: [],
+            });
+            this.inputTextarea.value = ""; // direct ref in component so direct access
 
             // Create an object of formData
             const formData = new FormData();
@@ -102,7 +114,6 @@ export class Lawrgminer extends React.Component {
                 .then((response) => {
                     const data = response.data;
                     this.setState({
-                        resultJSON: data,
                         fileId: data.id,
                         claims: data.claims,
                         premises: data.premises,
@@ -146,6 +157,7 @@ export class Lawrgminer extends React.Component {
                         <textarea name="miner-input-textarea" id="miner-input-textarea"
                                   cols="30" rows="10"
                                   onChange={this.adjustInputText.bind(this)}
+                                  ref={el => this.inputTextarea = el}
                         />
                         <Button variant="outline-light"
                                 onClick={this.tagWithText.bind(this)}
@@ -165,6 +177,7 @@ export class Lawrgminer extends React.Component {
                                 adjustInputFile={this.adjustInputFile.bind(this)}
                                 inputFile={this.state.inputFile}
                                 isAwaitingFile={this.state.isAwaitingFile}
+                                setRef={this.inputFileUpload}
                     />
                 </div>
 

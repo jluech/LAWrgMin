@@ -15,7 +15,7 @@ export class FileUpload extends React.Component {
             <div className={"upload-wrapper"}>
                 <h3 className={"section"}>...or browse a file on your computer</h3>
                 <div className={"upload-input"}>
-                    <input type="file" onChange={this.props.adjustInputFile} />
+                    <input type="file" onChange={this.props.adjustInputFile} ref={this.props.setRef} />
                 </div>
                 <div className={"section upload-section"}>
                     {this.buildFileDataHtml()}
