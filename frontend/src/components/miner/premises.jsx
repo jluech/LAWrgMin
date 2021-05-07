@@ -48,7 +48,7 @@ export class Premises extends React.Component {
             <div className="list-container">
                 <List
                     dataSource={this.createPremiseList()}
-                    height={400}
+                    height={800}
                     itemRender={this.itemTemplate}
                     searchExpr="premise"
                     searchEnabled={true}

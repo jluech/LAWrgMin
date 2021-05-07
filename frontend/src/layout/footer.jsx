@@ -24,7 +24,7 @@ export class Footer extends React.Component {
                     </div>
                     <br/>
                     <div className={"footer-references"}>
-                        <div>References</div>
+                        <div className={"footer-reference-title"}>References</div>
                         <div className={"footer-reference-entries"}>
                             {report[4].text.map((entry, index) => <span className={"footer-reference-entry"} key={`footer-ref-${index}`}>{entry}</span>)}
                         </div>

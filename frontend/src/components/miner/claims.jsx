@@ -48,7 +48,7 @@ export class Claims extends React.Component {
             <div className="list-container">
                 <List
                     dataSource={this.createClaimList()}
-                    height={400}
+                    height={800}
                     itemRender={this.itemTemplate}
                     searchExpr="claim"
                     searchEnabled={true}
