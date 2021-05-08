@@ -160,11 +160,18 @@ def cleanup_instance_files():
     utils.remove_dir_tree(files_path)
 
 
+def delete_old_log_files():
+    os.remove("./backend_root.log")
+    os.remove("./corpus_processing/backend_corpus.log")
+    os.remove("./targer_instance/backend_targer.log")
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]  # ignore first arg as it's the script
     if args.__len__() > 0 and args.__contains__("--cleanup-files"):
         logging.info("Cleaning up files from previous runs")
         cleanup_instance_files()
+        delete_old_log_files()
 
     # Create a directory in a known location to save uploaded files to.
     utils.__set_files_dir(backend.instance_path)
