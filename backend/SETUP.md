@@ -56,6 +56,13 @@ casefile.write(conll_data)
 casefile.close()
 ```
 
+### Download ECHR Corpus
+
+Our project utilized the ECHR court decisions corpus for training the underlying model.
+- Download the corpus as a zipped `.json` file from [their homepage](http://www.di.uevora.pt/~pq/echr/).
+- Unzip the contents and place the extracted `ECHR_Corpus.json` in `backend/corpus_processing/datasets/echr_corpus/ECHR_Corpus.json`.
+  This is important for the path to the corpus is hard-coded within the affected files.
+
 
 
 ## Targer
