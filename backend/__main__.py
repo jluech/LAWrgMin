@@ -51,14 +51,16 @@ def tag_with_text():
     request_data = request.get_json()
     text = request_data["text"]
     if not text:
-        raise RuntimeError("Requesting to tag text without providing any! Add some text in the 'data' part of the request body.")
+        raise RuntimeError("Requesting to tag text without providing any! Add some text in the 'data' part of the "
+                           "request body.")
 
     with open(file_name, "x") as file:
         file.write(text)
 
     # Call targer for labelling the new .txt file
     os.chdir(os.path.join(orig_wd, "targer_instance"))
-    os.system("python labelling.py -i {__in_dir} -o {__out_dir} --stats False".format(__in_dir=files_dir, __out_dir=files_dir))
+    os.system("python labelling.py -i {__in_dir} -o {__out_dir} --stats False".format(__in_dir=files_dir,
+                                                                                      __out_dir=files_dir))
     os.chdir(orig_wd)
 
     # Read results from targer .out file
@@ -96,7 +98,8 @@ def tag_with_file():
     if file_keys.__len__() > 1:
         raise RuntimeError("Requesting to tag multiple files is not supported. Limit to one file per request!")
     if file_keys.__len__() < 1:
-        raise RuntimeError("Requesting to tag a file without providing one! Add a file in the 'files' part of the request body.")
+        raise RuntimeError("Requesting to tag a file without providing one! Add a file in the 'files' part of the "
+                           "request body.")
     file_names = []
     file_key = file_keys[0]
     file = request.files[file_key]
@@ -111,11 +114,13 @@ def tag_with_file():
     os.chdir(orig_wd)
     file = filtered_file_names[0]
     file_path = os.path.join(files_dir, file)
-    os.system("python extract_text.py -i {__in_file} -o {__out_dir}".format(__in_file=file_path, __out_dir=files_dir))
+    os.system("python extract_text.py -i {__in_file} -o {__out_dir}".format(__in_file=file_path,
+                                                                            __out_dir=files_dir))
 
     # Call targer for labelling the new .txt file
     os.chdir(os.path.join(orig_wd, "targer_instance"))
-    os.system("python labelling.py -i {__in_dir} -o {__out_dir} --stats False".format(__in_dir=files_dir, __out_dir=files_dir))
+    os.system("python labelling.py -i {__in_dir} -o {__out_dir} --stats False".format(__in_dir=files_dir,
+                                                                                      __out_dir=files_dir))
     os.chdir(orig_wd)
 
     # Read results from targer .out file

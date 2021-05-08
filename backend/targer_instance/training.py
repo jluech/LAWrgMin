@@ -1,7 +1,7 @@
 import os
+import random
 import subprocess
 import sys
-import random
 
 targer_main_file = "main.py"
 # targer_files_dir = "data/NER/CoNNL_2003_shared_task"
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     os.chdir("lstm")  # need to call it relative to the main file
     # so other files being loaded during the process have the correct working directory
 
-    if (len(load)):
+    if len(load):
         subprocess.run(["python", targer_main_file, "--train", train_file, "--dev", dev_file, "--test", test_file,
                     "-d", data_formatting, "--evaluator", evaluation_type, "-e", epochs, load, loadPath, "--opt", "adam",
                     "--lr", "0.001", "--save-best", "yes", "--patience", "20", "--rnn-hidden-dim", "200",

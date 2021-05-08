@@ -1,6 +1,6 @@
 import logging
-import sys
 import os
+import sys
 
 import textract
 
@@ -48,5 +48,6 @@ if __name__ == "__main__":
         origin_dir = os.path.abspath(os.curdir)
         os.chdir(default_in_directory)
         for file in files:
-            extract_text("{__abs}/{__file}".format(__abs=os.path.abspath(os.curdir), __file=file), default_out_directory)
+            extract_text("{__abs}/{__file}".format(__abs=os.path.abspath(os.curdir),
+                                                   __file=file), default_out_directory)
         os.chdir(origin_dir)

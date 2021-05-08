@@ -144,9 +144,8 @@ def parse_corpus_data():
 
             os.chdir(orig_wd)
             logging.info('Converting .connl format into pe_conll for case ' + case['name'] + '...')
-            # for sentence level tagging
             pe_text = conll_to_pe_sentence_level(ann_filename.replace('.ann', '.conll'))
-            #pe_text = conll_to_pe_file_level(ann_filename.replace('.ann', '.conll'))
+            # pe_text = conll_to_pe_file_level(ann_filename.replace('.ann', '.conll'))
 
             pe_filename = ann_filename.replace('.ann', '_pe.conll')
             if os.path.exists(pe_filename):
