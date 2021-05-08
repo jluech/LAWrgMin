@@ -7,8 +7,8 @@ import textract
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(name)s - %(levelname)s: %(message)s",
                     datefmt="%m/%d/%Y %H:%M:%S", filename="backend_root.log")
 
-default_in_directory = "../data_static"  # default input, adjustable by providing args
-default_out_directory = "../targer_instance/data/in"
+default_in_directory = "./data_static"  # default input, adjustable by providing args
+default_out_directory = "./targer_instance/data/in"
 
 
 # function to read .pdf, .docx or .html files; requires absolute file path
