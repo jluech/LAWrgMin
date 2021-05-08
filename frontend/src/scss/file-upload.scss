@@ -1,6 +1,12 @@
 .upload-wrapper {
-    padding: 0 10%;
     display: block;
+    width: 100%;
+    padding: 0 5%;
+
+    h3.section {
+        position: relative;
+        top: -40px;
+    }
 }
 
 .upload-input > input {
