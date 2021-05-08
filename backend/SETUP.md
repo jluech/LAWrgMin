@@ -1,5 +1,9 @@
 # Backend Setup
 
+During development, we have experienced certain issues with setting up the backend part on Windows machines.
+So, if you have the possibility, **we strongly recommend setting up the project on a Linux environment** for simplicity and ease of use.
+Specifically, we can confirm the setup to be working on _Ubuntu 20.04.2 LTS_.
+
 ## Python
 
 Make sure you are using python v3.5.3 for this
