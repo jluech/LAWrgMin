@@ -98,4 +98,4 @@ def process_targer_output_data(doc_id, doc_path):
 
 
 if __name__ == "__main__":
-    logging.info(process_targer_output_data(1))
+    logging.info(process_targer_output_data(1, targer_output_dir_path))

@@ -5,7 +5,7 @@ import nltk
 from lstm.src.factories.factory_tagger import TaggerFactory
 
 
-path = "ECHR_model_100epoch_pe.hdf5"
+path = "./models/ECHR_model_100epoch_pe.hdf5"
 
 
 class ModelNewECHR:
