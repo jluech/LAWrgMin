@@ -61,7 +61,8 @@ def processing_helper(stack, clause_counter):
     return clause, stack
 
 
-def process_targer_output_data(doc_id, doc_path=targer_output_dir_path):
+def process_targer_output_data(doc_id, doc_path):
+    print('Output_dir:' + str(doc_path))
     dir_contents = os.listdir(doc_path)
     dir_contents.sort()  # TODO: optional, may be performance relevant
     output_files = [file for file in dir_contents if file[-4:] == ".out"]
