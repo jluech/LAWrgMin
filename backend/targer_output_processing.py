@@ -21,16 +21,9 @@ def transform_output_into_csv(file_id, file_dir):
     csv_list = [["clause_index", "text", "label"]]
     blocks = out_results[0]["blocks"]
     for idx, block in enumerate(blocks):
-        label = ""
-        text = ""
-        for word_obj in block:
-            word_label = word_obj["label"]
-            if word_label in ["Claim", "Premise"]:
-                label = word_label
-                word = word_obj["token"]
-                text += "%s%s" % (determine_delimiter(word), word)
+        label = block["label"]
         if label in ["Claim", "Premise"]:
-            csv_list.append([idx + 1, text.strip(), label])  # user-friendly 1-based indexing
+            csv_list.append([idx + 1, block["text"].strip(), label])  # end-user-friendly 1-based indexing
     return csv_list
 
 
@@ -62,7 +55,6 @@ def processing_helper(stack, clause_counter):
 
 
 def process_targer_output_data(doc_id, doc_path):
-    print('Output_dir:' + str(doc_path))
     dir_contents = os.listdir(doc_path)
     dir_contents.sort()  # TODO: optional, may be performance relevant
     output_files = [file for file in dir_contents if file[-4:] == ".out"]
