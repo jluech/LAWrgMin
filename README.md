@@ -22,10 +22,7 @@ This is where the LAWrgMiner comes into play. LAWrgMiner, a neural network train
 natural language arguments from legal documents. It allows lawyers to extract arguments from an unstructured legal
 proceeding and presents them in an easily understandable and structured way. While they normally must invest hours into
 manually searching through and annotating case law, LAWrgMiner reduces the time invested from searching for multiple
-hours to presenting claims and premises within the uploaded source in a couple of minutes.  
-
-[![LAWrgMiner Demo Video](resources/LAWrgMin_demo_thumbnail.png)](https://youtu.be/jMBn2o9aRXI)
-
+hours to presenting claims and premises within the uploaded source in a couple of minutes.
 
 ### The LAWrgMiner brings several advantages
 
@@ -33,6 +30,8 @@ hours to presenting claims and premises within the uploaded source in a couple o
 - Extraction of claims and premises with a built-in keyword search 
 - Supporting legal professionals in their daily activities
 - Can save a lot of working hours and, therefore, costs of legal proceedings  
+
+[![LAWrgMiner Demo Video](resources/LAWrgMin_demo_thumbnail.png)](https://youtu.be/jMBn2o9aRXI "LAWrgMiner Demo Video")
 
 
 ## References
