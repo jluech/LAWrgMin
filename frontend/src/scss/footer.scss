@@ -1,37 +1,37 @@
 @import "variables";
 
 .app-footer {
-  width: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $backgroundColor;
-  /* min-height: 100vh; */
-  align-items: flex-end;
-  display: flex;
-  color: white;
-  font-family: Poppins;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $backgroundColor;
+    /* min-height: 100vh; */
+    align-items: flex-end;
+    display: flex;
+    color: white;
+    font-family: Poppins;
 }
 
 div.footer-content-box {
-  padding-bottom: 2em;
-  padding-top: 6em;
+    padding-bottom: 2em;
+    padding-top: 6em;
 }
 
 .footer-references {
-  font-size: 10px;
+    font-size: 10px;
 
-  .footer-reference-title {
-    font-size: 12px;
-    font-weight: bold;
-  }
-
-  .footer-reference-entries {
-    padding-right: 20%;
-
-    .footer-reference-entry {
-      display: block;
+    .footer-reference-title {
+        font-size: 12px;
+        font-weight: bold;
     }
-  }
+
+    .footer-reference-entries {
+        padding-right: 20%;
+
+        .footer-reference-entry {
+            display: block;
+        }
+    }
 }

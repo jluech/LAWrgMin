@@ -10,8 +10,9 @@ export const ExportToExcel = (props) => {
 
     // create download with CSV file from exportData
     const exportToCSV = () => {
-        const request_url = `${props.api_host}/api/exportToCsv/${props.fileId}`
-        axios.get(request_url)
+        const request_url = `${props.api_host}/api/exportToCsv/${props.fileId}`;
+        axios
+            .get(request_url)
             .then((response) => {
                 const ws = XLSX.utils.aoa_to_sheet(response.data);
                 const wb = {Sheets: {data: ws}, SheetNames: ["data"]};
@@ -28,9 +29,8 @@ export const ExportToExcel = (props) => {
     };
 
     return (
-        <Button className={"miner-results-export-btn"}
-                variant="outline-light"
-                onClick={exportToCSV}
-        >Export to CSV</Button>
+        <Button className={"miner-results-export-btn"} variant="outline-light" onClick={exportToCSV}>
+            Export to CSV
+        </Button>
     );
 };

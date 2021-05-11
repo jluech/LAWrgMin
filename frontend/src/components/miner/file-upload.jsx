@@ -2,7 +2,6 @@ import React from "react";
 import {Button, Spinner} from "react-bootstrap";
 
 export class FileUpload extends React.Component {
-
     // File content to be displayed after file upload is complete
     buildFileDataHtml = () => {
         if (!this.props.inputFile) {
@@ -19,17 +18,15 @@ export class FileUpload extends React.Component {
                 </div>
                 <div className={"section upload-section"}>
                     {this.buildFileDataHtml()}
-                    <Button variant="outline-light"
-                            onClick={(event) => this.props.tagWithFile(event)}
-                    >
-                        {this.props.isAwaitingFile ?
-                            (<span className={"input-btn-text"}>
-                                    <Spinner animation={"border"} size={"sm"} role={"status"}
-                                             as={"span"}
-                                    /><span>...Tagging</span>
-                                </span>)
-                            : (<span className={"input-btn-text"}>Start Tagging</span>)
-                        }
+                    <Button variant="outline-light" onClick={(event) => this.props.tagWithFile(event)}>
+                        {this.props.isAwaitingFile ? (
+                            <span className={"input-btn-text"}>
+                                <Spinner animation={"border"} size={"sm"} role={"status"} as={"span"} />
+                                <span>...Tagging</span>
+                            </span>
+                        ) : (
+                            <span className={"input-btn-text"}>Start Tagging</span>
+                        )}
                     </Button>
                 </div>
             </div>

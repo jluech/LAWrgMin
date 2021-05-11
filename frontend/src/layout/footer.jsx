@@ -17,16 +17,20 @@ export class Footer extends React.Component {
                     <hr className="solid" />
                     <div>Course: AI: Technology and Law (FS21)</div>
                     <div>Lecturers: Prof. Abraham Bernstein PhD & Prof. Dr. Florent Thouvenin</div>
-                    <br/>
+                    <br />
                     <div>
-                        The research project was executed by Tjasa Marincek, Janik Lüchinger, Damaris Schmid,
-                        Cédric Zellweger, & Adrian Zermin
+                        The research project was executed by Tjasa Marincek, Janik Lüchinger, Damaris Schmid, Cédric
+                        Zellweger, & Adrian Zermin
                     </div>
-                    <br/>
+                    <br />
                     <div className={"footer-references"}>
                         <div className={"footer-reference-title"}>References</div>
                         <div className={"footer-reference-entries"}>
-                            {report[4].text.map((entry, index) => <span className={"footer-reference-entry"} key={`footer-ref-${index}`}>{entry}</span>)}
+                            {report[4].text.map((entry, index) => (
+                                <span className={"footer-reference-entry"} key={`footer-ref-${index}`}>
+                                    {entry}
+                                </span>
+                            ))}
                         </div>
                     </div>
                 </div>

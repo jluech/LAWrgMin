@@ -23,12 +23,15 @@ export class Claims extends React.Component {
         // specify values which should be taken for the listing
         // data comes from dataSource={} in HTML part
         return (
-            <Link className={"result-list-claim"}
+            <Link
+                className={"result-list-claim"}
                 to={`claim-${data.idx}`}
                 activeClass="active"
                 spy={true}
                 smooth={true}
-            >{data.claim}</Link>
+            >
+                {data.claim}
+            </Link>
         );
     }
 
@@ -37,7 +40,7 @@ export class Claims extends React.Component {
         const {claims} = this.props;
         if (claims.length > 0) {
             for (const claim of claims) {
-                claim_list.push({"claim": claim["text"].trim(), "idx": claim["idx"]});
+                claim_list.push({claim: claim["text"].trim(), idx: claim["idx"]});
             }
         }
         return claim_list;

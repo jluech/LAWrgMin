@@ -23,12 +23,15 @@ export class Premises extends React.Component {
         // specify values which should be taken for the listing
         // data comes from dataSource={} in HTML part
         return (
-            <Link className={"result-list-premise"}
+            <Link
+                className={"result-list-premise"}
                 to={`premise-${data.idx}`}
                 activeClass="active"
                 spy={true}
                 smooth={true}
-            >{data.premise}</Link>
+            >
+                {data.premise}
+            </Link>
         );
     }
 
@@ -37,7 +40,7 @@ export class Premises extends React.Component {
         const premise_list = [];
         if (premises.length > 0) {
             for (const premise of premises) {
-                premise_list.push({"premise": premise["text"].trim(), "idx": premise["idx"]});
+                premise_list.push({premise: premise["text"].trim(), idx: premise["idx"]});
             }
         }
         return premise_list;

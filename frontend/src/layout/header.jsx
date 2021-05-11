@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../images/logo.png";
 
 export class Header extends React.Component {
-
     render() {
         return (
             <header className="app-header text-left">

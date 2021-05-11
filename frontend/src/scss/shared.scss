@@ -1,31 +1,30 @@
 /* Headers and Text */
 .section {
-  color: white;
+    color: white;
 }
 
 .section-title {
-  color: white;
-  position: relative;
-  padding-top: 1em;
+    color: white;
+    position: relative;
+    padding-top: 1em;
 }
-
 
 /* Vertical Division Lines */
 hr {
-  &.dashed {
-    border-top: 3px dashed #bbb;
-  }
+    &.dashed {
+        border-top: 3px dashed #bbb;
+    }
 
-  &.dotted {
-    border-top: 3px dotted #bbb;
-  }
+    &.dotted {
+        border-top: 3px dotted #bbb;
+    }
 
-  &.solid {
-    border-top: 3px solid white;
-  }
+    &.solid {
+        border-top: 3px solid white;
+    }
 
-  &.rounded {
-    border-top: 8px solid #bbb;
-    border-radius: 5px;
-  }
+    &.rounded {
+        border-top: 8px solid #bbb;
+        border-radius: 5px;
+    }
 }

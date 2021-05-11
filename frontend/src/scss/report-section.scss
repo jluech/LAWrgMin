@@ -1,32 +1,32 @@
 @import "variables";
 
 .textbox {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 p.text {
-  color: white;
-  position: relative;
-  white-space: pre-line;
-  display: inline-block;
-  padding-bottom: 1em;
-  font-family: Poppins;
+    color: white;
+    position: relative;
+    white-space: pre-line;
+    display: inline-block;
+    padding-bottom: 1em;
+    font-family: Poppins;
 }
 
 .light {
-  padding: 0 10%;
-  background-color: slategray;
+    padding: 0 10%;
+    background-color: slategray;
 }
 
 .dark {
-  padding: 0 10%;
-  background-color: $backgroundColor;
+    padding: 0 10%;
+    background-color: $backgroundColor;
 }
 
 img.text-image {
-  height: 300px;
-  vertical-align: middle;
-  padding-right: 30px;
+    height: 300px;
+    vertical-align: middle;
+    padding-right: 30px;
 }

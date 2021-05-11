@@ -13,8 +13,9 @@
 @import "scss/report-section";
 
 @font-face {
-    font-family: 'Poppins';
-    src: local('Poppins'), url(./fonts/Poppins/Poppins-Regular.ttf) format('truetype');}
+    font-family: "Poppins";
+    src: local("Poppins"), url(./fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+}
 
 // globally applicable styles
 body {

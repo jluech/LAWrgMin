@@ -10,8 +10,7 @@ import {Premises} from "./premises";
 import {Claims} from "./claims";
 import {ExportToExcel} from "./export-to-excel";
 
-
-const api_host = "http://localhost:5000"
+const api_host = "http://localhost:5000";
 
 // for file upload tutorial, see https://www.nicesnippets.com/blog/react-js-file-upload-example-with-axios
 
@@ -31,7 +30,7 @@ export class Lawrgminer extends React.Component {
             blocks: [],
 
             // task/file/instance id from backend
-            fileId: null
+            fileId: null,
         };
 
         // this.inputTextarea ref set in render()
@@ -40,14 +39,14 @@ export class Lawrgminer extends React.Component {
 
     adjustInputText(event) {
         this.setState({
-            inputText: event.target.value
+            inputText: event.target.value,
         });
     }
 
     adjustInputFile(event) {
         if (event.target.files.length > 0) {
             this.setState({
-                inputFile: event.target.files[0]
+                inputFile: event.target.files[0],
             });
         }
     }
@@ -68,8 +67,9 @@ export class Lawrgminer extends React.Component {
         });
         this.inputFileUpload.current.value = null; // indirect ref in child component so via current
 
-        const request_url = `${api_host}/api/tagWithText`
-        axios.post(request_url, {"text": inputText})
+        const request_url = `${api_host}/api/tagWithText`;
+        axios
+            .post(request_url, {text: inputText})
             .then((response) => {
                 const data = response.data;
                 this.setState({
@@ -83,9 +83,11 @@ export class Lawrgminer extends React.Component {
                 console.log("error during request:", request_url, "\n", err);
                 alert(`Something went wrong!\nError during request: ${request_url}`, "Tagging Error");
             })
-            .finally(() => this.setState({
-                isAwaitingText: false,
-            }));
+            .finally(() =>
+                this.setState({
+                    isAwaitingText: false,
+                })
+            );
     }
 
     tagWithFile() {
@@ -109,24 +111,27 @@ export class Lawrgminer extends React.Component {
             formData.append("file", inputFile);
 
             // Request made to the backend api to send formData object
-            const request_url = `${api_host}/api/tagWithFile`
-            axios.post(request_url, formData)
+            const request_url = `${api_host}/api/tagWithFile`;
+            axios
+                .post(request_url, formData)
                 .then((response) => {
                     const data = response.data;
                     this.setState({
                         fileId: data.id,
                         claims: data.claims,
                         premises: data.premises,
-                        blocks: data.blocks
+                        blocks: data.blocks,
                     });
                 })
                 .catch((err) => {
                     console.log("error during request:", request_url, "\n", err);
                     alert(`Something went wrong!\nError during request: ${request_url}`, "Tagging Error");
                 })
-                .finally(() => this.setState({
-                    isAwaitingFile: false,
-                }));
+                .finally(() =>
+                    this.setState({
+                        isAwaitingFile: false,
+                    })
+                );
         }
     }
 
@@ -135,11 +140,15 @@ export class Lawrgminer extends React.Component {
         if (blocks.length > 0) {
             return blocks.map((block) => {
                 const label = block.label.toLowerCase();
-                const classes = `block-text ${label === "claim" ? "block-claim" : (label === "premise" ? "block-premise" : "")}`;
+                const classes = `block-text ${
+                    label === "claim" ? "block-claim" : label === "premise" ? "block-premise" : ""
+                }`;
                 return (
-                    <span className={classes} id={`${label}-${block.idx}`} key={`clause-${block.idx}`}>{block.text}</span>
+                    <span className={classes} id={`${label}-${block.idx}`} key={`clause-${block.idx}`}>
+                        {block.text}
+                    </span>
                 );
-            })
+            });
         } else {
             return null;
         }
@@ -154,58 +163,57 @@ export class Lawrgminer extends React.Component {
                 <h4 className="section-title">1. Input: Paste some text...</h4>
                 <div className={"miner-input"}>
                     <div className={"input-textarea"}>
-                        <textarea name="miner-input-textarea" id="miner-input-textarea"
-                                  cols="30" rows="10"
-                                  onChange={this.adjustInputText.bind(this)}
-                                  ref={el => this.inputTextarea = el}
+                        <textarea
+                            name="miner-input-textarea"
+                            id="miner-input-textarea"
+                            cols="30"
+                            rows="10"
+                            onChange={this.adjustInputText.bind(this)}
+                            ref={(el) => (this.inputTextarea = el)}
                         />
-                        <Button variant="outline-light"
-                                onClick={this.tagWithText.bind(this)}
-                        >
-                            {this.state.isAwaitingText ?
-                                (<span className={"input-btn-text"}>
-                                    <Spinner animation={"border"} size={"sm"} role={"status"}
-                                             as={"span"}
-                                    /><span>...Tagging</span>
-                                </span>)
-                                : (<span className={"input-btn-text"}>Start Tagging</span>)
-                            }
+                        <Button variant="outline-light" onClick={this.tagWithText.bind(this)}>
+                            {this.state.isAwaitingText ? (
+                                <span className={"input-btn-text"}>
+                                    <Spinner animation={"border"} size={"sm"} role={"status"} as={"span"} />
+                                    <span>...Tagging</span>
+                                </span>
+                            ) : (
+                                <span className={"input-btn-text"}>Start Tagging</span>
+                            )}
                         </Button>
                     </div>
-                    <FileUpload className="section section-file-upload"
-                                tagWithFile={this.tagWithFile.bind(this)}
-                                adjustInputFile={this.adjustInputFile.bind(this)}
-                                inputFile={this.state.inputFile}
-                                isAwaitingFile={this.state.isAwaitingFile}
-                                setRef={this.inputFileUpload}
+                    <FileUpload
+                        className="section section-file-upload"
+                        tagWithFile={this.tagWithFile.bind(this)}
+                        adjustInputFile={this.adjustInputFile.bind(this)}
+                        inputFile={this.state.inputFile}
+                        isAwaitingFile={this.state.isAwaitingFile}
+                        setRef={this.inputFileUpload}
                     />
                 </div>
 
                 <hr className="solid results-separator" />
 
-                {!isEmptyObject(this.state.blocks) &&
+                {!isEmptyObject(this.state.blocks) && (
                     <>
                         <h4 className="section-title">2. Results</h4>
                         <div className={"miner-results"}>
                             <div className={"miner-results-list"}>
                                 <div className={"miner-results-claims"}>
                                     <h5>Claims</h5>
-                                    <Claims claims={this.state.claims}/>
+                                    <Claims claims={this.state.claims} />
                                 </div>
                                 <div className={"miner-results-premises"}>
                                     <h5>Premises</h5>
-                                    <Premises premises={this.state.premises}/>
+                                    <Premises premises={this.state.premises} />
                                 </div>
                             </div>
                             <div className={"miner-results-text"}>{this.showTaggedFulltext()}</div>
-                            <ExportToExcel
-                                fileId={this.state.fileId}
-                                api_host = {api_host}
-                            />
+                            <ExportToExcel fileId={this.state.fileId} api_host={api_host} />
                         </div>
-                        <br/>
+                        <br />
                     </>
-                }
+                )}
             </div>
         );
     }
