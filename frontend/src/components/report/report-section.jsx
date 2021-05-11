@@ -14,7 +14,7 @@ export class ReportSection extends React.Component {
                     <h2 className="section-title">{report[0].section}</h2>
                     <div className="textbox">
                         <img className="text-image" src={image1} alt={""} />
-                        <p className="text" >{report[0].text}</p>
+                        <p className="text">{report[0].text}</p>
                     </div>
                 </div>
                 <div className="chapter dark">

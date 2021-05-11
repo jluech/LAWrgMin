@@ -13,19 +13,20 @@ export const report = [
             },
     {
         section: "The Argument Mining Framework",
-        text:
-            "Targer, an open-source system for tagging arguments in free text and for retrieving arguments from web-scale corpora is the base of LAWrgMiner’s argumentation mining model. Targer was chosen due to it being an open-source project, developed and extended to fit a wide range of application areas, which allowed us to train it on the ECHR dataset with only a few modifications. Alternatives like Margot, args.me, or ArgumenText do not offer the possibility to train them from ground up, based on a new dataset."
+        text: "Targer, an open-source system for tagging arguments in free text and for retrieving arguments from web-scale corpora is the base of LAWrgMiner’s argumentation mining model. Targer was chosen due to it being an open-source project, developed and extended to fit a wide range of application areas, which allowed us to train it on the ECHR dataset with only a few modifications. Alternatives like Margot, args.me, or ArgumenText do not offer the possibility to train them from ground up, based on a new dataset."
     },
     {
         section: "References",
         text: [
-            "Cabrio, E. & Villata, S (2018). Five Years of Argument Mining: a Data-driven Analysis. Conference: Twenty-Seventh International Joint Conference on Artificial Intelligence {IJCAI-18}. doi:10.24963/ijcai.2018/766",
+            "Cabrio, E., & Villata, S. (2018). Five Years of Argument Mining: a Data-driven Analysis. Conference: Twenty-Seventh International Joint Conference on Artificial Intelligence {IJCAI-18}. doi:10.24963/ijcai.2018/766",
+            "Chernodub, A., Oliynyk, O., Heidenreich, P., Bondarenko, A., Hagen, M., Biemann, C. & Panchenko, A. (2019). TARGER: Neural Argument Mining at Your Fingertips. Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics: System Demonstrations, 195-200. doi.org/10.18653/v1/P19-3031.",
             "Ein-Dor, L., Eyal Shnarch, Lena Dankin, Alon Halfon, B. Sznajder, Ariel Gera, Carlos Alzate, Martin Gleize, Leshem Choshen, Yufang Hou, Yonatan Bilu, R. Aharonov & N. Slonim (2020). Corpus Wide Argument Mining - a Working Solution. The Thirty-Fourth AAAI Conference on Artificial Intelligence, 7683-7691.",
             "Milward, D., Mochales, R., Moens, M. & Wyner, A. (2010). Approaches to text mining arguments from legal cases. In E. Francesconi, S. Montemagni, W. Peters, & D. Tiscornia (Eds.), Semantic processing",
             "Lawrence, J. & Reed, C. (2019). Argument Mining: A Survey. Computational Linguistics, 45(4), 765–818. doi:10.1162/coli_a_00364.",
             "Mochales, R. & Moens, M. (2011). Argumentation mining. Artificial Intelligence and Law 19(1), 1-22. doi:10.1007/s10506-010-9104-x",
             "Moens, M. (2018). Argumentation mining: How can a machine acquire common sense and world knowledge? Argument & Computation 9, 1–14. doi:10.3233/AAC-170025",
-            "Poudyal, P., Savelka, J., Ieven, A., Moens, M., Gonçalves, T., & Quaresma, P. (2020). ECHR: Legal Corpus for Argument Mining. Proceedings of the 7th Workshop on Argument Mining, 67–75 Barcelona."
-        ]
+            "Poudyal, P., Savelka, J., Ieven, A., Moens, M., Gonçalves, T., & Quaresma, P. (2020). ECHR: Legal Corpus for Argument Mining. Proceedings of the 7th Workshop on Argument Mining, 67–75 Barcelona.",
+            "Stab, C. & Gurevych, I. (2013). Guidelines for Annotating Argument Components and Relations in Persuasive Essays.",
+        ],
     },
 ];
