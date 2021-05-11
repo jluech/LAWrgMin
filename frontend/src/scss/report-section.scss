@@ -15,14 +15,16 @@ p.text {
     font-family: Poppins;
 }
 
-.light {
-    padding: 0 10%;
-    background-color: slategray;
-}
+.chapter {
+    padding: 0 10% 24px;
 
-.dark {
-    padding: 0 10%;
-    background-color: $backgroundColor;
+    &.light {
+        background-color: slategray;
+    }
+
+    &.dark {
+        background-color: $backgroundColor;
+    }
 }
 
 img.text-image {
