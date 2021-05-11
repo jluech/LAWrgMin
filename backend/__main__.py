@@ -161,9 +161,19 @@ def cleanup_instance_files():
 
 
 def delete_old_log_files():
-    os.remove("./backend_root.log")
-    os.remove("./corpus_processing/backend_corpus.log")
-    os.remove("./targer_instance/backend_targer.log")
+    # Relevant SO answer: https://stackoverflow.com/a/10840586
+    try:
+        os.remove("./backend_root.log")
+    except FileNotFoundError:
+        pass
+    try:
+        os.remove("./corpus_processing/backend_corpus.log")
+    except FileNotFoundError:
+        pass
+    try:
+        os.remove("./targer_instance/backend_targer.log")
+    except FileNotFoundError:
+        pass
 
 
 if __name__ == "__main__":
