@@ -1,33 +1,20 @@
 export const report = [
     {
         section: "Introduction",
-        text:
-            "Argumentation can be considered one of the core principles on which human interaction is based. " +
-            "It is an intelligent communication task aiming at increasing or decreasing the acceptability of a controversial claim or point of view (Moens, 2018). " +
-            "Convincing others by bringing up arguments supporting or attacking claims builds the basis of discursive activity which is crucial in legal reasoning.\n" +
-            "Because human argumentation is expressed in natural language and strongly context-dependent, the ability to conduct contextual discussions was believed to be unique. " +
-            "However, what if machines could be taught to extract arguments from human discourse?",
+        text: "Argumentation can be considered one of the core principles on which human interaction is based. It is an intelligent communication task aiming at increasing or decreasing the acceptability of a controversial claim or point of view (Moens, 2018). Convincing others by bringing up arguments supporting or attacking claims builds the basis of discursive activity which is crucial in legal reasoning. Because human argumentation is expressed in natural language and strongly context-dependent, the ability to conduct contextual discussions was believed to be unique. However, what if machines could be taught to extract arguments from human discourse?"
     },
     {
-        section: "Problem",
-        text:
-            "Case law plays an important role in legal argumentation and decision-making, especially in countries with legal systems using common law (Milward, Mochales, Moens, & Wyner, 2010). Lawyers need to dig into documents of past judicial decisions and identify previous decisions supporting their side in the legal dispute and undermining the other.\n" +
-            "The analysis of these documents requires skill and a lot of time: Cases are expressed in natural language, consider highly complex matters under dispute and have complex inter-relationships while the number of documents is constantly growing. Moreover, navigating the documents, interpreting, and applying the results successfully needs extensive training.\n" +
-            "These factors can furthermore lead to extensive costs of legal proceedings because of additional working hours and high skill fees of lawyers.",
+        section: "Problem - Time is Money",
+        text: "Case law plays an important role in legal argumentation and decision-making, especially in countries with legal systems using common law (Milward, Mochales, Moens, & Wyner, 2010). Lawyers need to dig into documents of past judicial decisions (precedents) and identify previous decisions supporting their side in the legal dispute and undermining the other. The analysis of these documents requires skill and a lot of time: Cases are expressed in natural language, consider highly complex matters under dispute, and have complex interrelationships while the number of documents is constantly growing. Moreover, navigating the documents, interpreting, and applying the results successfully needs extensive training. These factors can furthermore lead to extensive costs of legal proceedings because of additional working hours and high fees of lawyers (skill premium)."
     },
     {
-        section: "Solution",
-        text:
-            "The combination of the fields of Artificial Intelligence (AI), Natural Language Processing (NLP) and Law (Cabrio & Villata 2018) offer an instrument to help lawyers manage and search through the existing case law: Argumentation mining. Its goal is to extract claims and premises by searching case law and recognizing arguments, properties and relationships (Milward, Mochales, Moens, & Wyner, 2010). \n" +
-            "\n" +
-            "This is where LAWrgMin comes into play: LAWrgMin aims at extracting natural language arguments and their relations (five years of argument mining”) from legal documents. It is able to transform unstructured texts to structured arguments by clause recognition, clause relation prediction and premise/claim recognition and to present the result in a sorted comprehensive way. While lawyers normally must invest hours into the task of manually go through and annotating case law, LAWrgMin solves this in seconds and provides claims and linked premises from the uploaded legal documents. \n",
-    },
+        section: "Solution - LAWrgMiner",
+        text: "The combination of the fields of Artificial Intelligence (AI) and Natural Language Processing (NLP) offers an instrument to help lawyers manage and search through the existing case law: Argumentation mining. Generally, its goal is to extract claims and premises from text expressed in natural language (Milward, Mochales, Moens, & Wyner, 2010). This is where the LAWrgMiner comes into play. LAWrgMiner, a neural network trained on the ECHR dataset, aims to extract natural language arguments from legal documents. It allows a lawyer to extract arguments from an unstructured legal proceeding and presents them in an easily understandable and structured way. While they normally must invest hours into manually reading through the case law and searching for arguments, LAWrgMiner reduces the time invested from searching for multiple hours to presenting claims and premises within the uploaded source in a couple of minutes. With LAWrgMiner, we make two contributions. First, we train an existing argumentation miner, Targer (Chernodub et al., 2019), on a more specialized dataset than it was trained on until today. Second, we interviewed legal professionals in order to gather user requirements for the tool. Due to the time constraints of the course, we had to prioritize them strictly and focus on showing the proof of concept of an argument miner in the field of law. For example, we implemented a list view of claims and premises extracted from a legal case but moved the integration of an API for case law databases to the future work. "
+            },
     {
-        section: "Learnings",
+        section: "The Argument Mining Framework",
         text:
-            "Simple text copy/paste or PDF upload\n" +
-            "Extraction of claims and premises with a built-in key word search\n" +
-            "Argument identification is not biased by mistakes or subjective evaluation of human analysis",
+            "Targer, an open-source system for tagging arguments in free text and for retrieving arguments from web-scale corpora is the base of LAWrgMiner’s argumentation mining model. Targer was chosen due to it being an open-source project, developed and extended to fit a wide range of application areas, which allowed us to train it on the ECHR dataset with only a few modifications. Alternatives like Margot, args.me, or ArgumenText do not offer the possibility to train them from ground up, based on a new dataset."
     },
     {
         section: "References",
@@ -38,7 +25,7 @@ export const report = [
             "Lawrence, J. & Reed, C. (2019). Argument Mining: A Survey. Computational Linguistics, 45(4), 765–818. doi:10.1162/coli_a_00364.",
             "Mochales, R. & Moens, M. (2011). Argumentation mining. Artificial Intelligence and Law 19(1), 1-22. doi:10.1007/s10506-010-9104-x",
             "Moens, M. (2018). Argumentation mining: How can a machine acquire common sense and world knowledge? Argument & Computation 9, 1–14. doi:10.3233/AAC-170025",
-            "Poudyal, P., Savelka, J., Ieven, A., Moens, M., Gonçalves, T., & Quaresma, P. (2020). ECHR: Legal Corpus for Argument Mining. Proceedings of the 7th Workshop on Argument Mining, 67–75 Barcelona.",
-        ],
+            "Poudyal, P., Savelka, J., Ieven, A., Moens, M., Gonçalves, T., & Quaresma, P. (2020). ECHR: Legal Corpus for Argument Mining. Proceedings of the 7th Workshop on Argument Mining, 67–75 Barcelona."
+        ]
     },
 ];
