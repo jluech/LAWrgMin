@@ -24,6 +24,9 @@ proceeding and presents them in an easily understandable and structured way. Whi
 manually searching through and annotating case law, LAWrgMiner reduces the time invested from searching for multiple
 hours to presenting claims and premises within the uploaded source in a couple of minutes.  
 
+[![LAWrgMiner Demo Video](resources/LAWrgMin_demo_thumbnail.png)](https://youtu.be/jMBn2o9aRXI)
+
+
 ### The LAWrgMiner brings several advantages
 
 - Simple upload
