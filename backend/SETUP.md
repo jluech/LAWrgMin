@@ -66,7 +66,7 @@ Our project utilized the ECHR court decisions corpus for training the underlying
 
 
 ## Targer
-_(Instance received from Florian Ruosch)_
+_(Available [on Github](https://github.com/achernodub/targer), instance received from Florian Ruosch)_
 
 ### Setup Targer
 
